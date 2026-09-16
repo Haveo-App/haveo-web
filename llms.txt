@@ -1,0 +1,135 @@
+# Haveo
+
+> An iPhone app that coaches you through a networking event — before, during and
+> after. Built for people who find networking anxiety-inducing: the anxious, the
+> introverted, the neurodivergent, and anyone whose mind goes blank in the room.
+
+Haveo is free on the App Store. There is no account, and your events, notes and
+reflections are stored on the phone. The AI features are not on the phone: what
+you send the coach goes through Haveo's own server to Anthropic, and a file you
+attach goes the same way.
+
+## What it does
+- Builds an intro, an elevator pitch and talking points you would actually say out loud
+- Role-play practice with an AI partner, by chat or by voice
+- Event Mode: a pocket cheat sheet for during the event
+- Calm: guided breathing. Boost Cards: quick confidence techniques
+- People You Met: save contacts and follow up on time
+
+## Guides
+- [What to say at a networking event when you don't know anyone](https://haveo.app/what-to-say-when-you-dont-know-anyone/): Three openers that work on a room full of strangers, what to say after the first line, and how to leave a conversation kindly.
+- [How to prepare for a networking event when you have social anxiety](https://haveo.app/networking-with-social-anxiety/): A preparation routine for anxious networkers: what to write down, what to rehearse out loud, and what to do in the first ten minutes.
+- [What to say instead of "so, what do you do?"](https://haveo.app/what-to-say-instead-of-what-do-you-do/): Why the standard opener falls flat, and eight questions that get a real answer instead of a job title.
+- [How to follow up after meeting someone at a networking event](https://haveo.app/how-to-follow-up-after-a-networking-event/): When to send the message, what to write, and a short template that doesn't read like a form letter.
+- [Networking for introverts](https://haveo.app/networking-for-introverts/): How to get through a networking event as an introvert: fewer, longer conversations, an energy budget, and preparation that removes the improvisation.
+- [Networking when you are ADHD, autistic or dyslexic](https://haveo.app/neurodivergent-networking/): Networking rooms assume a brain that filters noise, holds names and improvises. If yours does not, the fix is preparation and a shorter night.
+- [Networking with ADHD](https://haveo.app/networking-with-adhd/): Interrupting, losing the thread, forgetting names, then not following up. The fix for each, and why the follow-up is the one worth solving first.
+- [Networking with dyslexia](https://haveo.app/networking-with-dyslexia/): Name badges you cannot read at arm's length, a written follow-up you keep putting off, and reading aloud you did not agree to. What to do about each.
+- [Networking when you need a job](https://haveo.app/job-search-networking/): Networking under pressure is a different problem: you need something, they can tell, and asking directly usually fails. What to ask for instead, and when.
+- [What to say at a career fair](https://haveo.app/career-fair-what-to-say/): The thirty seconds at the table, the question that makes a recruiter remember you, and how to leave with something you can follow up on.
+- [When you cannot stop replaying it afterwards](https://haveo.app/social-anxiety-after-a-networking-event/): Going over every sentence for days afterwards has a name — post-event processing. What it is, why the replay is not accurate, and what to do on the night instead.
+- [The follow-up email, with templates you can actually send](https://haveo.app/follow-up-email-after-a-networking-event/): Four short templates for the message after you meet someone: the normal one, the one with an ask, the late one, and the one where you barely spoke.
+- [How to end a conversation without it being awkward](https://haveo.app/how-to-end-a-conversation-politely/): The exit line is what makes it safe to start a conversation at all. Four that work, why you do not owe an excuse, and what to do when they will not stop talking.
+- [The hour before a networking event](https://haveo.app/the-hour-before-a-networking-event/): What to do in the last hour: what to eat, what to read, what to rehearse, and the two decisions to make before you leave the house.
+- [How to leave a networking event early](https://haveo.app/how-to-leave-a-networking-event-early/): When it is fine to go, what to say on the way out, and why leaving at a planned time is the thing that makes the next event easier.
+- [How to go to a networking event alone](https://haveo.app/how-to-go-to-a-networking-event-alone/): Arriving with nobody to stand next to. Where to go first, who to approach, and why going alone is usually easier than going with a friend.
+- [What to do if it becomes too much while you are there](https://haveo.app/what-to-do-if-you-panic-at-an-event/): Leaving the room, slowing your breathing, and deciding whether to go back in. A plan for the moment rather than advice for next time.
+- [Do you actually have to network?](https://haveo.app/do-i-actually-have-to-network/): An honest answer. What networking is really for, when it matters, and the versions that work if rooms full of strangers are not for you.
+- [How to join a group that is already talking](https://haveo.app/how-to-join-a-group-already-talking/): Which groups to approach, where to stand, what to say, and why a group of four is easier to join than two people.
+- [What to say when your mind goes blank](https://haveo.app/what-to-say-when-your-mind-goes-blank/): The three sentences that restart a conversation when you have lost it, and why describing the room works every time.
+- [When you forget someone's name](https://haveo.app/when-you-forget-someones-name/): How to ask again without it being awkward, how to get out of it when you cannot ask, and how to stop losing names in the first place.
+- [How to introduce yourself at a networking event](https://haveo.app/how-to-introduce-yourself-at-a-networking-event/): A sentence that works whether you are employed, freelancing, studying or between things — and what to do with the pause afterwards.
+- [Small talk questions that are not boring](https://haveo.app/small-talk-questions-that-arent-boring/): Twelve questions that get a real answer instead of one word, why the weather question fails, and how to follow up on what you get.
+- [How to introduce two people to each other](https://haveo.app/how-to-introduce-two-people/): The two-line introduction that leaves them with something to talk about, and why doing it is the fastest way to be useful in a room.
+- [The LinkedIn message after you meet someone](https://haveo.app/linkedin-message-after-meeting-someone/): What to write in the connection note, why the default blank request wastes the meeting, and three short versions to copy.
+- [Subject lines for a follow-up email](https://haveo.app/follow-up-email-subject-lines/): Ten subject lines that get opened, why the clever ones do worse, and the one word that does most of the work.
+- [What to do with the business cards](https://haveo.app/what-to-do-with-the-business-cards/): The pile in your bag is not a contact list. What to do in the taxi home, what to do the next morning, and what to throw away.
+- [Following up when it has been too long](https://haveo.app/following-up-late/): Three weeks, three months, or a year later. What to write, how much to apologize, and when it genuinely is too late.
+- [How to remember who you met](https://haveo.app/how-to-remember-who-you-met/): Why names disappear within minutes, the ten-second note that fixes it, and what to write down that is actually useful later.
+- [What to say in a coffee chat](https://haveo.app/what-to-say-in-a-coffee-chat/): You asked for twenty minutes and got it. How to open, what to ask, what not to ask, and how to end it without an awkward pause.
+- [Autistic people at networking events](https://haveo.app/autistic-networking-events/): The unwritten rules nobody states, what to do about small talk you find pointless, and which parts are worth complying with.
+- [Sensory overload at a networking event](https://haveo.app/sensory-overload-at-events/): Loud rooms, hard lighting and no quiet corner. What to check before you go, what to carry, and what to do when it has already happened.
+- [Masking at work events](https://haveo.app/masking-at-work-events/): Why an evening of performing costs more than the evening itself, how to spend less of it, and what to do about the day after.
+- [When a small moment stings for days](https://haveo.app/rejection-sensitivity-after-networking/): The conversation that ended flatly, the message with no reply, and why the reaction is out of proportion to the event.
+- [How many people should you talk to?](https://haveo.app/how-many-people-should-i-talk-to/): Two or three. Why counting introductions is the wrong measure, and what to aim at instead.
+- [Networking when you are already drained](https://haveo.app/networking-when-youre-already-drained/): The event is tonight and you have nothing left. What to cut, what is still worth doing, and when to just not go.
+- [Getting through a multi-day conference](https://haveo.app/conferences-for-introverts/): Three days is not one event three times. How to plan the days, which sessions to skip, and why the hallway is the actual conference.
+- [Networking online instead](https://haveo.app/online-networking-for-introverts/): What actually works when you replace events with writing and messages, how long it takes, and where it beats a room outright.
+- [Getting through a career fair with social anxiety](https://haveo.app/career-fair-with-social-anxiety/): A hall full of queues and recruiters. How to pick five tables, what to do about the queue, and why the first one should be a company you do not want.
+- [Questions for an informational interview](https://haveo.app/informational-interview-questions/): Fifteen questions that get a real answer, the three to avoid, and the one to always end on.
+- [LinkedIn messages to someone you have never met](https://haveo.app/linkedin-networking-message-examples/): Four cold messages that get replies, the structure underneath them, and the two mistakes that get everything else ignored.
+- [Networking while you are still studying](https://haveo.app/networking-as-a-student/): You have less to offer and far more permission to ask. How to use the student advantage before it expires.
+- [Networking after being laid off](https://haveo.app/networking-after-a-layoff/): What to say about it, who to tell first, and why the message you dread sending is the one that works.
+- [How to ask someone for a referral](https://haveo.app/how-to-ask-for-a-referral/): Who you can reasonably ask, the message that makes it easy to say yes, and how to make it almost no work for them.
+- [Networking when you are changing fields](https://haveo.app/networking-for-a-career-change/): Nobody in the new field knows you and your resume points the wrong way. What to ask, and how to stop leading with the gap.
+- [What to bring to a networking event](https://haveo.app/what-to-bring-to-a-networking-event/): A short list. What actually gets used, what never does, and the one thing most people forget.
+- [How to meet people at a conference](https://haveo.app/how-to-network-at-a-conference/): Where the conversations actually happen, how to use the schedule as a tool, and the one thing to arrange before you travel.
+- [How to network on LinkedIn](https://haveo.app/how-to-network-on-linkedin/): What works, in order: being findable, being useful in public, and sending few specific messages. Plus what to stop doing.
+- [What to expect at your first networking event](https://haveo.app/your-first-networking-event/): What actually happens, in order, from the door to going home — so that none of it is a surprise.
+- [The mistakes that actually cost you something](https://haveo.app/common-networking-mistakes/): Not the etiquette list. The handful of things that genuinely waste an evening, and what to do instead of each.
+- [ADHD at work](https://haveo.app/adhd-at-work/): The parts of a working day that cost most with ADHD, and the fixes that survive a real job: meetings, email, deadlines, and the follow-through nobody sees.
+- [Job interviews with ADHD](https://haveo.app/adhd-job-interview/): Rambling, losing the question, and the weakness question. What to prepare, what to ask for, and how to answer without disclosing anything you do not want to.
+- [Meetings with ADHD](https://haveo.app/adhd-in-meetings/): Losing the thread, interrupting, and remembering nothing afterwards. Four fixes that work in a real meeting, including the one that matters most.
+- [Working from home with ADHD](https://haveo.app/adhd-remote-work/): No commute, no colleagues, no edges to the day. What to build back in, and why the structure has to come from outside you.
+- [Taking notes with ADHD](https://haveo.app/adhd-note-taking/): Why the neat system always gets abandoned, and the four-line format that survives a real week.
+- [Time blindness at work](https://haveo.app/adhd-time-blindness-at-work/): Being late, underestimating everything, and losing an afternoon. What to change when your sense of elapsed time is not reliable.
+- [Email with ADHD](https://haveo.app/adhd-and-email-at-work/): Read it, meant to reply, three weeks gone. Why that happens and the two rules that stop it.
+- [Telling your employer you have ADHD](https://haveo.app/telling-your-employer-you-have-adhd/): What people actually weigh up, when they tend to do it, and the option most people miss — asking for the thing without the label.
+- [Asking for what you need at work with ADHD](https://haveo.app/adhd-accommodations-at-work/): The adjustments people actually ask for, how to phrase the request so it gets a yes, and what to do if it does not.
+- [Dyslexia at work](https://haveo.app/dyslexia-at-work/): Reading under time pressure, writing in public, and being asked to read something out. The practical fixes, and how to ask for them without a long explanation.
+- [The dyslexia line in an email signature](https://haveo.app/dyslexia-email-signature/): What the line is for, four versions people actually use, and the honest case against having one at all.
+- [Being asked to read something out loud](https://haveo.app/reading-out-loud-at-work/): The round-the-table read, the slide you did not write, and the document handed to you in a meeting. What to say instead.
+- [Writing emails with dyslexia](https://haveo.app/writing-emails-with-dyslexia/): The draft-and-paste habit, why text-to-speech catches what spellcheck cannot, and how to stop re-reading a three-line message six times.
+- [Taking notes with dyslexia](https://haveo.app/dyslexia-and-note-taking/): Writing fast enough to keep up, spelling names you have only heard, and being able to read it back tomorrow.
+- [Job interviews with dyslexia](https://haveo.app/dyslexia-in-a-job-interview/): Written tests, documents handed to you on the day, and whether to say anything. What to ask for in advance.
+- [Telling your employer you have dyslexia](https://haveo.app/telling-your-employer-you-have-dyslexia/): What people weigh up, when they tend to say it, and how to ask for what you need without disclosing at all.
+- [Asking for what you need at work with dyslexia](https://haveo.app/dyslexia-accommodations-at-work/): The adjustments people actually ask for, how to phrase one so it gets agreed, and what to do if it is refused.
+- [Social anxiety at work](https://haveo.app/social-anxiety-at-work/): Meetings, work socials, the first day, the review. The moments that cost most in a working week, and what to do about each.
+- [Speaking up in meetings](https://haveo.app/speaking-up-in-meetings/): The gap that never comes, the point that gets said by someone else, and what to do in the first five minutes to make the rest possible.
+- [Work socials you cannot skip again](https://haveo.app/work-parties-and-socials/): Drinks after work, the team night out, the thing you have declined twice. How to go for an hour and have it count.
+- [The office Christmas party](https://haveo.app/the-office-christmas-party/): The one work social with the most pressure attached. How long to stay, what to do about the drinking, and the morning after.
+- [The first day at a new job](https://haveo.app/first-day-at-a-new-job/): Names you will not remember, lunch, and not knowing what you are supposed to be doing. What actually happens, so none of it is a surprise.
+- [Why video calls feel worse](https://haveo.app/video-call-anxiety/): Seeing your own face, not knowing when to speak, and the silence that is not really silence. Four changes that help.
+- [The performance review](https://haveo.app/performance-review-anxiety/): Being told what someone thinks of you, in a room, with a form. How to prepare so the conversation is not a surprise.
+- [One-to-ones with your manager](https://haveo.app/one-on-ones-with-your-manager/): The recurring meeting with no agenda that you spend the morning dreading. What to put in it so it stops being an interrogation.
+- [Team lunches and eating at work](https://haveo.app/team-lunches-and-work-food/): The group lunch, the kitchen at noon, and eating in front of people. Small, practical things that make it easier.
+- [Going back to the office](https://haveo.app/going-back-to-the-office/): After remote work, the office is loud, social and full of small unwritten rules again. What to expect and what to ask for.
+- [Feeling like you do not belong at work](https://haveo.app/imposter-syndrome-at-work/): The sense that you got in by luck and will be found out. Why the usual reassurance does not land, and what actually shifts it.
+- [Presenting at work](https://haveo.app/presenting-at-work/): The internal presentation, the demo, the slot at the all-hands. What to rehearse, what to cut, and what to do in the first thirty seconds.
+- [Autistic at work](https://haveo.app/autistic-at-work/): The office, the unwritten rules, the social parts nobody scheduled. What costs most in a working week and what can be changed.
+- [The day after a work event](https://haveo.app/autistic-burnout-after-work-events/): Why a two-hour event costs the next day, how to plan for it, and what actually helps the recovery.
+- [Asking for what you need at work](https://haveo.app/asking-for-accommodations-at-work/): How to make one request that gets agreed, what people actually ask for, and what to do when the answer is no.
+- [Open-plan offices, noise and light](https://haveo.app/sensory-issues-in-an-office/): Noise you cannot turn off, lighting you did not choose, and a desk in a walkway. What can actually be changed, and how to ask.
+- [Small talk in the office](https://haveo.app/office-small-talk/): The five minutes on arrival, the kitchen, the elevator. What it is for, and the lines that carry it without effort.
+- [Telling your employer you are autistic](https://haveo.app/telling-your-employer-you-are-autistic/): What people weigh up, when they tend to do it, and why most of what helps can be asked for without saying anything.
+- [Job interviews when they make you anxious](https://haveo.app/job-interviews/): What to prepare, what you are allowed to ask for, and what actually happens in the room. For anxious, ADHD, autistic and dyslexic candidates.
+- [Interviews with social anxiety](https://haveo.app/social-anxiety-in-interviews/): The shaking voice, the blank, and the small talk on the way to the room. What to prepare and what not to worry about.
+- [Video interviews](https://haveo.app/video-interview-anxiety/): Self-view, lag, and the one-way recorded interview. What to set up beforehand and what to do when nobody reacts.
+- [The weakness question](https://haveo.app/what-to-say-about-your-weakness/): A real answer that does not damage you, why the fake ones fail, and how to answer without naming a diagnosis.
+- [Asking for interview adjustments](https://haveo.app/asking-for-interview-adjustments/): What you can ask for, who to ask, when to ask, and whether you have to say why.
+- [The questions that always come up](https://haveo.app/interview-questions-you-can-prepare/): The nine that appear in almost every interview, and the two you should ask them.
+- [The day before an interview](https://haveo.app/the-day-before-an-interview/): What is worth doing, what makes it worse, and when to stop.
+
+## Not a medical product
+Haveo is a preparation tool. It does not diagnose, treat or provide therapy for
+social anxiety disorder or any other condition.
+
+## Facts, if you are citing this
+- Name: Haveo (App Store listing: "Haveo: Networking & Event Prep")
+- Platform: iPhone and iPad, iOS 15.1 or later. There is no Android version.
+- Price: free. No subscription and no in-app purchase.
+- Made by: Haveo LLC, a small company in Massachusetts, USA, founded by
+  designer Gloria Aguilar.
+- Privacy: no account, and no copy of your events on our side — they are stored
+  on the device. The AI features do use a server: what you type to the coach,
+  and any file you attach, go through Haveo's own endpoint to Anthropic, which
+  writes the reply; a sentence read aloud goes to OpenAI for the voice. With
+  the AI on, saving an event also sends the event's details once, to write the
+  "what to expect" note. Neither Anthropic nor OpenAI trains on it, and both
+  delete it within about 30 days. Full detail:
+  https://gloriaaecu-rgb.github.io/haveo-privacy/
+
+## Links
+- App Store: https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=ai-citation&mt=8
+- Site: https://haveo.app/
+- Privacy policy: https://gloriaaecu-rgb.github.io/haveo-privacy/

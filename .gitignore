@@ -1,0 +1,8 @@
+# NESTED ON PURPOSE. Never add these lines to the ROOT .gitignore: it is an
+# input to the runtime fingerprint (reasons: ["bareGitIgnore"]), so editing it
+# changes runtimeVersion, and an OTA published on a runtime no binary carries
+# reaches nobody, silently, with no error. That has happened twice. A nested
+# .gitignore is not part of the hash — same reason visual/.gitignore and
+# soak/.gitignore exist.
+__pycache__/
+*.pyc

@@ -1,0 +1,90 @@
+[
+  {
+    "name": "chromium",
+    "v": "375x667",
+    "scrollW": 375,
+    "innerW": 375,
+    "ctaText": "Download on the App Store",
+    "ctaHref": "https://apps.apple.com/app/haveo/id6774740212",
+    "ctaTop": 538,
+    "ctaVisible": true,
+    "formName": "feedback",
+    "formFields": 6,
+    "formVisible": true,
+    "focus": {
+      "tag": "A \"Download on the App St\"",
+      "style": "solid",
+      "width": "3px",
+      "color": "rgb(37, 99, 235)",
+      "ring": true
+    },
+    "errs": 0,
+    "file": "landing/qa/chromium-375x667.png"
+  },
+  {
+    "name": "chromium",
+    "v": "1280x800",
+    "scrollW": 1280,
+    "innerW": 1280,
+    "ctaText": "Download on the App Store",
+    "ctaHref": "https://apps.apple.com/app/haveo/id6774740212",
+    "ctaTop": 601,
+    "ctaVisible": true,
+    "formName": "feedback",
+    "formFields": 6,
+    "formVisible": true,
+    "focus": {
+      "tag": "A \"Download on the App St\"",
+      "style": "solid",
+      "width": "3px",
+      "color": "rgb(37, 99, 235)",
+      "ring": true
+    },
+    "errs": 0,
+    "file": "landing/qa/chromium-1280x800.png"
+  },
+  {
+    "name": "webkit",
+    "v": "375x667",
+    "scrollW": 375,
+    "innerW": 375,
+    "ctaText": "Download on the App Store",
+    "ctaHref": "https://apps.apple.com/app/haveo/id6774740212",
+    "ctaTop": 539,
+    "ctaVisible": true,
+    "formName": "feedback",
+    "formFields": 6,
+    "formVisible": true,
+    "focus": {
+      "tag": "TEXTAREA",
+      "style": "solid",
+      "width": "3px",
+      "color": "rgb(37, 99, 235)",
+      "ring": true
+    },
+    "errs": 0,
+    "file": "landing/qa/webkit-375x667.png"
+  },
+  {
+    "name": "webkit",
+    "v": "1280x800",
+    "scrollW": 1280,
+    "innerW": 1280,
+    "ctaText": "Download on the App Store",
+    "ctaHref": "https://apps.apple.com/app/haveo/id6774740212",
+    "ctaTop": 602,
+    "ctaVisible": true,
+    "formName": "feedback",
+    "formFields": 6,
+    "formVisible": true,
+    "focus": {
+      "tag": "TEXTAREA",
+      "style": "solid",
+      "width": "3px",
+      "color": "rgb(37, 99, 235)",
+      "ring": true
+    },
+    "errs": 0,
+    "file": "landing/qa/webkit-1280x800.png"
+  }
+]

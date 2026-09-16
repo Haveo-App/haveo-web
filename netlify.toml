@@ -1,0 +1,36 @@
+# haveo.app — the Netlify site `meet-haveo`.
+#
+# Netlify reads THIS file, not the repo root's, because the site's base
+# directory is `landing/` (2026-09-14). The root netlify.toml belongs to the
+# backend site (gregarious-sundae) — its functions, its bundling, its SPA
+# rule. Before this file existed, CLI deploys run from the repo root picked the
+# root config up and shipped six dead copies of the AI functions onto haveo.app
+# (no keys there: /ai answered 500, /tts and /extract 501).
+#
+# PUBLISHING: a push to the branch `web-publicada` builds and publishes this
+# folder. Nothing else in the repo publishes the site. See README.md.
+
+[build]
+  # Relative to the base directory (landing/): this folder, as it is.
+  publish = "."
+  # README.md is notes for whoever edits the page, and build-pages.py is the
+  # generator that writes the guides — both are source, not part of the site.
+  # Without this line they are served, because publish is this folder as it is.
+  # publish is ".", so anything left in this folder is served. The generator,
+  # its content, the gate and the plan are source; the site is the HTML they
+  # produce. __pycache__ is belt and braces — landing/.gitignore already keeps
+  # it out of the repo.
+  command = "rm -f README.md PAGE-QUEUE.md build-pages.py content.py page-check.py page-dates.json && rm -rf __pycache__"
+
+# NO CATCH-ALL. A path that is not a file is a 404, and Netlify serves
+# 404.html with a 404 status.
+#
+# Until 2026-09-16 there was a `/* -> /index.html 200` rule here, inherited
+# from the backend site's config when this file was split out. It meant any
+# invented address — /anything — answered 200 with the home page. With 92 guide
+# URLs that is a soft-404 factory: Google treats a 200 that renders another
+# page as a duplicate or a broken page, and there is no way to tell a typo in a
+# link from a page that never existed. Gloria caught it on 16 September.
+#
+# If a real redirect is ever needed, add it as its own [[redirects]] block with
+# its own `from`. Never restore a wildcard.

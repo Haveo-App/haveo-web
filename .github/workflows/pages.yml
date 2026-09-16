@@ -1,0 +1,51 @@
+# haveo.app — published by GitHub Pages from this repository.
+#
+# A push to `main` IS the publish. The gate runs first: if page-check.py fails,
+# nothing goes live. Only the site is uploaded — the generator, its content, the
+# gate and the notes stay in the repository and are never served.
+name: Publish haveo.app
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gate — page-check.py
+        run: python3 page-check.py
+
+      - name: Assemble the site (source files left out)
+        run: |
+          mkdir _site
+          rsync -a ./ _site/ \
+            --exclude '.git' --exclude '.github' --exclude '_site' \
+            --exclude '.gitignore' --exclude '__pycache__' \
+            --exclude 'README.md' --exclude 'PAGE-QUEUE.md' \
+            --exclude 'build-pages.py' --exclude 'content.py' --exclude 'page-check.py' \
+            --exclude 'page-dates.json' --exclude 'netlify.toml' --exclude 'qa'
+          test -f _site/index.html && test -f _site/CNAME && test -f _site/404.html
+          ! test -e _site/content.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - uses: actions/deploy-pages@v4

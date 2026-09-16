@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- BEFORE ANY STYLE, AND AFTER THE CHARSET.
+       Six sections start at opacity:0 and are revealed by an IntersectionObserver
+       on scroll. That is the design — and it means that without JavaScript the
+       page loads with most of its content invisible and no way to bring it back.
+       This class is the switch: the hiding rule below only applies when this
+       line has run, so no-JS gets the whole page, plainly, at once.
+       Inline and above the stylesheet so it lands before the CSS paints; an
+       external file, or a position after <style>, would show the content and
+       then hide it. It goes AFTER <meta charset> because the encoding has to be
+       the first thing the parser learns. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haveo — Networking event prep for introverts</title>
+  <meta name="description" content="Haveo prepares you for a networking event end to end: build your intro, practice out loud, and take a Cheat Sheet in your pocket. Free." />
+  <link rel="canonical" href="https://haveo.app/" />
+  <meta name="google-site-verification" content="a6NpejQ78bRTr11y5q2zoSjKEsLOSxCXXYhDTUfg9rs" />
+
+  <!-- Favicon (Haveo) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#2563EB" />
+
+  <!-- Open Graph (WhatsApp, iMessage, Instagram, Facebook, LinkedIn) -->
+  <meta property="og:title" content="Haveo — Know what you'll say before you walk in" />
+  <meta property="og:description" content="Haveo prepares you for a networking event: your intro, questions to practice, talking points, and a Cheat Sheet for the room. Free on the App Store." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://haveo.app/" />
+  <meta property="og:image" content="https://haveo.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Haveo — know what you'll say before you walk in. Networking event prep for your phone." />
+  <meta property="og:site_name" content="Haveo" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Haveo — Know what you'll say before you walk in" />
+  <meta name="twitter:description" content="Your AI coach to prep for networking events. For the anxious, the introverted, and the people who'd rather not. Free on the App Store." />
+  <meta name="twitter:image" content="https://haveo.app/og-image.png" />
+
+  <!-- Structured data — helps Google understand the brand + app -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://haveo.app/#org",
+      "name": "Haveo",
+      "url": "https://haveo.app/",
+      "logo": "https://haveo.app/apple-touch-icon.png",
+      "sameAs": [
+        "https://www.tiktok.com/@haveoapp",
+        "https://apps.apple.com/us/app/haveo-networking-event-prep/id6774740212"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://haveo.app/#website",
+      "url": "https://haveo.app/",
+      "name": "Haveo",
+      "description": "Guides for networking when it makes you anxious, plus the Haveo iPhone app that prepares you before, during and after an event.",
+      "publisher": {
+        "@id": "https://haveo.app/#org"
+      }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://haveo.app/#app",
+      "name": "Haveo",
+      "alternateName": "Haveo: Networking & Event Prep",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Productivity",
+      "operatingSystem": "iOS 15.1 or later",
+      "description": "Prepares you for a networking event end to end: build an intro, practice it out loud with an AI coach, keep a cheat sheet in the room, and follow up afterwards. Built for anxious, introverted and neurodivergent people.",
+      "url": "https://haveo.app/",
+      "installUrl": "https://apps.apple.com/us/app/haveo-networking-event-prep/id6774740212",
+      "downloadUrl": "https://apps.apple.com/us/app/haveo-networking-event-prep/id6774740212",
+      "sameAs": [
+        "https://apps.apple.com/us/app/haveo-networking-event-prep/id6774740212"
+      ],
+      "inLanguage": "en",
+      "contentRating": "12+",
+      "publisher": {
+        "@id": "https://haveo.app/#org"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "Build an introduction and an elevator pitch you would say out loud",
+        "Practice by chat or by voice with an AI role-play partner",
+        "Event Mode: a cheat sheet in your pocket during the event",
+        "Guided breathing and quick confidence techniques",
+        "Save who you met and follow up on time"
+      ]
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQ structured data — mirrors the visible FAQ on the page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is it really free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Haveo is free on the App Store. Paid features may come later, but everything described on this page is free today." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do I get it?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Haveo is on the App Store, free, for iPhone and iPad. Follow @haveoapp on TikTok for what's coming next." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I practice out loud, by talking?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tap the mic and talk instead of typing — your phone turns your voice into text, and on iPhone that happens on the device itself. Haveo reads its replies back out loud, so you can rehearse with your ears as well as your eyes." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my information private?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Your events, notes and reflections are stored on your phone, and there's no account. The AI is the part that leaves: what you type to Haveo goes to Anthropic so it can answer, a file you attach goes the same way, and a sentence read aloud goes to OpenAI for the voice. With the AI on, saving an event also sends that event once, to write the “what to expect” note — that is the only thing sent without you asking. Neither company trains on it and both delete it within about 30 days. No ads and no tracking inside the app. This website counts anonymous page views and App Store clicks so we know which guides are useful — no profile, no advertising, and nothing tied to you." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does what I write go?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To answer you, Haveo sends what you type — and any file you attach — to Anthropic, the company whose AI writes the reply. They don't use it to teach their AI. When Haveo reads a reply out loud, that one sentence goes to OpenAI, who makes the voice." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- analytics -->
+  <!-- GA4, property 554539033, stream haveo.app. Added 2026-09-15.
+       The site's job is sending people to the App Store, so the key event is
+       app_store_click and its `placement` is the same ct token that is already
+       on the link — which means Google Analytics and App Store Connect can be
+       read against each other instead of guessed at.
+       The privacy FAQ was made precise in the same commit: the "no tracking"
+       promise now says "inside the app", and the site says plainly that it
+       counts page views and App Store clicks. Do not re-broaden that sentence
+       while this tag is here. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVW5T8KNGX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // No ad personalisation and IP anonymisation on: the site promises no ads
+    // and no profile, and the tag has to match the sentence.
+    gtag('config', 'G-FVW5T8KNGX', { anonymize_ip: true, allow_google_signals: false, allow_ad_personalization_signals: false });
+    // One key event. Every App Store link on the page carries ?ct=<placement>,
+    // so the placement is read off the href rather than hand-maintained.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+      if (!a) return;
+      var m = a.href.match(/[?&]ct=([^&]+)/);
+      gtag('event', 'app_store_click', {
+        placement: m ? decodeURIComponent(m[1]) : 'unknown',
+        page_path: location.pathname
+      });
+    }, true);
+  </script>
+  <!-- /analytics -->
+  <style>
+    :root {
+      --blue:#2563EB; --blue-dark:#1D4ED8;
+      --ink:#1A2238; --muted:#5B6472;
+      --bg:#FBF7F0; --card:#FFFFFF;
+      --yellow:#FBBF24; --peach:#FFC9A8; --lilac:#C8C3F0;
+      --mint:#CDEBC5; --sky:#BFD8FF;
+      --radius:28px;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'Quicksand',-apple-system,BlinkMacSystemFont,sans-serif;
+      color:var(--ink); line-height:1.55; overflow-x:hidden;
+      background:
+        radial-gradient(1100px 600px at 80% -5%, #FFF3D6 0%, rgba(255,243,214,0) 55%),
+        radial-gradient(900px 600px at -10% 10%, #E7EEFF 0%, rgba(231,238,255,0) 55%),
+        radial-gradient(900px 700px at 110% 80%, #FCE4D6 0%, rgba(252,228,214,0) 55%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap { max-width:880px; margin:0 auto; padding:0 22px; position:relative; }
+    img { display:block; }
+
+    /* ---------- floating decorative characters ---------- */
+    .blob { position:absolute; pointer-events:none; user-select:none; z-index:0; opacity:.92; }
+    @keyframes float { 0%,100%{ transform:translateY(0) rotate(0); } 50%{ transform:translateY(-16px) rotate(3deg);} }
+    @keyframes floatX { 0%,100%{ transform:translate(0,0);} 50%{ transform:translate(10px,-12px);} }
+    @keyframes bob { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-10px);} }
+    .f1{animation:float 6s ease-in-out infinite;}
+    .f2{animation:floatX 7.5s ease-in-out infinite;}
+    .f3{animation:float 9s ease-in-out infinite;}
+
+    /* ---------- hero ---------- */
+    header { padding:46px 0 30px; text-align:center; position:relative; }
+    .logo { display:inline-flex; align-items:center; gap:9px; font-weight:700; font-size:21px; color:var(--blue); margin-bottom:26px; }
+    .logo .dot { width:34px; height:34px; border-radius:11px; background:var(--blue); color:#fff; display:grid; place-items:center; font-size:18px; }
+
+    .hero-char { width:130px; height:130px; margin:0 auto 8px; }
+    .hero-char img { width:100%; height:100%; object-fit:contain; }
+
+    h1 { font-size:clamp(32px,7.5vw,52px); font-weight:700; line-height:1.08; letter-spacing:-1px; margin-bottom:18px; }
+    h1 .hl { color:var(--blue); position:relative; white-space:nowrap; }
+    h1 .hl::after { content:""; position:absolute; left:0; right:0; bottom:4px; height:10px; background:#FFE08A; z-index:-1; border-radius:6px; }
+    .sub { font-size:clamp(16px,4.3vw,20px); color:var(--muted); font-weight:500; max-width:560px; margin:0 auto 26px; }
+
+    /* ---------- hero CTA ---------- */
+    .cta-wrap { display:flex; flex-direction:column; align-items:center; gap:14px; position:relative; z-index:2; }
+    .soon-pill { display:inline-flex; align-items:center; gap:8px; background:#fff; border:1.5px solid #E7DECb; color:var(--ink); font-weight:700; font-size:14.5px; padding:9px 16px; border-radius:100px; box-shadow:0 8px 22px rgba(26,34,56,0.06); }
+    .soon-pill .live-dot { width:9px; height:9px; border-radius:50%; background:var(--yellow); box-shadow:0 0 0 4px rgba(251,191,36,.25); }
+    .btn { font-family:inherit; font-size:17px; font-weight:700; border:none; padding:16px 26px; border-radius:16px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:transform .12s ease, background .15s ease; }
+    .btn-primary { background:var(--blue); color:#fff; box-shadow:0 14px 30px rgba(37,99,235,0.22); }
+    .btn-primary:hover { background:var(--blue-dark); transform:translateY(-2px); }
+    .btn-tiktok { background:var(--ink); color:#fff; }
+    .btn-tiktok:hover { background:#000; transform:translateY(-2px); }
+    .btn-appstore { background:var(--blue); color:#fff; box-shadow:0 14px 30px rgba(37,99,235,0.22); }
+    .btn-appstore:hover { background:var(--blue-dark); transform:translateY(-2px); }
+    .btn-ghost { background:#fff; color:var(--ink); border:1.5px solid #E7DECb; }
+    .btn-ghost:hover { background:#FBF7EF; transform:translateY(-2px); }
+    .cta-note { font-size:13.5px; color:var(--muted); font-weight:600; }
+
+    /* ---------- sections ---------- */
+    section { padding:52px 0; position:relative; }
+    .eyebrow { text-transform:uppercase; letter-spacing:1.6px; font-size:12.5px; font-weight:700; color:var(--blue); text-align:center; margin-bottom:10px; }
+    h2 { font-size:clamp(25px,6vw,34px); font-weight:700; text-align:center; margin-bottom:34px; letter-spacing:-0.5px; line-height:1.12; }
+    .lede { text-align:center; max-width:600px; margin:-22px auto 34px; color:var(--muted); font-weight:600; font-size:16.5px; line-height:1.5; }
+
+    .cards { display:grid; gap:18px; }
+    .card { background:var(--card); border:1px solid #F0E9DC; border-radius:var(--radius); padding:26px 24px; text-align:center; box-shadow:0 8px 24px rgba(26,34,56,0.05); transition:transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform:translateY(-6px); box-shadow:0 16px 36px rgba(26,34,56,0.10); }
+    .card .art { width:84px; height:84px; margin:0 auto 14px; }
+    .card:hover .art { animation:bob 1.2s ease-in-out infinite; }
+    .card .art img { width:100%; height:100%; object-fit:contain; }
+    .card .emoji { font-size:44px; line-height:84px; height:84px; }
+    .card .tag { font-size:12px; font-weight:700; color:var(--blue); letter-spacing:1px; text-transform:uppercase; }
+    .card h3 { font-size:19px; font-weight:700; margin:4px 0 7px; }
+    .card p { color:var(--muted); font-weight:500; font-size:15.5px; }
+
+    /* feature checklist */
+    .inside { max-width:560px; margin:30px auto 0; background:#fff; border:1px solid #F0E9DC; border-radius:var(--radius); padding:24px 26px; box-shadow:0 8px 24px rgba(26,34,56,0.05); }
+    .inside h4 { text-align:center; font-size:16px; font-weight:700; margin-bottom:16px; color:var(--ink); }
+    .inside ul { list-style:none; display:grid; gap:12px; }
+    .inside li { display:flex; gap:12px; align-items:flex-start; font-weight:600; font-size:15.5px; color:var(--ink); }
+    .inside li .ck { flex:0 0 auto; width:24px; height:24px; border-radius:50%; background:#E7F0FF; color:var(--blue); display:grid; place-items:center; font-size:14px; font-weight:700; }
+    .inside li span.t small { display:block; color:var(--muted); font-weight:500; font-size:13.5px; margin-top:1px; }
+
+    /* pain section */
+    .pain { background:rgba(255,255,255,0.6); border-top:1px solid #F2EADC; border-bottom:1px solid #F2EADC; }
+    .pain ul { list-style:none; display:grid; gap:14px; max-width:560px; margin:0 auto; }
+    .pain li { display:flex; gap:14px; align-items:center; font-weight:600; font-size:16.5px; background:#fff; border:1px solid #F0E9DC; border-radius:18px; padding:14px 16px; box-shadow:0 6px 18px rgba(26,34,56,0.04); }
+    .pain li .ic { flex:0 0 auto; width:46px; height:46px; }
+    .pain li .ic img { width:100%; height:100%; object-fit:contain; }
+
+    /* proof / early results */
+    .proof { background:rgba(255,248,232,0.55); border-top:1px solid #F5E6BE; border-bottom:1px solid #F5E6BE; }
+    .stats { display:grid; gap:16px; max-width:720px; margin:0 auto; }
+    .stat { background:#fff; border:1px solid #F0E9DC; border-radius:var(--radius); padding:26px 20px; text-align:center; box-shadow:0 8px 24px rgba(26,34,56,0.05); transition:transform .2s ease; }
+    .stat:hover { transform:translateY(-5px); }
+    .stat .num { font-size:clamp(40px,9vw,54px); font-weight:700; color:var(--blue); line-height:1; letter-spacing:-1.5px; }
+    .stat .lbl { color:var(--ink); font-weight:600; font-size:15.5px; margin-top:9px; }
+    .stat .lbl strong { color:var(--ink); }
+    .proof-note { text-align:center; max-width:520px; margin:22px auto 0; color:var(--muted); font-weight:600; font-size:13px; }
+
+    /* testimonials */
+    .quotes { display:grid; gap:16px; max-width:720px; margin:0 auto; }
+    .quote { margin:0; background:#fff; border:1px solid #F0E9DC; border-radius:var(--radius); padding:24px 24px; box-shadow:0 8px 24px rgba(26,34,56,0.05); text-align:left; }
+    .quote p { font-weight:600; font-size:16px; color:var(--ink); line-height:1.5; }
+    .quote .who { display:block; font-style:normal; margin-top:14px; font-weight:700; font-size:14px; color:var(--blue); }
+    .quote .who small { display:block; color:var(--muted); font-weight:600; font-size:12.5px; }
+    @media (min-width:680px){ .quotes { grid-template-columns:repeat(2,1fr); } }
+
+    /* roadmap */
+    .roadmap { background:rgba(231,238,255,0.5); border-top:1px solid #E2E9FB; border-bottom:1px solid #E2E9FB; }
+    .soon-tag { display:inline-block; background:#FFF3D6; color:#8A6D00; font-weight:700; font-size:11px; letter-spacing:.6px; padding:4px 10px; border-radius:100px; text-transform:uppercase; margin-bottom:8px; }
+    .roadmap-note { text-align:center; max-width:520px; margin:26px auto 0; color:var(--muted); font-weight:600; font-size:15px; }
+
+    /* founder */
+    .founder { background:linear-gradient(160deg,#FFF8E8,#FFF2D6); border:1.5px solid #F8E4AE; border-radius:var(--radius); padding:30px 26px; text-align:center; max-width:600px; margin:0 auto; position:relative; }
+    .founder .who { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:14px; }
+    .founder .who img { width:54px; height:54px; }
+    .founder .who b { font-size:15px; color:#7A6314; }
+    .founder p { font-weight:600; color:#6B5B14; font-size:17px; line-height:1.5; }
+
+    /* follow + feedback */
+    .follow { text-align:center; }
+    .follow-btns { display:flex; flex-direction:column; align-items:center; gap:14px; margin-bottom:8px; }
+    .feedback { background:#fff; border:1.5px solid #E7DECb; border-radius:var(--radius); padding:28px 26px; max-width:500px; margin:28px auto 0; text-align:center; box-shadow:0 12px 30px rgba(26,34,56,0.06); }
+    .feedback h3 { font-size:20px; font-weight:700; margin-bottom:6px; }
+    .feedback p.lead { color:var(--muted); font-weight:600; font-size:15px; margin-bottom:18px; }
+    textarea, input[type="email"] { font-family:inherit; font-size:15.5px; padding:14px 16px; border:1.5px solid #E2DACd; border-radius:14px; width:100%; color:var(--ink); background:#FCFAF6; }
+    textarea { resize:vertical; line-height:1.4; margin-bottom:10px; }
+    /* Focus, and it has to be VISIBLE.
+       This rule used to be `outline:none` and nothing else, which removes the
+       browser's own focus ring and leaves a border-colour change to carry the
+       whole job. The ring comes back, drawn deliberately: 3px of the brand blue
+       with a 2px offset, on every link, button and field. A keyboard user has to
+       be able to see where they are; that is 2.4.7, and it was the one thing on
+       this page that did not meet it. */
+    textarea:focus, input[type="email"]:focus { outline:none; border-color:var(--blue); background:#fff; }
+    a:focus-visible,
+    button:focus-visible,
+    textarea:focus-visible,
+    input:focus-visible { outline:3px solid var(--blue); outline-offset:2px; border-radius:4px; }
+    /* Older engines with no :focus-visible still get a ring rather than nothing. */
+    @supports not selector(:focus-visible) {
+      a:focus, button:focus { outline:3px solid var(--blue); outline-offset:2px; }
+    }
+    .feedback button { width:100%; margin-top:4px; font-family:inherit; font-size:16px; font-weight:700; background:var(--blue); color:#fff; border:none; padding:15px 22px; border-radius:14px; cursor:pointer; transition:transform .12s ease, background .15s ease; }
+    .feedback button:hover { background:var(--blue-dark); transform:translateY(-2px); }
+    .reassure { font-size:13px; color:var(--muted); margin-top:12px; font-weight:600; }
+
+    footer { text-align:center; padding:36px 0 56px; color:var(--muted); font-size:13.5px; font-weight:600; }
+    .faq { max-width:580px; margin:0 auto; display:grid; gap:12px; text-align:left; }
+    .faq details { background:#fff; border:1px solid #F0E9DC; border-radius:16px; padding:4px 18px; }
+    .faq summary { font-weight:700; font-size:15.5px; padding:14px 0; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+    .faq summary::-webkit-details-marker { display:none; }
+    .faq summary::after { content:"+"; color:var(--blue); font-size:22px; font-weight:700; }
+    .faq details[open] summary::after { content:"–"; }
+    .faq .a { color:var(--muted); font-weight:500; font-size:15px; padding:0 0 16px; }
+
+    /* scroll reveal */
+    /* Only hidden when JavaScript is there to un-hide it. See the script at the
+       top of <head>: without `html.js` these sections never start invisible. */
+    html.js .reveal { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+    html.js .reveal.in { opacity:1; transform:none; }
+
+    @media (min-width:680px) {
+      .cards { grid-template-columns:repeat(3,1fr); }
+      .cta-row { flex-direction:row !important; }
+      .hero-char { width:150px; height:150px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .f1,.f2,.f3,.card:hover .art { animation:none !important; }
+      .reveal { opacity:1; transform:none; transition:none; }
+      html { scroll-behavior:auto; }
+      /* The four that were left behind. The infinite float and bob were already
+         covered — those are the ones 2.2.2 is about — but .btn, .card, .stat and
+         the feedback button still moved on hover and press. Small movements, and
+         somebody who has asked the OS for less motion has asked for all of it. */
+      .btn, .card, .stat, .feedback button { transition:none !important; }
+      .btn:hover, .card:hover, .stat:hover, .feedback button:hover { transform:none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header>
+    <img class="blob f1"  src="illustrations/characters/char-purple-star.svg"  style="top:60px; left:6%; width:54px;" alt="">
+    <img class="blob f2"  src="illustrations/characters/char-19-blue.svg"      style="top:120px; right:7%; width:62px;" alt="">
+    <img class="blob f3"  src="illustrations/characters/char-orange-blob.svg"  style="top:300px; left:3%; width:50px;" alt="">
+    <img class="blob f1"  src="illustrations/characters/char-04-peach.svg"     style="top:260px; right:4%; width:58px;" alt="">
+    <img class="blob f2"  src="illustrations/characters/char-green-splash.svg" style="top:430px; left:10%; width:46px;" alt="">
+
+    <div class="wrap">
+      <div class="logo"><span class="dot">H</span> Haveo</div>
+
+      <div class="hero-char f1"><img src="illustrations/ai-assistant.svg" alt="Haveo, the yellow character who coaches you" /></div>
+
+      <h1>Know what you'll say <span class="hl">before you walk in.</span></h1>
+      <p class="sub">
+        Meet Haveo 👋 — networking event prep for people who find these rooms hard.
+        Build your intro, practice out loud, then glance at your Cheat Sheet in the
+        room. Reflect and follow up after.
+      </p>
+
+      <div class="cta-wrap">
+        <span class="soon-pill"><span class="live-dot"></span> Now on the App Store — free</span>
+        <div class="cta-row" style="display:flex; flex-direction:column; gap:12px;">
+          <a class="btn btn-appstore" href="https://apps.apple.com/app/haveo/id6774740212?pt=128642904&amp;ct=site-hero&amp;mt=8" target="_blank" rel="noopener">
+            <svg viewBox="0 0 384 512" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            Download on the App Store
+          </a>
+          <a class="btn btn-tiktok" href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">
+            🎵 Follow @haveoapp
+          </a>
+          <a class="btn btn-ghost" href="#feedback">💬 Share your honest feedback</a>
+        </div>
+        <p class="cta-note">Built for iPhone & iPad. No account, no ads, and no tracking inside the app.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAIN / RELATE ===== -->
+  <section class="pain reveal">
+    <div class="wrap">
+      <p class="eyebrow">If this is you…</p>
+      <h2>You're not bad at this.<br>You need the words ready.</h2>
+      <p class="lede">Nobody walks into these rooms knowing what to say. It is something you prepare, not something you are.</p>
+      <ul>
+        <li><span class="ic"><img src="illustrations/characters/char-03-red.svg" alt=""></span> You rehearse what you'll say — and your mind still goes blank.</li>
+        <li><span class="ic"><img src="illustrations/characters/char-17-purple.svg" alt=""></span> You dread the "so… what do you do?" question.</li>
+        <li><span class="ic"><img src="illustrations/characters/char-27-blue.svg" alt=""></span> Events drain you — or scare you — before you even arrive.</li>
+        <li><span class="ic"><img src="illustrations/characters/char-14-peach.svg" alt=""></span> English isn't your first language and small talk is the hardest part.</li>
+        <li><span class="ic"><img src="illustrations/characters/char-green-leaf.svg" alt=""></span> You're neurodivergent and going in without a plan has never worked for you.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS (available now) ===== -->
+  <section>
+    <div class="wrap reveal">
+      <p class="eyebrow">Before, during, after</p>
+      <h2>The whole event, end to end.</h2>
+      <p class="lede">What to do <strong>before, during, and after</strong> a networking event. Free.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="art"><img src="illustrations/ai-assistant.svg" alt="A chat with Haveo while building an intro"></div>
+          <span class="tag">Before</span>
+          <h3>Build it and practice it</h3>
+          <p>Build an intro you would really say. Get the questions people will ask you, and talking points for the room. Then practice the whole conversation with Haveo — out loud or by typing.</p>
+        </div>
+        <div class="card">
+          <div class="art"><img src="illustrations/cheat-sheet-target.svg" alt="A Cheat Sheet showing a goal, an intro and talking points"></div>
+          <span class="tag">During</span>
+          <h3>Your Cheat Sheet, in your pocket</h3>
+          <p>Your goal, your intro and your talking points, in one glance on your phone. Calm has guided breathing if you want a minute outside.</p>
+        </div>
+        <div class="card">
+          <div class="art"><img src="illustrations/milestones.svg" alt="A list of people you met, with follow-up reminders"></div>
+          <span class="tag">After</span>
+          <h3>Follow up on the people you met</h3>
+          <p>Save who you met and what you talked about. Haveo drafts the follow-up message and reminds you on the day you chose.</p>
+        </div>
+      </div>
+
+      <div class="inside">
+        <h4>Everything inside — free</h4>
+        <ul>
+          <li><span class="ck">✓</span> <span class="t">Create your intro, Questions to practice &amp; Talking points</span></li>
+          <li><span class="ck">✓</span> <span class="t">Role play<small>Practice the real conversation with Haveo playing the other person — by voice or by typing.</small></span></li>
+          <li><span class="ck">✓</span> <span class="t">Event Mode — your Cheat Sheet, one tap away</span></li>
+          <li><span class="ck">✓</span> <span class="t">Calm — guided breathing, whenever you want a minute</span></li>
+          <li><span class="ck">✓</span> <span class="t">Boost Cards — small, concrete things to try in the room</span></li>
+          <li><span class="ck">✓</span> <span class="t">People you met — save contacts and follow up on time</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS =====
+       Restored. They came out on 9 Sept as "unverified"; the founder's notes
+       of 8 Sept record all four as checked against the real messages, and she
+       asked for them back on that basis.
+
+       WHAT CHANGED ON THE WAY BACK IN, and why each one:
+
+       The heading is "In their words." — it used to be an eyebrow reading
+       "In their words" sitting on top of an h2 reading "What Early Testers
+       Say.", which is the same idea twice and put a near-duplicate of the
+       stats block's h2 into the screen-reader heading list. One heading now,
+       and the eyebrow is gone rather than repeated as a paragraph nobody
+       needs to hear before it.
+
+       First names only, no photographs. A face and a surname turn a quote
+       somebody sent in a message into a marketing asset they did not agree
+       to be. The words are theirs and are quoted whole; the identification
+       stops at what they would recognise as fair.
+
+       <blockquote>/<cite>, not <div>/<p>. These ARE quotations, and the
+       elements that say so are the ones a screen reader can announce as
+       such. The CSS never left, so the look is unchanged. -->
+  <section class="reveal" id="testimonials">
+    <div class="wrap">
+      <h2>In their words.</h2>
+      <div class="quotes">
+        <blockquote class="quote">
+          <p>&ldquo;Because I'm a procrastinator, this helped me organize my thoughts without feeling stuck. I was a lot more relaxed &mdash; I felt prepared.&rdquo;</p>
+          <cite class="who">&mdash; Godfrey <small>used Haveo before a live networking event</small></cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>&ldquo;The Boost Cards were my favorite feature.&rdquo;</p>
+          <cite class="who">&mdash; Chesna <small>early tester</small></cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>&ldquo;The Boost Cards are way more valuable than social media scrolling.&rdquo;</p>
+          <cite class="who">&mdash; KB <small>early tester</small></cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>&ldquo;Being able to practice an introduction is huge.&rdquo;</p>
+          <cite class="who">&mdash; Tim <small>early tester</small></cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section class="roadmap reveal">
+    <div class="wrap">
+      <p class="eyebrow">On the way</p>
+      <h2>What we're building next.</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="soon-tag">New</span>
+          <div class="emoji">🎤</div>
+          <h3>Practice out loud</h3>
+          <p>This one has shipped. Tap the mic and talk instead of typing — Haveo replies out loud, so you can rehearse with your ears as well as your eyes.</p>
+        </div>
+        <div class="card">
+          <span class="soon-tag">Next</span>
+          <div class="emoji">⚡</div>
+          <h3>More Boost Cards</h3>
+          <p>A bigger deck, with new cards added over time.</p>
+        </div>
+        <div class="card">
+          <span class="soon-tag">Later</span>
+          <div class="emoji">💎</div>
+          <h3>Premium coaching</h3>
+          <p>Paid coaching features, later. Nothing is paid today.</p>
+        </div>
+      </div>
+      <p class="roadmap-note">
+        Haveo is <strong>free</strong>. These are what we're building next —
+        and your feedback decides what comes first. 💛
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER ===== -->
+  <section>
+    <div class="wrap reveal">
+      <div class="founder">
+        <div class="who">
+          <img src="illustrations/characters/char-10-face.svg" alt="">
+          <b>From the founder 💛</b>
+        </div>
+        <p>“I built Haveo because I'm an anxious networker too. I wanted something
+           that helps you prepare — kindly — instead of just telling you to be confident.
+           I'm building it in the open. Your honest, constructive
+           feedback shapes every update.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOLLOW + FEEDBACK ===== -->
+  <section class="follow reveal" id="feedback">
+    <div class="wrap">
+      <p class="eyebrow">Follow along</p>
+      <h2>Follow the journey.</h2>
+      <div class="follow-btns">
+        <a class="btn btn-appstore" href="https://apps.apple.com/app/haveo/id6774740212?pt=128642904&amp;ct=site-cta&amp;mt=8" target="_blank" rel="noopener">
+          <svg viewBox="0 0 384 512" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          Download Haveo — free on the App Store
+        </a>
+        <a class="btn btn-tiktok" href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">
+          🎵 @haveoapp on TikTok — updates &amp; behind the scenes
+        </a>
+      </div>
+
+      <div class="feedback">
+        <h3>Help us make it better</h3>
+        <p class="lead">What would make Haveo more helpful for <em>your</em> journey to
+          your next networking event? Be honest. We read every note.</p>
+        <!-- The form lived on Netlify Forms. haveo.app moved to GitHub Pages on
+             2026-09-16, which has no form handling, so feedback is an email. -->
+        <a class="btn btn-primary" href="mailto:hello@haveo.app?subject=Haveo%20feedback">Send us feedback</a>
+        <p class="reassure">It opens your email app.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <footer>
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>Is it really free?</summary>
+          <div class="a">Yes. Haveo is free on the App Store. Paid features may come later, but everything described on this page is free today.</div>
+        </details>
+        <details>
+          <summary>Where do I get it?</summary>
+          <div class="a"><a href="https://apps.apple.com/app/haveo/id6774740212?pt=128642904&amp;ct=site-faq&amp;mt=8" target="_blank" rel="noopener">Download Haveo free on the App Store</a>, for iPhone and iPad. Follow <a href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">@haveoapp</a> on TikTok for what's coming next.</div>
+        </details>
+        <details>
+          <summary>Can I practice out loud, by talking?</summary>
+          <div class="a">Yes. Tap the mic and talk instead of typing — your phone turns your voice into text, and on iPhone that happens on the device itself. Haveo reads its replies back out loud, so you can rehearse with your ears as well as your eyes. 🎤</div>
+        </details>
+        <details>
+          <summary>Is my information private?</summary>
+          <div class="a">Your events, notes and reflections are stored on your phone, and there's no account. The AI is the part that leaves: what you type to Haveo goes to Anthropic so it can answer, a file you attach goes the same way, and a sentence read aloud goes to OpenAI for the voice. With the AI on, saving an event also sends that event once, to write the “what to expect” note — that is the only thing sent without you asking. Neither company trains on it and both delete it within about 30 days. No ads and no tracking inside the app. This website counts anonymous page views and App Store clicks so we know which guides are useful — no profile, no advertising, and nothing tied to you.</div>
+        </details>
+        <details>
+          <summary>Does it work offline?</summary>
+          <div class="a">Partly. Your events, your Cheat Sheet, your notes and Boost Cards are on your phone, so you can read them with no signal — which is the part you need in the room. Anything where Haveo writes or replies needs a connection.</div>
+        </details>
+        <details>
+          <summary>Is it only for tech events?</summary>
+          <div class="a">No. Pick the kind of event and Haveo prepares for that one: a conference, a meetup, a career fair, an interview, a client call, a presentation, a social gathering, or a difficult conversation you are dreading.</div>
+        </details>
+        <details>
+          <summary>Where does what I write go?</summary>
+          <div class="a">To answer you, Haveo sends what you type — and any file you attach — to Anthropic, the company whose AI writes the reply. They don't use it to teach their AI. When Haveo reads a reply out loud, that one sentence goes to OpenAI, who makes the voice. The full details are in the <a href="https://gloriaaecu-rgb.github.io/haveo-privacy/">privacy policy</a>.</div>
+        </details>
+      </div>
+      <!-- guides:start — this list is written by build-pages.py. Edit the
+           pages there and re-run it; anything typed between these two markers
+           by hand is overwritten on the next build. Without these links the
+           guides are reachable only from the sitemap, which is how a page ends
+           up indexed and never visited. -->
+      <p style="margin-top:28px; font-weight:600;">Networking guides:<br /><a href="/what-to-say-when-you-dont-know-anyone/">What to say at a networking event when you don't know anyone</a> &nbsp;·&nbsp; <a href="/networking-with-social-anxiety/">How to prepare for a networking event when you have social anxiety</a> &nbsp;·&nbsp; <a href="/how-to-follow-up-after-a-networking-event/">How to follow up after meeting someone at a networking event</a> &nbsp;·&nbsp; <a href="/networking-for-introverts/">Networking for introverts</a> &nbsp;·&nbsp; <a href="/neurodivergent-networking/">Networking when you are ADHD, autistic or dyslexic</a> &nbsp;·&nbsp; <a href="/job-search-networking/">Networking when you need a job</a> &nbsp;·&nbsp; <a href="/adhd-at-work/">ADHD at work</a> &nbsp;·&nbsp; <a href="/dyslexia-at-work/">Dyslexia at work</a> &nbsp;·&nbsp; <a href="/social-anxiety-at-work/">Social anxiety at work</a> &nbsp;·&nbsp; <a href="/autistic-at-work/">Autistic at work</a> &nbsp;·&nbsp; <a href="/job-interviews/">Job interviews when they make you anxious</a></p>
+      <!-- guides:end -->
+      <p style="margin-top:28px;">
+        <a href="https://gloriaaecu-rgb.github.io/haveo-privacy/" target="_blank" rel="noopener">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="https://gloriaaecu-rgb.github.io/haveo-privacy/support.html" target="_blank" rel="noopener">Support</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">@haveoapp</a>
+      </p>
+      <p style="margin-top:12px;">Haveo · Built solo, with care. © 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  </script>
+
+</body>
+</html>
