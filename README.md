@@ -42,7 +42,7 @@ git push origin main     # this IS the publish
 - Undo: `git revert` the commit and push. Or Actions → an older successful run →
   "Re-run all jobs".
 - DNS lives at Namecheap: four A records to GitHub Pages (185.199.108.153,
-  .109.153, .110.153, .111.153) and `www` as a CNAME to `gloriaaecu-rgb.github.io`.
+  .109.153, .110.153, .111.153) and `www` as a CNAME to `haveo-app.github.io`.
   Leave the MX, SPF and google-site-verification records alone — they are email
   and Search Console.
 
