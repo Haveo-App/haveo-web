@@ -190,6 +190,112 @@ setTimeout(function(){r.removeAttribute("data-badge")},4000);
         page_path: location.pathname
       });
     }, true);
+
+    /* wk-engagement (portfolio-ops web-kit): scroll depth + active dwell.
+       GA4's built-in scroll event fires once, at 90%, which cannot tell a page
+       that loses the reader at the second section from one that holds them to
+       the end — the exact difference any page-order or length change makes.
+       Without these two events a change to this page cannot be graded. */
+    /* wk-engagement — scroll depth and active dwell, so a page change can be graded.
+     *
+     *   wkEngagement();                       // defaults below
+     *   wkEngagement({ depths:[25,50,75,90], dwell:[15,30,60] });
+     *
+     * GA4's built-in `scroll` event fires ONCE, at 90%. That cannot tell a page that
+     * loses the reader at the second section from one that holds them to the end —
+     * which is the exact difference every page-order or length change is trying to
+     * make. EaseForward had 9 of those events across 28 days and nothing else;
+     * DuPont had no scroll signal at all on any page.
+     *
+     * Dwell counts only seconds where the tab is VISIBLE. Elapsed time is not
+     * attention: a tab left open all afternoon is not a reader.
+     *
+     * Call `wkEngagement.reset()` on a client-side route change, or the second page
+     * of a single-page app inherits the first page's marks.
+     */
+    function wkEngagement(options) {
+      try {
+        var o = options || {};
+        var depths = o.depths || [25, 50, 75, 90];
+        var dwell = o.dwell || [15, 30, 60];
+        var sentDepth = {};
+        var sentDwell = {};
+        var activeSeconds = 0;
+        var ticking = false;
+
+        function send(event, params) {
+          try {
+            if (!window.gtag) return;
+            params.page_path = window.location.pathname;
+            window.gtag("event", event, params);
+          } catch (e) {}
+        }
+
+        function reportDepth() {
+          var doc = document.documentElement;
+          // <body> does not exist yet when this is pasted into <head>, which is
+          // where a site's analytics block usually lives. Reading scrollHeight off
+          // null threw, the outer catch swallowed it, and setup stopped right there:
+          // scroll depth worked (its listener was already registered) and dwell was
+          // never wired at all. Measured on haveo.app — four scroll events, zero
+          // dwell events.
+          if (!document.body) return;
+          var scrollable = Math.max(document.body.scrollHeight, doc.scrollHeight) - window.innerHeight;
+          if (scrollable <= 0) return; // a page that fits the screen was never scrolled past
+          var percent = Math.round(((window.scrollY || doc.scrollTop || 0) / scrollable) * 100);
+          for (var i = 0; i < depths.length; i++) {
+            var mark = depths[i];
+            if (percent >= mark && !sentDepth[mark]) {
+              sentDepth[mark] = true;
+              send("scroll_depth", { percent_scrolled: mark });
+            }
+          }
+        }
+
+        // Feature-detected on purpose: analytics unit tests run against a minimal
+        // window stub, and a hard dependency on rAF turned a measurement addition
+        // into three failures for unrelated events on EaseForward.
+        var raf = typeof window.requestAnimationFrame === "function"
+          ? window.requestAnimationFrame.bind(window)
+          : function (fn) { return fn(); };
+
+        if (typeof window.addEventListener === "function") {
+          window.addEventListener("scroll", function () {
+            if (ticking) return;
+            ticking = true;
+            raf(function () { ticking = false; reportDepth(); });
+          }, { passive: true });
+        }
+        // A page that opens already past a threshold still counts — but only once
+        // there is a document to measure.
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", reportDepth, { once: true });
+        } else {
+          reportDepth();
+        }
+
+        if (typeof window.setInterval === "function") {
+          window.setInterval(function () {
+            if (document.visibilityState !== "visible") return;
+            activeSeconds += 5;
+            for (var i = 0; i < dwell.length; i++) {
+              var mark = dwell[i];
+              if (activeSeconds >= mark && !sentDwell[mark]) {
+                sentDwell[mark] = true;
+                send("page_active_dwell", { seconds: mark });
+              }
+            }
+          }, 5000);
+        }
+
+        wkEngagement.reset = function () {
+          sentDepth = {};
+          sentDwell = {};
+          activeSeconds = 0;
+        };
+      } catch (e) {}
+    }
+    wkEngagement();
   </script>
   <!-- /analytics -->
   <style>
