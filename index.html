@@ -13,6 +13,21 @@
        then hide it. It goes AFTER <meta charset> because the encoding has to be
        the first thing the parser learns. -->
   <script>document.documentElement.classList.add('js');</script>
+  <!-- The brand moment, decided BEFORE the page paints.
+       Same reason as the .js class above: an inline script here runs while the
+       parser is still working, so its decision lands in the first frame. A
+       module, or anything external, would arrive after the page had painted and
+       the cover would read as a flash.
+       The 4s failsafe is what makes it safe to cover the page at all — if
+       anything below fails, the attribute comes off and the reader gets the
+       page. Homepage only: someone who landed on a guide came for the answer. -->
+  <script>(function(){try{
+var r=document.documentElement;
+if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+try{if(sessionStorage.getItem("haveo_badge_seen"))return;sessionStorage.setItem("haveo_badge_seen","1")}catch(e){return}
+r.setAttribute("data-badge","on");
+setTimeout(function(){r.removeAttribute("data-badge")},4000);
+}catch(e){}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Haveo — Networking event prep for introverts</title>
   <meta name="description" content="Haveo prepares you for a networking event end to end: build your intro, practice out loud, and take a Cheat Sheet in your pocket. Free." />
@@ -175,6 +190,112 @@
         page_path: location.pathname
       });
     }, true);
+
+    /* wk-engagement (portfolio-ops web-kit): scroll depth + active dwell.
+       GA4's built-in scroll event fires once, at 90%, which cannot tell a page
+       that loses the reader at the second section from one that holds them to
+       the end — the exact difference any page-order or length change makes.
+       Without these two events a change to this page cannot be graded. */
+    /* wk-engagement — scroll depth and active dwell, so a page change can be graded.
+     *
+     *   wkEngagement();                       // defaults below
+     *   wkEngagement({ depths:[25,50,75,90], dwell:[15,30,60] });
+     *
+     * GA4's built-in `scroll` event fires ONCE, at 90%. That cannot tell a page that
+     * loses the reader at the second section from one that holds them to the end —
+     * which is the exact difference every page-order or length change is trying to
+     * make. EaseForward had 9 of those events across 28 days and nothing else;
+     * DuPont had no scroll signal at all on any page.
+     *
+     * Dwell counts only seconds where the tab is VISIBLE. Elapsed time is not
+     * attention: a tab left open all afternoon is not a reader.
+     *
+     * Call `wkEngagement.reset()` on a client-side route change, or the second page
+     * of a single-page app inherits the first page's marks.
+     */
+    function wkEngagement(options) {
+      try {
+        var o = options || {};
+        var depths = o.depths || [25, 50, 75, 90];
+        var dwell = o.dwell || [15, 30, 60];
+        var sentDepth = {};
+        var sentDwell = {};
+        var activeSeconds = 0;
+        var ticking = false;
+
+        function send(event, params) {
+          try {
+            if (!window.gtag) return;
+            params.page_path = window.location.pathname;
+            window.gtag("event", event, params);
+          } catch (e) {}
+        }
+
+        function reportDepth() {
+          var doc = document.documentElement;
+          // <body> does not exist yet when this is pasted into <head>, which is
+          // where a site's analytics block usually lives. Reading scrollHeight off
+          // null threw, the outer catch swallowed it, and setup stopped right there:
+          // scroll depth worked (its listener was already registered) and dwell was
+          // never wired at all. Measured on haveo.app — four scroll events, zero
+          // dwell events.
+          if (!document.body) return;
+          var scrollable = Math.max(document.body.scrollHeight, doc.scrollHeight) - window.innerHeight;
+          if (scrollable <= 0) return; // a page that fits the screen was never scrolled past
+          var percent = Math.round(((window.scrollY || doc.scrollTop || 0) / scrollable) * 100);
+          for (var i = 0; i < depths.length; i++) {
+            var mark = depths[i];
+            if (percent >= mark && !sentDepth[mark]) {
+              sentDepth[mark] = true;
+              send("scroll_depth", { percent_scrolled: mark });
+            }
+          }
+        }
+
+        // Feature-detected on purpose: analytics unit tests run against a minimal
+        // window stub, and a hard dependency on rAF turned a measurement addition
+        // into three failures for unrelated events on EaseForward.
+        var raf = typeof window.requestAnimationFrame === "function"
+          ? window.requestAnimationFrame.bind(window)
+          : function (fn) { return fn(); };
+
+        if (typeof window.addEventListener === "function") {
+          window.addEventListener("scroll", function () {
+            if (ticking) return;
+            ticking = true;
+            raf(function () { ticking = false; reportDepth(); });
+          }, { passive: true });
+        }
+        // A page that opens already past a threshold still counts — but only once
+        // there is a document to measure.
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", reportDepth, { once: true });
+        } else {
+          reportDepth();
+        }
+
+        if (typeof window.setInterval === "function") {
+          window.setInterval(function () {
+            if (document.visibilityState !== "visible") return;
+            activeSeconds += 5;
+            for (var i = 0; i < dwell.length; i++) {
+              var mark = dwell[i];
+              if (activeSeconds >= mark && !sentDwell[mark]) {
+                sentDwell[mark] = true;
+                send("page_active_dwell", { seconds: mark });
+              }
+            }
+          }, 5000);
+        }
+
+        wkEngagement.reset = function () {
+          sentDepth = {};
+          sentDwell = {};
+          activeSeconds = 0;
+        };
+      } catch (e) {}
+    }
+    wkEngagement();
   </script>
   <!-- /analytics -->
   <style>
@@ -360,8 +481,64 @@
       .btn:hover, .card:hover, .stat:hover, .feedback button:hover { transform:none !important; }
     }
   </style>
+
+  <!-- Homepage only, on purpose. build-pages.py copies the FIRST <style> block
+       into every guide page; this second block is not inherited, so the badge CSS
+       does not ship to 92 pages that never play it. -->
+  <style>
+/* ── The badge moment ──────────────────────────────────────────────────────
+   Every brand site opens with the moment its business actually delivers. This
+   one hands you a name badge you already know what to say behind — so the badge
+   is drawn and the line is written on it. No adjective, no claim: the object
+   does the work. The veil is painted by the attribute the inline script sets,
+   so frame one is already Haveo's paper rather than a white flash. */
+html[data-badge="on"]{overflow:hidden}
+html[data-badge="on"]::before{content:"";position:fixed;inset:0;z-index:9998;background:#F0E9DC}
+#badge-moment{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#F0E9DC;
+  animation:badge-out .6s ease-in 2.4s both}
+#badge-moment .card{position:relative;width:min(78vw,300px);padding:18px 20px 26px;border-radius:14px;
+  background:#fff;box-shadow:0 18px 40px rgba(31,41,55,.13);transform:rotate(-2deg);
+  animation:badge-in .62s cubic-bezier(.22,1,.36,1) both}
+#badge-moment .hello{margin:0 0 14px;font:600 11px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;color:#2563EB}
+#badge-moment .rule{height:1px;background:#E7DECb;transform-origin:left;
+  animation:badge-rule .4s ease-out .5s both}
+#badge-moment .name{margin:10px 0 0;font:500 19px/1.35 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:#1F2937;clip-path:inset(0 100% 0 0);animation:badge-write .75s cubic-bezier(.4,0,.2,1) .78s both}
+#badge-moment .skip{position:fixed;right:16px;bottom:16px;min-height:44px;padding:10px 18px;
+  border:1px solid #E7DECb;border-radius:999px;background:transparent;color:#6B7280;
+  font:13px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}
+@keyframes badge-in{from{opacity:0;transform:rotate(-2deg) translateY(16px) scale(.97)}to{opacity:1;transform:rotate(-2deg)}}
+@keyframes badge-rule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes badge-write{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes badge-out{from{opacity:1}to{opacity:0;visibility:hidden}}
+@media(prefers-reduced-motion:reduce){html[data-badge="on"]::before{display:none}html[data-badge="on"]{overflow:auto}#badge-moment{display:none}}
+  </style>
+
 </head>
 <body>
+
+<script>/* Mounts the badge only if the decision above said so, and clears it on the
+   first sign the reader wants to get on with it — including the first Tab, because
+   an overlay covers the page but not its focus order. */
+(function(){try{
+var r=document.documentElement;
+if(!r.hasAttribute("data-badge"))return;
+var started=Date.now(),done=false;
+var el=document.createElement("div");
+el.id="badge-moment";el.setAttribute("role","presentation");el.setAttribute("aria-hidden","true");
+el.innerHTML='<div class="card"><p class="hello">Hello, my name is</p><div class="rule"></div><p class="name">and here is what I do</p></div><button type="button" class="skip">Skip</button>';
+document.body.insertBefore(el,document.body.firstChild);
+function send(n,by){try{if(window.gtag)window.gtag("event",n,{moment:"badge",dismissed_by:by,elapsed_ms:Date.now()-started});}catch(e){}}
+function finish(by){if(done)return;done=true;r.removeAttribute("data-badge");if(el.parentNode)el.parentNode.removeChild(el);send("brand_moment_complete",by);}
+send("brand_moment_shown","");
+setTimeout(function(){finish("timeout")},3000);
+el.querySelector(".skip").addEventListener("click",function(){finish("skip")});
+window.addEventListener("keydown",function(){finish("key")},{once:true});
+window.addEventListener("wheel",function(){finish("scroll")},{once:true,passive:true});
+window.addEventListener("touchmove",function(){finish("scroll")},{once:true,passive:true});
+window.addEventListener("pointerdown",function(){finish("tap")},{once:true});
+}catch(e){}})();</script>
 
   <!-- ===== HERO ===== -->
   <header>
