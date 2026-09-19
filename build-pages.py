@@ -451,7 +451,9 @@ social anxiety disorder or any other condition.
   writes the reply; a sentence read aloud goes to OpenAI for the voice. With
   the AI on, saving an event also sends the event's details once, to write the
   "what to expect" note. Neither Anthropic nor OpenAI trains on it, and both
-  delete it within about 30 days. Full detail:
+  delete it within about 30 days. Haveo also counts which features get
+  opened, so we can see what actually helps: a count is the name of a
+  feature and the date, and it can't carry anything you wrote. Full detail:
   https://gloriaaecu-rgb.github.io/haveo-privacy/
 
 ## Links
