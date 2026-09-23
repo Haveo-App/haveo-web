@@ -6,3 +6,12 @@
 # soak/.gitignore exist.
 __pycache__/
 *.pyc
+
+# Graphify's generated repo map. It MUST be ignored in the committed file, not
+# in .git/info/exclude: exclude does not survive cloning, and the priority-growth
+# release mirror is a clone. Without this line the mirror reads dirty the moment
+# graphify runs, and the patch-only OpenRouter builder refuses every dispatch
+# with "lane capability exhausted: pre-flight refusal (repo dirty)" -- so haveo
+# could never ship. Measured 2026-09-23: haveo was the ONLY portfolio site
+# missing this line, and the only one whose builds never reached a reviewer.
+graphify-out/
