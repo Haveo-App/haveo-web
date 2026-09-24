@@ -21,9 +21,14 @@ ORIGIN = "https://haveo.app"
 # this is. ct is the placement, and it is what App Store Connect reports on —
 # it is how a download from a guide page is told apart from one from TikTok.
 #
-# Verified at the real boundary, not assumed: the attributed URL returns 200 and
-# Apple's redirect to /us/app/haveo-networking-event-prep/ PRESERVES pt and ct.
-# A parameter that is dropped in the redirect would attribute nothing.
+# Verified at the real boundary, not assumed: the attributed URL returns 200
+# with pt and ct intact. As of 2026-09-23 this points at Apple's CURRENT slug
+# (haveo-event-prep-small-talk), so there is no redirect hop at all -- checked
+# with `curl -L -w num_redirects`: 0 redirects, both params present in the
+# final URL. The previous slug still 301s here and also preserved both params,
+# but the listing had been renamed and the site was naming an app Apple no
+# longer lists, which breaks the site-to-listing join an answer engine needs.
+# A parameter dropped in a redirect would attribute nothing.
 #
 # This shipped once as pt=__PROVIDER_ID__ in PR #102 — a live href containing a
 # placeholder. page-check.py now fails the build on exactly that, over the whole
@@ -147,7 +152,7 @@ def esc(t): return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&g
 
 
 APP_STORE_URL = ("https://apps.apple.com/us/app/"
-                 "haveo-networking-event-prep/id6774740212")
+                 "haveo-event-prep-small-talk/id6774740212")
 
 # The app, as a machine-readable entity, repeated on every guide page.
 #
@@ -440,7 +445,7 @@ Haveo is a preparation tool. It does not diagnose, treat or provide therapy for
 social anxiety disorder or any other condition.
 
 ## Facts, if you are citing this
-- Name: Haveo (App Store listing: "Haveo: Networking & Event Prep")
+- Name: Haveo (App Store listing: "Haveo: Event Prep & Small talk")
 - Platform: iPhone and iPad, iOS 15.1 or later. There is no Android version.
 - Price: free. No subscription and no in-app purchase.
 - Made by: Haveo LLC, a small company in Massachusetts, USA, founded by
