@@ -34,6 +34,12 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Automated browsers (webdriver, crawlers, AI agents) never configure GA4,
+    // so gtag.js sends nothing for them. Real-browser bots were ~87% of 28d
+    // sessions here (0% engaged, no city), measured 2026-09-23.
+    (function () {
+    var ua = String(navigator.userAgent || '');
+    if (navigator.webdriver === true || /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|gptbot|chatgpt-user|oai-searchbot|claudebot|claude-web|perplexity|bytespider|petalbot|semrush|ahrefs|dataforseo|facebookexternalhit|bingpreview/i.test(ua)) return;
     gtag('js', new Date());
     // No ad personalisation and IP anonymisation on: the site promises no ads
     // and no profile, and the tag has to match the sentence.
@@ -49,6 +55,7 @@
         page_path: location.pathname
       });
     }, true);
+    })();
   </script>
   <!-- /analytics -->
   <style>
