@@ -1,0 +1,31 @@
+name: Page contract
+
+# This repo publishes haveo.app from main via Pages, and its only other workflow
+# is that deploy — which runs on push and reports NOTHING on a pull request.
+# The portfolio merge gate fails closed when a PR has no checks, so every PR
+# here was unmergeable by default and no growth work could ever land.
+#
+# $0: stdlib python, no network, no LLM, no dependencies.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: page-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  page-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Every page is findable and measurable
+        run: python3 scripts/page-contract.py
