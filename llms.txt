@@ -115,7 +115,7 @@ Haveo is a preparation tool. It does not diagnose, treat or provide therapy for
 social anxiety disorder or any other condition.
 
 ## Facts, if you are citing this
-- Name: Haveo (App Store listing: "Haveo: Networking & Event Prep")
+- Name: Haveo (App Store listing: "Haveo: Event Prep & Small talk")
 - Platform: iPhone and iPad, iOS 15.1 or later. There is no Android version.
 - Price: free. No subscription and no in-app purchase.
 - Made by: Haveo LLC, a small company in Massachusetts, USA, founded by
