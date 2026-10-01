@@ -14,8 +14,8 @@
        the first thing the parser learns. -->
   <script>document.documentElement.classList.add('js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haveo — Networking event prep for introverts</title>
-  <meta name="description" content="Haveo prepares you for a networking event end to end: build your intro, practice out loud, and take a Cheat Sheet in your pocket. Free." />
+  <title>Haveo Official App — Networking Event Prep</title>
+  <meta name="description" content="Official Haveo app site. Download Haveo free on the App Store to prepare for networking events, practice out loud, and keep a Cheat Sheet in your pocket." />
   <link rel="canonical" href="https://haveo.app/" />
   <meta name="google-site-verification" content="a6NpejQ78bRTr11y5q2zoSjKEsLOSxCXXYhDTUfg9rs" />
 
@@ -113,6 +113,11 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this the official Haveo app site?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. This is the official site for Haveo, the iPhone and iPad app for networking event prep. The App Store link on this page goes to Haveo: Event Prep & Small talk." }
+      },
       {
         "@type": "Question",
         "name": "Is it really free?",
@@ -244,6 +249,8 @@
     .btn-ghost { background:#fff; color:var(--ink); border:1.5px solid #E7DECb; }
     .btn-ghost:hover { background:#FBF7EF; transform:translateY(-2px); }
     .cta-note { font-size:13.5px; color:var(--muted); font-weight:600; }
+    .official-note { max-width:580px; margin:18px auto 0; background:#fff; border:1px solid #F0E9DC; border-radius:18px; padding:14px 16px; color:var(--muted); font-size:14px; font-weight:600; line-height:1.5; box-shadow:0 8px 22px rgba(26,34,56,0.05); }
+    .official-note strong { color:var(--ink); }
 
     /* ---------- sections ---------- */
     section { padding:52px 0; position:relative; }
@@ -257,7 +264,7 @@
     .card .art { width:84px; height:84px; margin:0 auto 14px; }
     .card:hover .art { animation:bob 1.2s ease-in-out infinite; }
     .card .art img { width:100%; height:100%; object-fit:contain; }
-    .card .emoji { font-size:44px; line-height:84px; height:84px; }
+    .card .roadmap-mark { height:84px; display:grid; place-items:center; color:var(--blue); font-size:15px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; }
     .card .tag { font-size:12px; font-weight:700; color:var(--blue); letter-spacing:1px; text-transform:uppercase; }
     .card h3 { font-size:19px; font-weight:700; margin:4px 0 7px; }
     .card p { color:var(--muted); font-weight:500; font-size:15.5px; }
@@ -385,7 +392,7 @@
 
       <h1>Know what you'll say <span class="hl">before you walk in.</span></h1>
       <p class="sub">
-        Meet Haveo 👋 — networking event prep for people who find these rooms hard.
+        Meet Haveo — networking event prep for people who find these rooms hard.
         Build your intro, practice out loud, then glance at your Cheat Sheet in the
         room. Reflect and follow up after.
       </p>
@@ -398,11 +405,12 @@
             Download on the App Store
           </a>
           <a class="btn btn-tiktok" href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">
-            🎵 Follow @haveoapp
+            Follow @haveoapp
           </a>
-          <a class="btn btn-ghost" href="#feedback">💬 Share your honest feedback</a>
+          <a class="btn btn-ghost" href="#feedback">Share your honest feedback</a>
         </div>
         <p class="cta-note">Built for iPhone & iPad. No account, no ads, and nothing that follows you into other apps.</p>
+        <p class="official-note"><strong>Looking for Haveo from Google?</strong> This is the official site for Haveo: Event Prep &amp; Small talk. The App Store button opens the real iPhone and iPad listing.</p>
       </div>
     </div>
   </header>
@@ -453,12 +461,12 @@
       <div class="inside">
         <h4>Everything inside — free</h4>
         <ul>
-          <li><span class="ck">✓</span> <span class="t">Create your intro, Questions to practice &amp; Talking points</span></li>
-          <li><span class="ck">✓</span> <span class="t">Role play<small>Practice the real conversation with Haveo playing the other person — by voice or by typing.</small></span></li>
-          <li><span class="ck">✓</span> <span class="t">Event Mode — your Cheat Sheet, one tap away</span></li>
-          <li><span class="ck">✓</span> <span class="t">Calm — guided breathing, whenever you want a minute</span></li>
-          <li><span class="ck">✓</span> <span class="t">Boost Cards — small, concrete things to try in the room</span></li>
-          <li><span class="ck">✓</span> <span class="t">People you met — save contacts and follow up on time</span></li>
+          <li><span class="ck">OK</span> <span class="t">Create your intro, Questions to practice &amp; Talking points</span></li>
+          <li><span class="ck">OK</span> <span class="t">Role play<small>Practice the real conversation with Haveo playing the other person — by voice or by typing.</small></span></li>
+          <li><span class="ck">OK</span> <span class="t">Event Mode — your Cheat Sheet, one tap away</span></li>
+          <li><span class="ck">OK</span> <span class="t">Calm — guided breathing, whenever you want a minute</span></li>
+          <li><span class="ck">OK</span> <span class="t">Boost Cards — small, concrete things to try in the room</span></li>
+          <li><span class="ck">OK</span> <span class="t">People you met — save contacts and follow up on time</span></li>
         </ul>
       </div>
     </div>
@@ -518,26 +526,26 @@
       <div class="cards">
         <div class="card">
           <span class="soon-tag">New</span>
-          <div class="emoji">🎤</div>
+          <div class="roadmap-mark" aria-hidden="true">Voice</div>
           <h3>Practice out loud</h3>
           <p>This one has shipped. Tap the mic and talk instead of typing — Haveo replies out loud, so you can rehearse with your ears as well as your eyes.</p>
         </div>
         <div class="card">
           <span class="soon-tag">Next</span>
-          <div class="emoji">⚡</div>
+          <div class="roadmap-mark" aria-hidden="true">More</div>
           <h3>More Boost Cards</h3>
           <p>A bigger deck, with new cards added over time.</p>
         </div>
         <div class="card">
           <span class="soon-tag">Later</span>
-          <div class="emoji">💎</div>
+          <div class="roadmap-mark" aria-hidden="true">Paid</div>
           <h3>Premium coaching</h3>
           <p>Paid coaching features, later. Nothing is paid today.</p>
         </div>
       </div>
       <p class="roadmap-note">
         Haveo is <strong>free</strong>. These are what we're building next —
-        and your feedback decides what comes first. 💛
+        and your feedback decides what comes first.
       </p>
     </div>
   </section>
@@ -548,7 +556,7 @@
       <div class="founder">
         <div class="who">
           <img src="illustrations/characters/char-10-face.svg" alt="">
-          <b>From the founder 💛</b>
+          <b>From the founder</b>
         </div>
         <p>“I built Haveo because I'm an anxious networker too. I wanted something
            that helps you prepare — kindly — instead of just telling you to be confident.
@@ -569,7 +577,7 @@
           Download Haveo — free on the App Store
         </a>
         <a class="btn btn-tiktok" href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">
-          🎵 @haveoapp on TikTok — updates &amp; behind the scenes
+          @haveoapp on TikTok — updates &amp; behind the scenes
         </a>
       </div>
 
@@ -591,6 +599,10 @@
       <h2>Frequently asked questions</h2>
       <div class="faq">
         <details open>
+          <summary>Is this the official Haveo app site?</summary>
+          <div class="a">Yes. This is the official site for Haveo, the iPhone and iPad app for networking event prep. The App Store link on this page goes to <a href="https://apps.apple.com/app/haveo/id6774740212?pt=128642904&amp;ct=site-official-faq&amp;mt=8" target="_blank" rel="noopener">Haveo: Event Prep &amp; Small talk</a>.</div>
+        </details>
+        <details open>
           <summary>Is it really free?</summary>
           <div class="a">Yes. Haveo is free on the App Store. Paid features may come later, but everything described on this page is free today.</div>
         </details>
@@ -600,7 +612,7 @@
         </details>
         <details>
           <summary>Can I practice out loud, by talking?</summary>
-          <div class="a">Yes. Tap the mic and talk instead of typing — your phone turns your voice into text, and on iPhone that happens on the device itself. Haveo reads its replies back out loud, so you can rehearse with your ears as well as your eyes. 🎤</div>
+          <div class="a">Yes. Tap the mic and talk instead of typing — your phone turns your voice into text, and on iPhone that happens on the device itself. Haveo reads its replies back out loud, so you can rehearse with your ears as well as your eyes.</div>
         </details>
         <details>
           <summary>Is my information private?</summary>
