@@ -797,8 +797,10 @@ PAGES += [
      "Studying: \"I'm finishing a degree in X and trying to work out what to aim at.\" This gets more help than any confident version would.",
      "Freelancing or several things: pick the one relevant to this room. You are not misrepresenting yourself, you are answering the question asked.",
    ]),
-   ("Rehearse it out loud, once", [
-     "Not read, said. Twenty seconds. A sentence you have heard yourself say is a completely different object under pressure from one you have only thought.",
+   ("How Can I Rehearse and Save My Introduction on iPhone?", [
+     "Haveo is a free iPhone and iPad app for networking preparation. Add your event, open Create Your Intro, and write what you do and why you are attending.",
+     "Save the introduction to your Cheat Sheet, then open Role Play to rehearse with Haveo playing the other person. You can speak or type; AI practice needs internet access and your consent.",
+     "In Talking Points, tap Save to Cheat Sheet on the conversation starters you want to keep. Your saved introduction and talking points are available offline, so you can glance at them at the event.",
    ]),
    ("Then stop talking", [
      "Say your sentence and let the pause exist. Filling it with more about yourself is the most common way a good introduction turns into a monologue.",
