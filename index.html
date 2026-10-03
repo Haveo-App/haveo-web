@@ -376,13 +376,11 @@
     footer { text-align:center; padding:36px 0 56px; color:var(--muted); font-size:13.5px; font-weight:600; }
     .faq { max-width:580px; margin:0 auto; display:grid; gap:12px; text-align:left; }
     .faq details { background:#fff; border:1px solid #F0E9DC; border-radius:16px; padding:4px 18px; }
-    .faq summary { font-weight:700; font-size:16px; padding:14px 0; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+    .faq summary { font-weight:700; font-size:15.5px; padding:14px 0; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; }
     .faq summary::-webkit-details-marker { display:none; }
     .faq summary::after { content:"+"; color:var(--blue); font-size:22px; font-weight:700; }
     .faq details[open] summary::after { content:"–"; }
-    .faq .a p + p { margin-top:12px; }
-    .faq .a a { color:var(--blue-dark); text-underline-offset:3px; }
-    .faq .a { color:var(--muted); font-weight:500; font-size:16px; padding:0 0 16px; }
+    .faq .a { color:var(--muted); font-weight:500; font-size:15px; padding:0 0 16px; }
 
     /* scroll reveal */
     /* Only hidden when JavaScript is there to un-hide it. See the script at the
@@ -406,6 +404,13 @@
       .btn, .card, .stat, .feedback button { transition:none !important; }
       .btn:hover, .card:hover, .stat:hover, .feedback button:hover { transform:none !important; }
     }
+  </style>
+  <!-- Homepage reading adjustments. The guide generator inherits only the
+       first, shared style block; these rules belong to this composition. -->
+  <style id="home-rehearsal-reading">
+    .faq summary, .faq .a { font-size:16px; }
+    .faq .a p + p { margin-top:12px; }
+    .faq .a a { color:var(--blue-dark); text-underline-offset:3px; }
   </style>
 </head>
 <body>
