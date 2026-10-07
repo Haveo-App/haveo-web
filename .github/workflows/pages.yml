@@ -24,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -49,3 +51,23 @@ jobs:
           path: _site
 
       - uses: actions/deploy-pages@v4
+
+      # Tell Bing (and through it ChatGPT and Perplexity search) which pages
+      # changed. The key file has been live since September but nothing ever
+      # submitted to it, so Bing was never told the guides existed (found
+      # 2026-10-06). Never blocks a publish: a failed ping is logged, not fatal.
+      - name: IndexNow — submit changed pages
+        continue-on-error: true
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          KEY=8e5ecfb486d62afbee1a9503a631ecf7
+          if [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then BEFORE=HEAD~1; fi
+          URLS=$(git diff --name-only "$BEFORE" HEAD -- '*.html' \
+            | grep -E '(^|/)index\.html$' \
+            | sed -E 's#^index\.html$##; s#/index\.html$#/#' \
+            | sed 's#^#https://haveo.app/#' | sort -u)
+          if [ -z "$URLS" ]; then echo "no page changed"; exit 0; fi
+          echo "$URLS"
+          BODY=$(printf '%s\n' "$URLS" | python3 -c 'import json,sys; print(json.dumps({"host":"haveo.app","key":"'$KEY'","keyLocation":"https://haveo.app/'$KEY'.txt","urlList":[l.strip() for l in sys.stdin if l.strip()]}))')
+          curl -sS -o /dev/null -w "indexnow %{http_code}\n" -H 'Content-Type: application/json' -d "$BODY" https://api.indexnow.org/indexnow

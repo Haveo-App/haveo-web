@@ -146,7 +146,7 @@ PAGES = [
  "hub": None,
  "h1": "How to follow up after meeting someone at a networking event",
  "title": "How to Follow Up After a Networking Event (With Examples)",
- "desc": "When to send the message, what to write, and a short template that doesn't read like a form letter.",
+ "desc": "When to send it, sample follow-up emails after a networking event, subject lines, and a LinkedIn note that does not read like a form letter.",
  "answer": "Send it <strong>within 48 hours</strong>, keep it to three sentences, and name one specific thing you talked about. Something like: \"Hi Sam — good to meet you at the design meetup. Still thinking about what you said about hiring juniors. Would be good to stay in touch.\" That is the whole job.",
  "sections": [
    ("Send it within 48 hours", [
@@ -160,6 +160,30 @@ PAGES = [
    ("What makes a follow-up feel impersonal", [
      "Templates that could have been sent to anyone, an ask in the first message, and flattery with no detail behind it. If your note would still make sense addressed to a different person, it is not a follow-up — it is a mass email.",
    ]),
+   ("Sample email: you talked for a few minutes", [
+     "Subject: Good to meet you at [event]",
+     "\"Hi [name] — good to meet you at [event] on [day]. I am still thinking about what you said about [topic]. Would be good to stay in touch.\"",
+   ]),
+   ("Sample email: you had a real conversation", [
+     "Subject: [Topic] — following up from [event]",
+     "\"Hi [name] — thanks for the conversation at [event]. Your point about [specific thing] was useful, and I looked up [thing they mentioned] afterwards. If you are open to it, I would like to hear more about how your team handles [topic] over a short call sometime.\"",
+     "Only add a request when the conversation earned it. If you only spoke for two minutes, use the first sample.",
+   ]),
+   ("Sample email: they offered to help", [
+     "Subject: Following up on your offer at [event]",
+     "\"Hi [name] — at [event] you kindly offered to [introduce me to / send me / look at] [thing]. If that still works for you, here is what would help: [one specific, small thing]. Thank you either way.\"",
+     "Name the exact thing they offered. People offer help in the moment and forget the details, so make it easy to say yes in one reply.",
+   ]),
+   ("LinkedIn note version", [
+     "LinkedIn shows the note on a phone, so keep it to two sentences. Always add a note to the request. A connection request with no note looks the same as no follow-up.",
+     "\"Hi [name] — good to meet you at [event]. I enjoyed our talk about [topic] and would like to stay in touch.\"",
+   ]),
+   ("Subject lines that work", [
+     "Use the event name. It is the one thing that tells them who you are before they open the email.",
+     "Good to meet you at [event]",
+     "Following up from [event]: [topic]",
+     "Thanks for the conversation at [event]",
+   ]),
    ("Write the note before you forget", [
      "Capture the detail while you are still there — a line in your phone as you leave. Haveo has this built in: save who you met, keep the one thing you talked about, and set your own reminder to send the message.",
    ]),
@@ -169,7 +193,7 @@ PAGES = [
    ("What if I don't have a reason to follow up?", "\"Good to meet you, would be good to stay in touch\" is a complete and sufficient reason. Not every message needs a purpose attached."),
    ("What if they don't reply?", "Very often nothing is wrong — people are busy and inboxes are full. One follow-up is generous; a second, weeks later with something genuinely useful attached, is fine. Beyond that, let it go."),
  ],
- "related": ["what-to-say-instead-of-what-do-you-do", "networking-for-introverts"],
+ "related": ["what-to-say-instead-of-what-do-you-do", "networking-for-introverts", "how-to-ask-for-a-referral", "linkedin-message-after-meeting-someone"],
 },
 {
  "slug": "networking-for-introverts",
@@ -1576,34 +1600,56 @@ PAGES += [
  "slug": "how-to-ask-for-a-referral",
  "hub": "job-search-networking",
  "h1": "How to ask someone for a referral",
- "title": "How to Ask for a Referral",
- "desc": "Who you can reasonably ask, the message that makes it easy to say yes, and how to make it almost no work for them.",
- "answer": "Ask people who have seen you work, name the exact role, and <strong>write the paragraph for them</strong>. A referral fails when it is effortful — give them the link, two lines on why you fit, and an easy way to decline.",
+ "title": "How to Ask for a Referral: Email and LinkedIn Examples",
+ "desc": "Who you can ask for a job referral, copy-ready email and LinkedIn messages, subject lines, and what to send if they do not reply.",
+ "answer": "Ask people who have seen your work, name the exact role, and <strong>write the paragraph for them</strong>. Send the job link, two lines on why you fit, and an easy way to say no. The templates below cover a former colleague, a weak contact, and a LinkedIn message.",
  "sections": [
    ("Who you can actually ask", [
-     "Anyone who has seen your work directly: former colleagues, managers, clients, collaborators. They are staking their judgment, so they need to have some.",
-     "Someone you met once at an event cannot refer you. They can introduce you, which is a different and much easier ask.",
+     "Anyone who has seen your work directly: former colleagues, managers, clients, collaborators. They are putting their judgment behind you, so they need to have seen something.",
+     "Someone you met once at an event usually cannot refer you. They can introduce you to the hiring manager or someone on the team, which is a different and much easier ask. Use the second template for that.",
    ]),
    ("Make it nearly no work", [
-     "The link to the specific role. Two or three lines they can paste about why you fit it. Your resume attached.",
-     "Most referrals die because the person meant to do it and the task never got small enough to finish.",
+     "Send three things in one message: the link to the specific role, two or three lines they can paste about why you fit, and your resume attached.",
+     "Most referrals fail because the person meant to do it and the task never got small enough to finish. If they have to open three tabs to help you, they will do it later, and later rarely comes.",
    ]),
-   ("The message", [
-     "\"Hi [name] — [company] is hiring a [role] and I am applying. We worked together on [project], so you have actually seen me do this. Would you be comfortable putting in a referral? I have pasted a couple of lines below you are welcome to use or ignore. Completely fine if not.\"",
+   ("Email template: a former colleague", [
+     "Subject: Referral for the [role] role at [company]?",
+     "\"Hi [name] — [company] is hiring a [role] and I am applying. We worked together on [project], so you have seen me do this kind of work. Would you be comfortable putting in a referral? Here is the posting: [link]. I pasted two lines below that you are welcome to use or ignore. Completely fine if not.\"",
+   ]),
+   ("Template: someone you do not know well", [
+     "Here you ask for an introduction or a short conversation, not a referral. It is a smaller request, so more people say yes.",
+     "\"Hi [name] — we met at [event] and talked about [topic]. I am applying for the [role] role on your team. Could you tell me who the hiring manager is, or would you have 15 minutes to tell me what the team is like? No problem if the timing is bad.\"",
+   ]),
+   ("LinkedIn message version", [
+     "LinkedIn messages get read on a phone, so keep it short and put the ask in the first line.",
+     "\"Hi [name], quick ask: I am applying for the [role] role at [company] ([link]). We worked together on [project]. Would you be open to referring me? I can send two lines you can paste. Completely fine if not.\"",
+   ]),
+   ("Subject lines that get opened", [
+     "Put the company and the role in the subject, so they know what it is before they open it.",
+     "Referral for the [role] role at [company]?",
+     "Quick ask about [company]",
+     "[Mutual contact] suggested I reach out about [role]",
    ]),
    ("Give them the exit", [
-     "\"Completely fine if not\" at the end matters more than it looks. Without it, someone who is not comfortable referring you often just does not reply, and you lose the contact as well as the referral.",
+     "\"Completely fine if not\" at the end matters more than it looks. Without it, someone who is not comfortable referring you often just does not reply.",
+     "Then you lose the contact as well as the referral. The exit keeps the relationship either way.",
+   ]),
+   ("If they do not reply", [
+     "Wait one week, then send one short note in the same thread. After that, let it go.",
+     "\"Hi [name], bringing this back up in case it got buried. The posting closes on [date]. Completely fine if you would rather not.\"",
    ]),
    ("Afterwards", [
-     "Tell them what happened either way. People who referred someone and never heard the outcome are noticeably less willing the next time.",
+     "Thank them the same day they say yes. Then tell them what happened, whether you got an interview or not.",
+     "People who referred someone and never heard the outcome are less willing the next time.",
    ]),
  ],
  "faq": [
-   ("What if we have not spoken in years?", "Acknowledge it in half a line and ask anyway. Former colleagues are usually glad to hear from someone and a referral is a small thing to give."),
-   ("Is it rude to ask someone senior?", "No, if they saw your work. Referring good people is part of a senior job and most companies pay a bonus for it."),
+   ("What if we have not spoken in years?", "Mention it in half a line and ask anyway. Former colleagues are usually glad to hear from someone, and a referral is a small thing to give."),
+   ("Is it rude to ask someone senior?", "No, if they saw your work. Referring good people is part of a senior job, and many companies pay a referral bonus for it."),
+   ("Should I ask before or after I apply?", "Before, if you can. A referral that arrives after you applied can be harder for the recruiter to connect to your application, so ask first and apply once they confirm."),
    ("What if they say no?", "Thank them and move on without asking why. A no protects a relationship that a pressured yes would damage."),
  ],
- "related": ["job-search-networking", "networking-after-a-layoff", "informational-interview-questions"],
+ "related": ["job-search-networking", "how-to-follow-up-after-a-networking-event", "networking-after-a-layoff", "informational-interview-questions"],
 },
 {
  "slug": "networking-for-a-career-change",
