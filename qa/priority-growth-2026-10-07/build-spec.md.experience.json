@@ -1,0 +1,106 @@
+{
+  "schema": 2,
+  "project": "haveo",
+  "intent": "Build one local_gbp_conversion priority-growth improvement for haveo in the isolated worktree",
+  "phase": "repair",
+  "visual_evidence": {
+    "scope": "local_repair",
+    "scope_reason": "Reprioritize the existing homepage download action without changing the brand, guide layouts, destinations, or runtime.",
+    "target": "candidate",
+    "owner_status": "unreviewed",
+    "capture_kind": "rendered",
+    "spec_sha256": "e8f30267450f52e09b1cd36c72aa5cc7d03c42740d00ddf497aca3e1ad80abf7",
+    "taste_sha256": "185b0adad6bb89ca5031e4fb3fdc4a98f3634231bcf19367eff1610b205659a8",
+    "correction_excerpt": "La acci\u00f3n principal debe ser obvia, c\u00f3moda para el pulgar y decir lo que pasa al tocar.",
+    "comparison": "Baseline has three similarly prominent buttons. Candidate has one download button, compact supporting links, and clear device context before the button.",
+    "references": [
+      {
+        "path": "before-webkit-375x667.png",
+        "sha256": "92311fb710003536c1a3580e8d1309e94aaf0230919b23888c402c8bf57f2aac",
+        "moment": "existing homepage",
+        "borrow": "Haveo blue, cream, Quicksand, mascot and direct attributed App Store anchor.",
+        "avoid": "Equal emphasis on social, feedback and download; decorative shapes across text."
+      }
+    ],
+    "candidate_frames": [
+      {
+        "path": "after-webkit-375x667.png",
+        "sha256": "404cd1134f899e1f173bbd7f25ad1b469df1e46a74688e933876b9d2e27b7831",
+        "moment": "opening",
+        "viewport": "short_phone"
+      },
+      {
+        "path": "after-webkit-390x844.png",
+        "sha256": "da359b9dff88e8e06124c9f13e2e53be295603efc09b6484fb6b93d2ae73e121",
+        "moment": "opening",
+        "viewport": "phone"
+      },
+      {
+        "path": "after-webkit-1280x800.png",
+        "sha256": "1d50312e70ace4989ac73944fa3f8d69f285182aa74fd2569a774b7eca8103f6",
+        "moment": "opening",
+        "viewport": "desktop"
+      },
+      {
+        "path": "reduced-motion-webkit.png",
+        "sha256": "e31ab5836aefe1ceaf7d65c92a4f6954b684b18103f7fdb2b96e9ec780b86a57",
+        "moment": "reduced motion",
+        "viewport": "short_phone"
+      }
+    ]
+  },
+  "brief": {
+    "visitor": "A visitor searching for Haveo who wants to prepare for a networking event.",
+    "promise": "Identify the iPhone and iPad app and make downloading the obvious first action.",
+    "primary_action": "Open the existing App Store listing with pt=128642904 and ct=site-hero.",
+    "friction": "Three large competing hero buttons and device context below all three. This is a layout hypothesis, not proven conversion causation.",
+    "kpi": {
+      "outcome": "App Store installs attributable to the site.",
+      "event": "app_store_click, placement site-hero, is an intermediate signal.",
+      "denominator": "Human homepage visits for click rate; Apple campaign viewers for installs.",
+      "baseline": "Conversion/install rate unavailable in this bounded call; do not infer zero from Search Console.",
+      "evidence": "binding.json binds the supplied immutable Search Console action brief and current Apple listing lookup.",
+      "readout": "cto-growth-lead compares seven days before versus seven days after the adapter records deployment.",
+      "decision_rule": "Keep if comparable qualified traffic does not show a decline; low volume remains inconclusive."
+    },
+    "concept": {
+      "idea": "One familiar blue download button with compact social and feedback links below.",
+      "brand_reason": "Reuse Haveo existing mascot, typeface, blue, cream and rounded button.",
+      "interaction": "Tap download or use the keyboard; optionally follow or share feedback.",
+      "visible_response": "Existing button feedback and native external navigation; feedback anchor opens the relevant section.",
+      "direct_path": "The original attributed App Store href remains directly available without JavaScript.",
+      "alternatives": "Retain current three-button row as rollback; no new sticky bar, modal or install funnel."
+    },
+    "story": {
+      "opening": "Explain that Haveo is an iPhone and iPad app for networking event prep.",
+      "action": "Download on the App Store.",
+      "consequence": "App Store listing opens where the user can choose to install.",
+      "next_step": "Optional social and feedback paths remain secondary."
+    },
+    "content": {
+      "visible": "Offer, platform, free availability, direct store button, privacy note and supporting links.",
+      "optional_html": "Existing native FAQ details unchanged and present in raw HTML.",
+      "linked_depth": "Existing guide network unchanged; no new thin local page."
+    },
+    "references": {
+      "borrow": "Existing Haveo composition, canonical taste rules for clear primary and compact secondary actions.",
+      "avoid": "Generic template styling, equal weight on three buttons, invented local/GBP facts."
+    },
+    "components": {
+      "reuse": "Existing static native anchors and brand button; RailCta/RailFaq manifests and REVIEW.md inspected.",
+      "local_reason": "Small static HTML repair; React component runtime is unnecessary. Homepage-only second style block avoids guide CSS changes."
+    },
+    "verification": {
+      "rendered_states": "Chromium/WebKit at 375x667, 390x844, 390x600 and 1280x800; see verification.json and PNGs.",
+      "motion": "Reduced-motion state checked; no new scene motion. New pressed offset has a reduced-motion override.",
+      "accessibility_performance": "Header axe checks, keyboard focus, touch activation, no overflow; no extra network runtime. Whole-page gate remains AMBER with unchanged contrast/small-text findings.",
+      "raw_html": "Device explanation, attributed download link and updated date present without JavaScript; 93 site pages pass page contract.",
+      "conversion_boundary": "Chromium opens the Apple listing; live HTTP destination preserves pt/ct. WebKit records unprevented touch/keyboard activation but its native Apple handoff remains unverified."
+    },
+    "reviewers": {
+      "craft": "Top-level coordinator dispatches Antigravity independently before release; not invoked by this bounded builder.",
+      "behavior": "cto-qa-lead with Claude fidelity verification before release; native iPhone handoff still needs confirmation.",
+      "outcome": "cto-growth-lead at deployment plus seven days; no uplift claimed."
+    }
+  }
+}

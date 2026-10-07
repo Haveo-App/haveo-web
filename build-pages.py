@@ -408,7 +408,12 @@ for p in PAGES:
     written.append(f"{ORIGIN}/{p['slug']}/")
 
 # sitemap: homepage + every guide
-_lastmod = {ORIGIN + "/": max(d["modified"] for d in DATES.values())}
+# The homepage can change independently of its generated guide links.
+_home_updated = re.search(r'<time data-page-updated datetime="(\d{4}-\d{2}-\d{2})">', index_html)
+_home_dates = [d["modified"] for d in DATES.values()]
+if _home_updated:
+    _home_dates.append(_home_updated.group(1))
+_lastmod = {ORIGIN + "/": max(_home_dates)}
 _lastmod.update({f"{ORIGIN}/{p['slug']}/": DATES[p["slug"]]["modified"] for p in PAGES})
 urls = "".join(
     f"\n  <url>\n    <loc>{u}</loc>\n    <lastmod>{_lastmod[u]}</lastmod>\n"
