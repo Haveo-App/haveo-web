@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "site": "haveo",
+  "round_id": "2026-10-07",
+  "work_id": "priority-growth:2026-10-07:haveo",
+  "recommended_action": "local_gbp_conversion",
+  "brief_path": "/Users/gonzalo/.claude/state/priority-growth-release/executions/haveo-b0aed95b552fc3c2b8cb-attempt-1-pre-dispatch-1-claim-d47005dfa38313c2/preflight/briefs/haveo.uO2JJm.json",
+  "brief_sha256": "341ef6a2518369dea78d964b0f436bf9ce04b7c082227b2c26c64d3a8d801e78",
+  "baseline_commit": "21cd40942dc64d2a48498a4d8ff4caa4c0e4d661",
+  "graphify_sha256": "86dd8c5dc6202669dbc617e5f3ce470fec8fe7942ef5c63c101b5a55e75db11d",
+  "shared_context_packet_sha256": "d2aa7fd4aef1561d1eb8353516004deaf714153442d67194c31385ac3eaebf5c",
+  "source_sha256": {
+    "index.html": "57aae20018bdca3daa82837040163489807b8127ffc78ba59adca364f083b2fe",
+    "build-pages.py": "f23686441224088ab0861b4d61571bcb985c48833babd64c42ea0fba14513115",
+    "sitemap.xml": "83d982eea54b6281af3e48117407b8f534c1fa805e9d1ffa2ef2acd364c62496"
+  },
+  "production_probe": {
+    "url": "https://haveo.app/",
+    "expected_text": "Haveo is an iPhone and iPad app for networking event prep.",
+    "expected_primary_selector": ".home-hero .btn-appstore",
+    "expected_primary_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+    "expected_secondary_selector": ".home-hero .secondary-actions",
+    "event": "app_store_click",
+    "placement": "site-hero"
+  },
+  "limits": [
+    "Local committed candidate only; production release belongs to the adapter.",
+    "Search clicks are not installs or a conversion baseline.",
+    "No new GBP or local-business claims.",
+    "New candidate requires sibling reviews; no recursive LLM dispatch.",
+    "WebKit trusted input verified with navigation suppressed; native App Store handoff remains unverified."
+  ]
+}

@@ -1,0 +1,7 @@
+python3 page-check.py: PASS, 92 guide pages with positive control 92/92
+python3 scripts/page-contract.py: PASS, 93/93 pages
+python3 build-pages.py: PASS, regenerated; all tracked files byte-identical on second run
+node qa/priority-growth-2026-10-07/verify-home.mjs: PASS, 8 viewport/browser cases; see verification.json for native-handoff limitation
+cto_experience_contract.py: PASS, errors=[]
+human-consumption-gate.mjs --fail-on red: PASS threshold, AMBER before/after, 0 RED
+git diff --check: PASS
