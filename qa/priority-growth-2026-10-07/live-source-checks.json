@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-10-07T05:52:51.010992+00:00",
+  "results": [
+    {
+      "url": "https://haveo.app/",
+      "final_url": "https://haveo.app/",
+      "status": 200,
+      "sha256": "42b8dfae8b082a8ffd7678387ca6aec85cc2f5ab3221a5b1f7450c5ef57ed574",
+      "title": "Haveo \u2014 Networking event prep for introverts"
+    },
+    {
+      "url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "final_url": "https://apps.apple.com/us/app/haveo-event-prep-small-talk/id6774740212?ct=site-hero&pt=128642904",
+      "status": 200,
+      "sha256": "f0001d7151c87e77981b0fe8798f12201459ffba6e0c74677ab91d37467d4f96",
+      "title": "\u200eHaveo: Event Prep &amp; Small talk App - App Store",
+      "listing_schema": [
+        {
+          "@context": "https://schema.org",
+          "@id": "https://apps.apple.com/#organization",
+          "@type": "Organization",
+          "name": "App Store",
+          "url": "https://apps.apple.com",
+          "logo": "https://apps.apple.com/assets/app-store.png",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q368215",
+            "https://twitter.com/AppStore",
+            "https://www.instagram.com/appstore/",
+            "https://www.facebook.com/appstore/"
+          ],
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "Apple",
+            "@id": "https://www.apple.com/#organization",
+            "url": "https://www.apple.com/"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Haveo: Event Prep & Small talk",
+          "description": "Networking events are uncomfortable. Haveo gives you the words before you walk in.\n\nWhether it's a conference, meetup, or career fair, Haveo works with you before, during, and after. You walk in knowing what you'll say. Practice out loud with an AI conversation partner that talks back.\n\nWhat Haveo does\n\nBefore the event:\n\n\u2022 Build a natural intro you can say out loud\n\u2022 Practice the questions you'll be asked, and what to ask back\n\u2022 Get talking points and conversation starters for your industry\n\u2022 Practice the conversation with Haveo playing the other person\n\nDuring the event:\n\n\u2022 Event Mode keeps your Cheat Sheet one tap away\n\u2022 Boost Cards: small, concrete things to try in the room\n\u2022 Calm \u2014 guided breathing, whenever you want a minute\n\u2022 Quick notes, to save a name or a detail while it's fresh\n\nAfter the event:\n\n\u2022 Reflect on what went well and what to work on\n\u2022 Save your wins, so the next prep starts from what worked\n\u2022 Build a Cheat Sheet you keep, and add to for each event\n\nWho it's for\n\nIf networking events make you anxious, overwhelmed, or feel like a chore, Haveo is for you. Designed by a UX designer who hated networking and wanted a tool that helped.\n\nEspecially helpful if you're early in your career, switching industries, introverted, or neurodivergent \u2014 Haveo's interface is built with accessibility in mind.\n\nPrivacy first\n\nYour events, notes, and reflections stay on your device. No accounts. No ads. Nothing that follows you into other apps.\n\nWhen you use an AI feature, what you typed \u2014 and any file you attach \u2014 goes to Anthropic to write the reply, and a spoken line goes to OpenAI to be read out loud. That only happens after you agree to it.\n\nHaveo also counts which features get opened, so Haveo can see what actually helps. It only records which feature was opened and when. It can't carry anything you wrote.\n\nGet started\n\nAdd your first event in under a minute and Haveo starts working with you. Free to use. No subscription.\n\nEarly days\n\nHaveo is built by one designer. Every update is shaped by what users say helps. Thank you for being early.",
+          "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9e/55/10/9e5510d6-faa2-3ca7-7868-10703d4d4d87/AppIcon-0-0-1x_U007epad-0-1-85-220.png/1200x630wa.png",
+          "availableOnDevice": "iPhone, iPad, iPod",
+          "operatingSystem": "Requires iOS\u00a015.1 or later. Compatible with iPhone, iPad, and iPod\u00a0touch.",
+          "offers": {
+            "@type": "Offer",
+            "price": 0,
+            "priceCurrency": "USD"
+          },
+          "applicationCategory": "LifestyleApplication",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 1,
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "keywords": [
+            "Lifestyle",
+            "Productivity"
+          ],
+          "genre": [
+            "Lifestyle",
+            "Productivity"
+          ],
+          "author": {
+            "@type": "Organization",
+            "name": "GLORIA E AGUILAR",
+            "url": "https://apps.apple.com/us/developer/gloria-e-aguilar/id6774740214"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Top Charts",
+              "item": "https://apps.apple.com/us/iphone/charts"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Lifestyle",
+              "item": "https://apps.apple.com/us/iphone/charts/6012"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Haveo: Event Prep & Small talk",
+              "item": "https://apps.apple.com/us/app/haveo-event-prep-small-talk/id6774740212"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limit": "GET only; no install or production conversion asserted."
+}
