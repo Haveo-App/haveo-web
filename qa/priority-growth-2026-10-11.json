@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "site": "haveo",
+  "round_id": "2026-10-11",
+  "work_id": "priority-growth:2026-10-11:haveo",
+  "recommended_action": "owned_site_ctr",
+  "baseline_commit": "73df06d3bdaea300714733d67012798bcbbf78cb",
+  "brief_path": "/Users/gonzalo/.claude/state/priority-growth-release/executions/haveo-855e39a72b4c5cccb8fb-attempt-1-pre-dispatch-1-claim-0531626949501afe/preflight/briefs/haveo.2aLSGh.json",
+  "brief_sha256": "95cd09c76c6bf0252c39667257f3efca06f0f3a045265ee2092e298a235beb99",
+  "shared_context_packet_sha256": "a22a9656160f0c410eaa70486b84852a88ae3d556e4371ea6346d34a0ab90303",
+  "graphify_sha256": "86dd8c5dc6202669dbc617e5f3ce470fec8fe7942ef5c63c101b5a55e75db11d",
+  "immutable_action_brief": {
+    "schema": 1,
+    "site": "haveo",
+    "collected_at": "2026-10-11T04:59:59Z",
+    "data_freshness_date": "2026-10-05",
+    "source_evidence": {
+      "tool": "/Users/gonzalo/code/portfolio-ops-pg-senary/scripts/gsc_query.py",
+      "dimensions": [
+        "date",
+        "query",
+        "page"
+      ]
+    },
+    "windows": {
+      "seven_day": {
+        "start_date": "2026-09-29",
+        "end_date": "2026-10-05",
+        "totals": {
+          "clicks": 0,
+          "impressions": 64
+        }
+      },
+      "final_72_hours": {
+        "start_date": "2026-10-03",
+        "end_date": "2026-10-05",
+        "totals": {
+          "clicks": 0,
+          "impressions": 25
+        }
+      }
+    },
+    "top_query_page_opportunities": [
+      {
+        "date": "2026-10-05",
+        "query": "haveo",
+        "page": "https://haveo.app/",
+        "clicks": 0,
+        "impressions": 6,
+        "sitelink_urls_sharing_impressions": 1,
+        "position": 1.5
+      },
+      {
+        "date": "2026-10-02",
+        "query": "haveo",
+        "page": "https://haveo.app/",
+        "clicks": 0,
+        "impressions": 5,
+        "sitelink_urls_sharing_impressions": 1,
+        "position": 1.4
+      },
+      {
+        "date": "2026-10-01",
+        "query": "haveo",
+        "page": "https://haveo.app/",
+        "clicks": 0,
+        "impressions": 4,
+        "sitelink_urls_sharing_impressions": 1,
+        "position": 1.8
+      }
+    ],
+    "primary_constraint": "no_organic_clicks",
+    "recommended_action": "owned_site_ctr",
+    "action_taxonomy": [
+      "owned_site_publish",
+      "owned_site_ctr",
+      "local_gbp_conversion",
+      "owned_site_geo_answerability"
+    ],
+    "geo_audit": {
+      "base_url": "https://haveo.app",
+      "jsonld_types": [
+        "FAQPage",
+        "MobileApplication",
+        "Organization",
+        "WebSite"
+      ],
+      "findings": [],
+      "blocking_findings": [],
+      "audit_error": false
+    }
+  },
+  "source_checks": {
+    "checked_at_utc": "2026-10-11T05:09:01.169664+00:00",
+    "homepage_url": "https://haveo.app/",
+    "homepage_status": 200,
+    "homepage_title": "Haveo — Networking event prep for introverts",
+    "apple_source": "https://itunes.apple.com/lookup?id=6774740212&country=us",
+    "apple_result_count": 1,
+    "app_name": "Haveo: Event Prep & Small talk",
+    "price": 0.0,
+    "formatted_price": "Free",
+    "supports_iphone": true,
+    "app_description": "Networking events are uncomfortable. Haveo gives you the words before you walk in.\n\nWhether it's a conference, meetup, or career fair, Haveo works with you before, during, and after. You walk in knowing what you'll say. Practice out loud with an AI conversation partner that talks back.\n\nWhat Haveo does\n\nBefore the event:\n\n• Build a natural intro you can say out loud\n• Practice the questions you'll be asked, and what to ask back\n• Get talking points and conversation starters for your industry\n• Practice the conversation with Haveo playing the other person\n\nDuring the event:\n\n• Event Mode keeps your Cheat Sheet one tap away\n• Boost Cards: small, concrete things to try in the room\n• Calm — guided breathing, whenever you want a minute\n• Quick notes, to save a name or a detail while it's fresh\n\nAfter the event:\n\n• Reflect on what went well and what to work on\n• Save your wins, so the next prep starts from what worked\n• Build a Cheat Sheet you keep, and add to for each event\n\nWho it's for\n\nIf networking events make you anxious, overwhelmed, or feel like a chore, Haveo is for you. Designed by a UX designer who hated networking and wanted a tool that helped.\n\nEspecially helpful if you're early in your career, switching industries, introverted, or neurodivergent — Haveo's interface is built with accessibility in mind.\n\nPrivacy first\n\nYour events, notes, and reflections stay on your device. No accounts. No ads. Nothing that follows you into other apps.\n\nWhen you use an AI feature, what you typed — and any file you attach — goes to Anthropic to write the reply, and a spoken line goes to OpenAI to be read out loud. That only happens after you agree to it.\n\nHaveo also counts which features get opened, so Haveo can see what actually helps. It only records which feature was opened and when. It can't carry anything you wrote.\n\nGet started\n\nAdd your first event in under a minute and Haveo starts working with you. Free to use. No subscription.\n\nEarly days\n\nHaveo is built by one designer. Every update is shaped by what users say helps. Thank you for being early."
+  },
+  "production_probe": {
+    "url": "https://haveo.app/",
+    "expected_title": "Haveo — Networking event prep for introverts on iPhone",
+    "expected_description": "Get Haveo free on the App Store for iPhone. Build your intro, practice out loud, and take a Cheat Sheet in your pocket for networking events.",
+    "canonical": "https://haveo.app/",
+    "expected_body_sha256": "1cc9a7a77fb193fde9d90e4b11a8bb2c61096e40cd9bea3fa4c267012380beba"
+  },
+  "delivery_state": "local candidate only; independent sibling reviews, release and production verification belong to coordinator",
+  "business_effect": "unmeasured; brief is a historical observation, not live CTR or evidence of uplift"
+}
