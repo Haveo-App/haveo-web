@@ -32,6 +32,16 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 # catch it is to compare against a known value.
 GA4_ID = "G-FVW5T8KNGX"
 
+# The homepage is the branded-search destination. These exact, checked facts
+# keep its SERP title from quietly reverting to generic networking advice:
+# Haveo is the App Store product named "Haveo: Event Prep & Small Talk" and
+# the visible homepage says it is free for iPhone and iPad.
+HOME_TITLE = "Haveo: Event Prep &amp; Small Talk — Free iPhone App"
+HOME_DESCRIPTION_MARKERS = (
+    "The official Haveo app for iPhone and iPad.",
+    "Free.",
+)
+
 # Not every HTML file is a content page. Search-engine verification files are
 # fixed tokens the provider serves back to itself — they have no title and no
 # analytics BY DESIGN, and requiring either would make this gate permanently
@@ -67,6 +77,13 @@ def check(path: pathlib.Path) -> list[str]:
         fails.append("no <title>")
     elif len(title.group(1).strip()) < 10:
         fails.append(f"<title> too short to be a real title: {title.group(1)!r}")
+
+    if path == ROOT / "index.html":
+        if not title or title.group(1).strip() != HOME_TITLE:
+            fails.append("homepage title does not identify the official iPhone app")
+        for marker in HOME_DESCRIPTION_MARKERS:
+            if marker not in html:
+                fails.append(f"homepage description missing branded-search marker: {marker!r}")
 
     if not CANONICAL.search(html):
         fails.append("no rel=canonical")
