@@ -1,0 +1,9 @@
+{
+  "app_store_click": {
+    "event": "cta_click",
+    "params": {
+      "legacy_name": "app_store_click"
+    },
+    "frozen": true
+  }
+}
