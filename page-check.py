@@ -223,6 +223,20 @@ def main():
             if rx.search(text):
                 fails.append((f, "British spelling", msg))
 
+    # A branded visitor who arrives at the homepage should not have to guess
+    # whether the primary button installs something, creates an account, or
+    # merely opens a store page. Keep that answer next to the first App Store
+    # handoff, in the initial HTML, so it remains available without JavaScript.
+    try:
+        home = open("index.html", encoding="utf-8").read()
+    except FileNotFoundError:
+        fails.append(("index.html", "missing homepage", ""))
+    else:
+        if 'class="download-details"' not in home:
+            fails.append(("index.html", "missing App Store handoff detail", "download-details"))
+        if "The button opens Haveo's App Store page." not in home:
+            fails.append(("index.html", "unclear App Store handoff", "expected plain-language explanation"))
+
     # --- GEO structure -----------------------------------------------------
     # Every page must connect its answer to the app, or a model that quotes the
     # answer has no machine-readable reason to name Haveo. That connection is
