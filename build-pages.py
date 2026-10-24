@@ -408,7 +408,9 @@ for p in PAGES:
     written.append(f"{ORIGIN}/{p['slug']}/")
 
 # sitemap: homepage + every guide
-_lastmod = {ORIGIN + "/": max(d["modified"] for d in DATES.values())}
+_home_m = re.search(r'data-page-updated datetime="(\d{4}-\d{2}-\d{2})"', index_html)
+_home_date = _home_m.group(1) if _home_m else max(d["modified"] for d in DATES.values())
+_lastmod = {ORIGIN + "/": max(_home_date, max(d["modified"] for d in DATES.values()))}
 _lastmod.update({f"{ORIGIN}/{p['slug']}/": DATES[p["slug"]]["modified"] for p in PAGES})
 urls = "".join(
     f"\n  <url>\n    <loc>{u}</loc>\n    <lastmod>{_lastmod[u]}</lastmod>\n"
