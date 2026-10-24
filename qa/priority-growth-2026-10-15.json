@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "site": "haveo",
+  "round_id": "2026-10-15",
+  "work_id": "priority-growth:2026-10-15:haveo:s1",
+  "recommended_action": "owned_site_ctr",
+  "baseline_commit": "73df06d3bdaea300714733d67012798bcbbf78cb",
+  "brief_path": "/Users/gonzalo/.claude/state/priority-growth-release/executions/haveo-dd675eb3106f84f8bfcd-attempt-1-pre-dispatch-1-claim-2f23c4703e80b65c/preflight/briefs/haveo.I4OPq5.json",
+  "brief_sha256": "5c751beeb66cc00d2767c2413eb709b49dee04152ea3c7e4d3d9ac58806eaf4d",
+  "shared_context_packet_sha256": "756aa9f903d38c05cbdcdcf500f70b878b7333b8ea1112bb79577edee4f65cc8",
+  "graphify_sha256": "86dd8c5dc6202669dbc617e5f3ce470fec8fe7942ef5c63c101b5a55e75db11d",
+  "immutable_action_brief": {
+    "schema": 1,
+    "site": "haveo",
+    "collected_at": "2026-10-15T05:15:49Z",
+    "data_freshness_date": "2026-10-11",
+    "source_evidence": {
+      "tool": "/Users/gonzalo/code/portfolio-ops-pg-quinary/scripts/gsc_query.py",
+      "dimensions": [
+        "date",
+        "query",
+        "page"
+      ]
+    },
+    "windows": {
+      "seven_day": {
+        "start_date": "2026-10-05",
+        "end_date": "2026-10-11",
+        "totals": {
+          "clicks": 0,
+          "impressions": 75
+        }
+      },
+      "final_72_hours": {
+        "start_date": "2026-10-09",
+        "end_date": "2026-10-11",
+        "totals": {
+          "clicks": 0,
+          "impressions": 41
+        }
+      }
+    },
+    "top_query_page_opportunities": [
+      {
+        "date": "2026-10-11",
+        "query": "haveo",
+        "page": "https://haveo.app/",
+        "clicks": 0,
+        "impressions": 8,
+        "sitelink_urls_sharing_impressions": 1,
+        "position": 1
+      },
+      {
+        "date": "2026-10-11",
+        "query": "haveo",
+        "page": "https://haveo.app/networking-for-introverts/",
+        "clicks": 0,
+        "impressions": 6,
+        "sitelink_urls_sharing_impressions": 1,
+        "position": 7.2
+      },
+      {
+        "date": "2026-10-10",
+        "query": "haveo",
+        "page": "https://haveo.app/",
+        "clicks": 0,
+        "impressions": 6,
+        "sitelink_urls_sharing_impressions": 1,
+        "position": 1.2
+      }
+    ],
+    "primary_constraint": "no_organic_clicks",
+    "recommended_action": "owned_site_ctr",
+    "action_taxonomy": [
+      "owned_site_publish",
+      "owned_site_ctr",
+      "local_gbp_conversion",
+      "owned_site_geo_answerability"
+    ],
+    "geo_audit": {
+      "base_url": "https://haveo.app",
+      "jsonld_types": [
+        "FAQPage",
+        "MobileApplication",
+        "Organization",
+        "WebSite"
+      ],
+      "findings": [],
+      "blocking_findings": [],
+      "audit_error": false
+    }
+  },
+  "source_checks": {
+    "checked_at_utc": "2026-10-15T05:21:38Z",
+    "homepage_url": "https://haveo.app/",
+    "homepage_status": 200,
+    "homepage_title": "Haveo \u2014 Networking event prep for introverts",
+    "apple_source": "https://itunes.apple.com/lookup?id=6774740212&country=us",
+    "apple_result_count": 1,
+    "app_name": "Haveo: Event Prep & Small talk",
+    "price": 0.0,
+    "formatted_price": "Free",
+    "supports_iphone": true
+  },
+  "production_probe": {
+    "url": "https://haveo.app/",
+    "expected_title": "Haveo \u2014 Networking Event Prep for Introverts on iPhone",
+    "expected_description": "Haveo prepares you for a networking event on iPhone: build your intro, practice out loud, and keep a Cheat Sheet in your pocket. Free on the App Store.",
+    "canonical": "https://haveo.app/",
+    "expected_response_sha256": "8c9769ff236a912a00328dfe559e9b4bdecf0cef2d82b30c1a594cc57afe8521",
+    "hashing_recipe": "sha256 of raw GET response body bytes for https://haveo.app/"
+  },
+  "delivery_state": "local candidate only; independent sibling reviews, release and production verification belong to coordinator",
+  "business_effect": "unmeasured; brief is a historical observation, not live CTR or evidence of uplift"
+}
