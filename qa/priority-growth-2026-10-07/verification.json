@@ -1,0 +1,206 @@
+{
+  "checks": [
+    {
+      "browser": "webkit",
+      "viewport": [
+        375,
+        667
+      ],
+      "button_rect": {
+        "x": 33.453125,
+        "y": 491.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-webkit-375x667.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "trusted input verified; native App Store handoff pending",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    },
+    {
+      "browser": "webkit",
+      "viewport": [
+        390,
+        844
+      ],
+      "button_rect": {
+        "x": 40.953125,
+        "y": 495.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-webkit-390x844.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "trusted input verified; native App Store handoff pending",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    },
+    {
+      "browser": "webkit",
+      "viewport": [
+        390,
+        600
+      ],
+      "button_rect": {
+        "x": 40.953125,
+        "y": 495.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-webkit-390x600.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "trusted input verified; native App Store handoff pending",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    },
+    {
+      "browser": "webkit",
+      "viewport": [
+        1280,
+        800
+      ],
+      "button_rect": {
+        "x": 485.953125,
+        "y": 547.78125,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-webkit-1280x800.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "trusted input verified; native App Store handoff pending",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    },
+    {
+      "browser": "chromium",
+      "viewport": [
+        375,
+        667
+      ],
+      "button_rect": {
+        "x": 33.453125,
+        "y": 491.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-chromium-375x667.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "popup URL verified",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    },
+    {
+      "browser": "chromium",
+      "viewport": [
+        390,
+        844
+      ],
+      "button_rect": {
+        "x": 40.953125,
+        "y": 495.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-chromium-390x844.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "popup URL verified",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    },
+    {
+      "browser": "chromium",
+      "viewport": [
+        390,
+        600
+      ],
+      "button_rect": {
+        "x": 40.953125,
+        "y": 495.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-chromium-390x600.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "popup URL verified",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    },
+    {
+      "browser": "chromium",
+      "viewport": [
+        1280,
+        800
+      ],
+      "button_rect": {
+        "x": 485.953125,
+        "y": 547.78125,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "screenshot": "after-chromium-1280x800.png",
+      "handoff_url": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "navigation": "popup URL verified",
+      "keyboard": "pass",
+      "feedback": "pass",
+      "synthetic_event": {
+        "placement": "site-hero",
+        "page_path": "/"
+      },
+      "analytics_delivery": "blocked",
+      "overflow": false
+    }
+  ],
+  "no_js": [
+    "webkit",
+    "chromium"
+  ],
+  "reduced_motion": [
+    "webkit",
+    "chromium"
+  ],
+  "raw_html": "pass",
+  "shared_css_analytics_and_links": "unchanged"
+}

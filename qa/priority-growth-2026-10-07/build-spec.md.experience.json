@@ -1,0 +1,100 @@
+{
+  "schema": 2,
+  "project": "haveo",
+  "intent": "Build one local_gbp_conversion priority-growth improvement for haveo in the isolated worktree",
+  "phase": "repair",
+  "visual_evidence": {
+    "scope": "local_repair",
+    "scope_reason": "Existing homepage repair: clarify app purpose and foreground its existing download action while preserving Haveo artwork and guide layouts.",
+    "target": "candidate",
+    "owner_status": "unreviewed",
+    "capture_kind": "rendered",
+    "spec_sha256": "807602a10fde3e478bcb4b59b0c78fbd4cbcae73a189872e5cd67c89cef8e58c",
+    "taste_sha256": "185b0adad6bb89ca5031e4fb3fdc4a98f3634231bcf19367eff1610b205659a8",
+    "correction_excerpt": "Acciones secundarias más pequeñas y con menos texto. Un turbo no debe ocupar el mismo protagonismo que la misión o el salto.",
+    "comparison": "Compare the current baseline with this repair: the branded mascot stays intact; peripheral decoration stops overlapping phone text; the App Store button precedes smaller secondary links.",
+    "references": [
+      {
+        "path": "before-webkit-375x667.png",
+        "sha256": "248b1f0cfbffff0c25c71013430940d653ac556edce106ae195cb335e46db84a",
+        "moment": "baseline",
+        "borrow": "Keep the Haveo mascot, warm background, Quicksand and blue rounded download control.",
+        "avoid": "Three equal-weight actions and floating decorations over the reading area."
+      }
+    ],
+    "candidate_frames": [
+      {
+        "path": "after-webkit-375x667.png",
+        "sha256": "5f8025202fcc1300938132c8fc64a4de664588aa97fbfe7b0d605bb20d0a874a",
+        "moment": "opening",
+        "viewport": "short_phone"
+      },
+      {
+        "path": "after-webkit-390x844.png",
+        "sha256": "83d04ee08f586fe82efbff04b016caa934805a75d57392a6456581f8dced2bab",
+        "moment": "opening",
+        "viewport": "phone"
+      },
+      {
+        "path": "after-webkit-1280x800.png",
+        "sha256": "69199e20f6f6c76250c3ea498551d43577fc2fdea1529f6d100c4f4adccb3fd1",
+        "moment": "opening",
+        "viewport": "desktop"
+      }
+    ]
+  },
+  "brief": {
+    "visitor": "A person searching for Haveo who wants networking-event preparation on iPhone or iPad.",
+    "promise": "Identify Haveo and reach its existing App Store listing from the opening screen.",
+    "primary_action": "Download on the App Store, using the unchanged site-hero campaign URL.",
+    "friction": "Download currently competes with equally prominent social and feedback buttons; phone decorations overlap explanatory copy.",
+    "kpi": {
+      "outcome": "App Store handoffs per human homepage session; installs measured separately.",
+      "event": "Existing app_store_click with placement=site-hero.",
+      "denominator": "Human sessions landing on the homepage, excluding synthetic and known bot traffic.",
+      "baseline": "Search snapshot: 1 click / 77 impressions in seven days; 0 / 22 in final 72 hours. No handoff or install baseline supplied.",
+      "evidence": "Immutable brief 341ef6a2518369dea78d964b0f436bf9ce04b7c082227b2c26c64d3a8d801e78, rehashed in this run.",
+      "readout": "Growth lead retrieves homepage handoff baseline and compares equivalent 14-day windows after release.",
+      "decision_rule": "Keep if measured handoffs improve with adequate comparable traffic; sparse data stays inconclusive; revert if friction or conversion worsens."
+    },
+    "concept": {
+      "idea": "One clear download action with small optional social and feedback links.",
+      "brand_reason": "Retain Haveo yellow character, soft background, Quicksand, and rounded blue controls.",
+      "interaction": "Tap or keyboard-activate the existing download link.",
+      "visible_response": "Pressed button state; Chromium opens the listing destination; WebKit native handoff requires a device check.",
+      "direct_path": "Existing App Store href remains a plain HTML link, including with JavaScript disabled.",
+      "alternatives": "Retain the baseline if the coordinator rejects the hierarchy; no new scene or component system is needed."
+    },
+    "story": {
+      "opening": "Identify the app, its platform, and the event-preparation use case.",
+      "action": "Choose Download on the App Store.",
+      "consequence": "The unchanged campaign link hands off to Apple.",
+      "next_step": "Review and install in the App Store; no install completion is claimed by the site."
+    },
+    "content": {
+      "visible": "App purpose, download, free availability, privacy reassurance, and compact secondary actions.",
+      "optional_html": "Existing native details FAQ stays in initial HTML.",
+      "linked_depth": "All existing generated guide links remain unchanged."
+    },
+    "references": {
+      "borrow": "Existing Haveo artwork and button language; current shared RailFaq native-details pattern.",
+      "avoid": "Equal visual weight for social/feedback, overlapping decorative characters on phone, invented local business facts."
+    },
+    "components": {
+      "reuse": "Existing Haveo button, shared first CSS block and delegated App Store event listener; no kit defect identified.",
+      "local_reason": "A small static homepage composition repair needs local scoped CSS. React RailFaq installation would add an unrelated runtime; existing details already works."
+    },
+    "verification": {
+      "rendered_states": "WebKit and Chromium at 375x667, 390x844, 390x600 and 1280x800; before/after frames.",
+      "motion": "Retain existing float; new press feedback respects reduced motion. No new narrative animation or scene.",
+      "accessibility_performance": "44px actions, focus rings, touch, keyboard, no horizontal overflow. Full-page gate AMBER before/after; existing contrast and type warnings remain.",
+      "raw_html": "App explanation, plain App Store link, FAQ and updated date present without JS; generator round trip and copy/page contracts.",
+      "conversion_boundary": "Live Apple listing returned HTTP 200; synthetic input and attribution delivery blocked from GA4. Native iPhone installation and production conversion pending."
+    },
+    "reviewers": {
+      "craft": "Coordinator dispatches sibling Antigravity review of the new candidate and frames.",
+      "behavior": "cto-qa-lead verifies candidate; Claude checks brief fidelity as sibling call.",
+      "outcome": "Growth lead compares human handoff and install evidence after publication."
+    }
+  }
+}

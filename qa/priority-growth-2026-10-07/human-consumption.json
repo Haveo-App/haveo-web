@@ -1,0 +1,157 @@
+{
+  "generated_at": "2026-10-07T05:49:37.818Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "thresholds": {
+    "px_to_product_amber": 1688,
+    "px_to_product_red": 3376,
+    "cta_in_first_screen": true,
+    "longest_paragraph_words_amber": 80,
+    "longest_paragraph_words_red": 120,
+    "max_words_between_headings_amber": 250,
+    "max_words_between_headings_red": 400,
+    "screens_amber": 14,
+    "screens_red": 22,
+    "min_tap_target_px": 24,
+    "min_images_first_three_screens": 1
+  },
+  "results": [
+    {
+      "site": "haveo",
+      "name": "Haveo",
+      "url": "http://127.0.0.1:8769/",
+      "http": 200,
+      "clicks": null,
+      "level": "AMBER",
+      "reasons": [
+        "the product sits 1754px down (2.1 screens)",
+        "longest block is 84 words",
+        "contrast below AA on 3 element(s)",
+        "23 body blocks under 16px",
+        "11 images with no alt text",
+        "no analytics event fired while scrolling the whole page — a change here cannot be graded"
+      ],
+      "measured": {
+        "scroll_height": 7780,
+        "screens": 9.2,
+        "total_words": 778,
+        "px_to_product": 1754,
+        "product_selector": "[class*='cards'] [class*='card']",
+        "informational": false,
+        "px_to_cta": 496,
+        "cta_selector": "a[href*='apps.apple.com']",
+        "cta_in_first_screen": true,
+        "longest_paragraph_words": 84,
+        "avg_paragraph_words": 16,
+        "paragraphs_over_80": 1,
+        "heading_count": 14,
+        "max_words_between_headings": 101,
+        "images_first_three_screens": 11,
+        "small_tap_targets": 0,
+        "small_tap_target_examples": [],
+        "robot_words": [],
+        "foldout_present": false,
+        "collapsed_words": 431,
+        "h1_count": 1,
+        "heading_skips": 0,
+        "typography": {
+          "small_font": 23,
+          "tight_leading": 0,
+          "long_line": 0,
+          "justified": 0,
+          "samples": [
+            {
+              "fontSize": 17,
+              "leading": 1.55,
+              "chars_per_line": 39
+            },
+            {
+              "fontSize": 14,
+              "leading": 1.55,
+              "chars_per_line": 47
+            },
+            {
+              "fontSize": 13,
+              "leading": 1.55,
+              "chars_per_line": 19
+            }
+          ]
+        },
+        "all_caps_runs": 0,
+        "all_caps_from_css": 0,
+        "long_sentences": 5,
+        "long_sentence_share": 0.094,
+        "avg_sentence_words": 15,
+        "scannable_top": true,
+        "tldr_marker": false,
+        "early_lists": 1,
+        "thesis_hits": [
+          "networking",
+          "event",
+          "prep",
+          "app"
+        ],
+        "banned_words": [],
+        "machine": {
+          "title": "Haveo — Networking event prep for introverts",
+          "title_len": 44,
+          "meta_description_len": 135,
+          "canonical": true,
+          "noindex": false,
+          "schema_types": [
+            "Organization",
+            "Person",
+            "WebSite",
+            "MobileApplication",
+            "Offer",
+            "FAQPage",
+            "Question",
+            "Answer"
+          ],
+          "schema_blocks": 2,
+          "schema_broken": 0,
+          "dom_words": 1165,
+          "images_without_alt": 11,
+          "lang": "en"
+        },
+        "page_errors": [],
+        "third_party_errors": 0,
+        "tls": null,
+        "raw": {
+          "http": 200,
+          "raw_html_words": 1103,
+          "raw_words_in_details": 459,
+          "raw_details_count": 8,
+          "sections_100_180": 0,
+          "sections_over_400": 1,
+          "sections": 16,
+          "min_section_words": 2,
+          "rendered_vs_raw_ratio": 1.06
+        },
+        "instrumentation": [],
+        "axe": {
+          "violations": 1,
+          "serious": 1,
+          "top": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "nodes": 3,
+              "help": "Elements must meet minimum color contrast ratio thresholds"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "red": 0,
+    "amber": 1,
+    "green": 0,
+    "clicks_total": 0,
+    "clicks_on_red": 0,
+    "clicks_on_amber": 0
+  }
+}
