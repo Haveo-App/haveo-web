@@ -1,0 +1,783 @@
+{
+  "browser_results": [
+    {
+      "engine": "chromium",
+      "width": 375,
+      "height": 667,
+      "stage": "before",
+      "button": {
+        "top": 538.484375,
+        "bottom": 596.828125,
+        "width": 313.125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 825,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "height": 667,
+      "stage": "after",
+      "button": {
+        "top": 491.5,
+        "bottom": 549.84375,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 695,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "clickedDestination": "https://apps.apple.com/us/app/haveo-event-prep-small-talk/id6774740212?ct=site-hero&pt=128642904",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "stage": "before",
+      "button": {
+        "top": 543.484375,
+        "bottom": 601.828125,
+        "width": 313.125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 830,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "stage": "after",
+      "button": {
+        "top": 495.5,
+        "bottom": 553.84375,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 699,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "clickedDestination": "https://apps.apple.com/us/app/haveo-event-prep-small-talk/id6774740212?ct=site-hero&pt=128642904",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 600,
+      "stage": "before",
+      "button": {
+        "top": 543.484375,
+        "bottom": 601.828125,
+        "width": 313.125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 830,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 600,
+      "stage": "after",
+      "button": {
+        "top": 495.5,
+        "bottom": 553.84375,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 699,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "clickedDestination": "https://apps.apple.com/us/app/haveo-event-prep-small-talk/id6774740212?ct=site-hero&pt=128642904",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "height": 800,
+      "stage": "before",
+      "button": {
+        "top": 600.78125,
+        "bottom": 687.46875,
+        "width": 292.1875,
+        "height": 86.6875
+      },
+      "scrollY": 0,
+      "headerHeight": 752,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "height": 800,
+      "stage": "after",
+      "button": {
+        "top": 547.78125,
+        "bottom": 606.125,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 730,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, \"system-ui\", sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "clickedDestination": "https://apps.apple.com/us/app/haveo-event-prep-small-talk/id6774740212?ct=site-hero&pt=128642904",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "mode": "no-js",
+      "button": {
+        "x": 33.453125,
+        "y": 491.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "css": {
+        "animation": "float"
+      }
+    },
+    {
+      "engine": "chromium",
+      "mode": "reduced-motion",
+      "button": {
+        "x": 33.453125,
+        "y": 491.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "css": {
+        "animation": "none"
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "height": 667,
+      "stage": "before",
+      "button": {
+        "top": 538.484375,
+        "bottom": 596.828125,
+        "width": 315.125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 825,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 375,
+      "height": 667,
+      "stage": "after",
+      "button": {
+        "top": 491.5,
+        "bottom": 549.84375,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 695,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "activation": {
+        "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+        "defaultPrevented": false
+      },
+      "navigationStatus": "WebKit emitted unprevented activation but did not expose an Apple popup or navigation; native handoff unverified. Chromium navigation and separate live HTTP probe verify destination.",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "stage": "before",
+      "button": {
+        "top": 543.484375,
+        "bottom": 601.828125,
+        "width": 315.125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 830,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "stage": "after",
+      "button": {
+        "top": 495.5,
+        "bottom": 553.84375,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 699,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "activation": {
+        "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+        "defaultPrevented": false
+      },
+      "navigationStatus": "WebKit emitted unprevented activation but did not expose an Apple popup or navigation; native handoff unverified. Chromium navigation and separate live HTTP probe verify destination.",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 600,
+      "stage": "before",
+      "button": {
+        "top": 543.484375,
+        "bottom": 601.828125,
+        "width": 315.125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 830,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 600,
+      "stage": "after",
+      "button": {
+        "top": 495.5,
+        "bottom": 553.84375,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 699,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "activation": {
+        "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+        "defaultPrevented": false
+      },
+      "navigationStatus": "WebKit emitted unprevented activation but did not expose an Apple popup or navigation; native handoff unverified. Chromium navigation and separate live HTTP probe verify destination.",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "height": 800,
+      "stage": "before",
+      "button": {
+        "top": 600.78125,
+        "bottom": 687.46875,
+        "width": 290.8125,
+        "height": 86.6875
+      },
+      "scrollY": 0,
+      "headerHeight": 752,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "height": 800,
+      "stage": "after",
+      "button": {
+        "top": 547.78125,
+        "bottom": 606.125,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "scrollY": 0,
+      "headerHeight": 730,
+      "overflow": 0,
+      "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+      "font": "Quicksand, -apple-system, BlinkMacSystemFont, sans-serif",
+      "loadedFonts": [
+        "Quicksand",
+        "Quicksand",
+        "Quicksand",
+        "Quicksand"
+      ],
+      "axeViolations": [],
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      },
+      "activation": {
+        "href": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+        "defaultPrevented": false
+      },
+      "navigationStatus": "WebKit emitted unprevented activation but did not expose an Apple popup or navigation; native handoff unverified. Chromium navigation and separate live HTTP probe verify destination.",
+      "feedbackVisible": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "mode": "no-js",
+      "button": {
+        "x": 33.453125,
+        "y": 491.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "css": {
+        "animation": "float"
+      }
+    },
+    {
+      "engine": "webkit",
+      "mode": "reduced-motion",
+      "button": {
+        "x": 33.453125,
+        "y": 491.5,
+        "width": 308.078125,
+        "height": 58.34375
+      },
+      "css": {
+        "animation": "none"
+      }
+    },
+    {
+      "rawHtml": "PASS"
+    }
+  ],
+  "source_checks": {
+    "first_css_unchanged": true,
+    "analytics_unchanged": true,
+    "app_store_links_unchanged": true,
+    "no_new_external_scripts": true
+  },
+  "whole_page_gate": {
+    "site": "haveo",
+    "name": "Haveo",
+    "url": "http://127.0.0.1:8768/",
+    "http": 200,
+    "clicks": null,
+    "level": "AMBER",
+    "reasons": [
+      "the product sits 1754px down (2.1 screens)",
+      "longest block is 84 words",
+      "contrast below AA on 3 element(s)",
+      "23 body blocks under 16px",
+      "11 images with no alt text",
+      "no analytics event fired while scrolling the whole page \u2014 a change here cannot be graded"
+    ],
+    "measured": {
+      "scroll_height": 7780,
+      "screens": 9.2,
+      "total_words": 778,
+      "px_to_product": 1754,
+      "product_selector": "[class*='cards'] [class*='card']",
+      "informational": false,
+      "px_to_cta": 496,
+      "cta_selector": "a[href*='apps.apple.com']",
+      "cta_in_first_screen": true,
+      "longest_paragraph_words": 84,
+      "avg_paragraph_words": 16,
+      "paragraphs_over_80": 1,
+      "heading_count": 14,
+      "max_words_between_headings": 101,
+      "images_first_three_screens": 11,
+      "small_tap_targets": 0,
+      "small_tap_target_examples": [],
+      "robot_words": [],
+      "foldout_present": false,
+      "collapsed_words": 431,
+      "h1_count": 1,
+      "heading_skips": 0,
+      "typography": {
+        "small_font": 23,
+        "tight_leading": 0,
+        "long_line": 0,
+        "justified": 0,
+        "samples": [
+          {
+            "fontSize": 17,
+            "leading": 1.55,
+            "chars_per_line": 39
+          },
+          {
+            "fontSize": 14,
+            "leading": 1.55,
+            "chars_per_line": 47
+          },
+          {
+            "fontSize": 13,
+            "leading": 1.55,
+            "chars_per_line": 19
+          }
+        ]
+      },
+      "all_caps_runs": 0,
+      "all_caps_from_css": 0,
+      "long_sentences": 5,
+      "long_sentence_share": 0.094,
+      "avg_sentence_words": 15,
+      "scannable_top": true,
+      "tldr_marker": false,
+      "early_lists": 1,
+      "thesis_hits": [
+        "networking",
+        "event",
+        "prep",
+        "app"
+      ],
+      "banned_words": [],
+      "machine": {
+        "title": "Haveo \u2014 Networking event prep for introverts",
+        "title_len": 44,
+        "meta_description_len": 135,
+        "canonical": true,
+        "noindex": false,
+        "schema_types": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "MobileApplication",
+          "Offer",
+          "FAQPage",
+          "Question",
+          "Answer"
+        ],
+        "schema_blocks": 2,
+        "schema_broken": 0,
+        "dom_words": 1165,
+        "images_without_alt": 11,
+        "lang": "en"
+      },
+      "page_errors": [],
+      "third_party_errors": 0,
+      "tls": null,
+      "raw": {
+        "http": 200,
+        "raw_html_words": 1103,
+        "raw_words_in_details": 459,
+        "raw_details_count": 8,
+        "sections_100_180": 0,
+        "sections_over_400": 1,
+        "sections": 16,
+        "min_section_words": 2,
+        "rendered_vs_raw_ratio": 1.06
+      },
+      "instrumentation": [],
+      "axe": {
+        "violations": 1,
+        "serious": 1,
+        "top": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": 3,
+            "help": "Elements must meet minimum color contrast ratio thresholds"
+          }
+        ]
+      }
+    }
+  },
+  "whole_page_baseline": {
+    "site": "haveo",
+    "name": "Haveo",
+    "url": "http://127.0.0.1:8769/__before__",
+    "http": 200,
+    "clicks": null,
+    "level": "AMBER",
+    "reasons": [
+      "the product sits 1886px down (2.2 screens)",
+      "longest block is 84 words",
+      "contrast below AA on 3 element(s)",
+      "23 body blocks under 16px",
+      "11 images with no alt text",
+      "no analytics event fired while scrolling the whole page \u2014 a change here cannot be graded"
+    ],
+    "measured": {
+      "scroll_height": 7890,
+      "screens": 9.3,
+      "total_words": 792,
+      "px_to_product": 1886,
+      "product_selector": "[class*='cards'] [class*='card']",
+      "informational": false,
+      "px_to_cta": 543,
+      "cta_selector": "a[href*='apps.apple.com']",
+      "cta_in_first_screen": true,
+      "longest_paragraph_words": 84,
+      "avg_paragraph_words": 16,
+      "paragraphs_over_80": 1,
+      "heading_count": 14,
+      "max_words_between_headings": 97,
+      "images_first_three_screens": 13,
+      "small_tap_targets": 0,
+      "small_tap_target_examples": [],
+      "robot_words": [],
+      "foldout_present": false,
+      "collapsed_words": 431,
+      "h1_count": 1,
+      "heading_skips": 0,
+      "typography": {
+        "small_font": 23,
+        "tight_leading": 0,
+        "long_line": 0,
+        "justified": 0,
+        "samples": [
+          {
+            "fontSize": 17,
+            "leading": 1.55,
+            "chars_per_line": 41
+          },
+          {
+            "fontSize": 14,
+            "leading": 1.55,
+            "chars_per_line": 45
+          },
+          {
+            "fontSize": 13,
+            "leading": 1.55,
+            "chars_per_line": 19
+          }
+        ]
+      },
+      "all_caps_runs": 0,
+      "all_caps_from_css": 0,
+      "long_sentences": 5,
+      "long_sentence_share": 0.091,
+      "avg_sentence_words": 14,
+      "scannable_top": true,
+      "tldr_marker": false,
+      "early_lists": 1,
+      "thesis_hits": [
+        "networking",
+        "event",
+        "prep",
+        "app",
+        "meet"
+      ],
+      "banned_words": [],
+      "machine": {
+        "title": "Haveo \u2014 Networking event prep for introverts",
+        "title_len": 44,
+        "meta_description_len": 135,
+        "canonical": true,
+        "noindex": false,
+        "schema_types": [
+          "Organization",
+          "Person",
+          "WebSite",
+          "MobileApplication",
+          "Offer",
+          "FAQPage",
+          "Question",
+          "Answer"
+        ],
+        "schema_blocks": 2,
+        "schema_broken": 0,
+        "dom_words": 1180,
+        "images_without_alt": 11,
+        "lang": "en"
+      },
+      "page_errors": [],
+      "third_party_errors": 0,
+      "tls": null,
+      "raw": {
+        "http": 200,
+        "raw_html_words": 1116,
+        "raw_words_in_details": 459,
+        "raw_details_count": 8,
+        "sections_100_180": 0,
+        "sections_over_400": 1,
+        "sections": 16,
+        "min_section_words": 2,
+        "rendered_vs_raw_ratio": 1.06
+      },
+      "instrumentation": [],
+      "axe": {
+        "violations": 1,
+        "serious": 1,
+        "top": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "nodes": 3,
+            "help": "Elements must meet minimum color contrast ratio thresholds"
+          }
+        ]
+      }
+    }
+  },
+  "build_checks": {
+    "copy_gate": "page-check: 92 pages, all gates clean (positive control 92/92)",
+    "build_idempotent": true,
+    "page_contract_command": "python3 qa/priority-growth-2026-10-07/artifacts/candidate-source/scripts/page-contract.py",
+    "page_contract_output": "93/93 pages carry title, canonical, description and GA4 G-FVW5T8KNGX\nPASS",
+    "page_contract_scope": "Exact git-listed HTML candidate files. Ignored QA-only npm fixtures are not published; root rglob would otherwise count their tool HTML."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "site": "haveo",
+  "round_id": "2026-10-07",
+  "work_id": "priority-growth:2026-10-07:haveo:s1",
+  "recommended_action": "local_gbp_conversion",
+  "baseline_commit": "21cd40942dc64d2a48498a4d8ff4caa4c0e4d661",
+  "brief_sha256": "ef43b7a22a6dc663cf29c4cea265dd5887bdabce003027e19a53ca823e0ed136",
+  "graphify_sha256": "86dd8c5dc6202669dbc617e5f3ce470fec8fe7942ef5c63c101b5a55e75db11d",
+  "shared_context_packet_sha256": "bb1c8f2815b927c90c61bd1ac59976a486116d47bdff770f0dc6e4d4950b6f65",
+  "observed_at_utc": "2026-10-07T05:12:59.167954+00:00",
+  "apple": {
+    "source": "https://itunes.apple.com/lookup?id=6774740212",
+    "trackId": 6774740212,
+    "trackName": "Haveo: Event Prep & Small talk",
+    "price": 0.0,
+    "currency": "USD",
+    "minimumOsVersion": "15.1",
+    "features": [
+      "iosUniversal"
+    ]
+  },
+  "production_probe": {
+    "url": "https://haveo.app/",
+    "raw_html_required": [
+      "<header class=\"home-hero\">",
+      "id=\"home-download-focus\"",
+      "aria-label=\"More from Haveo\"",
+      "data-page-updated datetime=\"2026-10-07\""
+    ],
+    "download_destination": "https://apps.apple.com/app/haveo/id6774740212?pt=128642904&ct=site-hero&mt=8",
+    "click_event": "app_store_click",
+    "placement": "site-hero"
+  },
+  "delivery_state": "local candidate; not deployed; coordinator owns independent review and release",
+  "business_effect": "unmeasured; GSC brief is not a conversion or install baseline"
+}
