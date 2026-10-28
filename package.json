@@ -1,0 +1,7 @@
+{
+  "name": "haveo-site",
+  "private": true,
+  "scripts": {
+    "test": "python3 page-check.py && python3 scripts/page-contract.py"
+  }
+}
