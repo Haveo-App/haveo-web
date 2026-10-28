@@ -74,7 +74,7 @@ PAGES = [
    ("What if I run out of things to say?", "Ask them to expand on the last thing they said: \"How did that go?\" or \"What made you pick that?\" You do not have to introduce a new topic — you can always go one level deeper on the current one."),
    ("Is it obvious that I'm nervous?", "Almost never. Speakers overestimate how visible their own nerves are — in Savitsky and Gilovich's 2003 speech study (<em>Journal of Experimental Social Psychology</em>), speakers judged their anxiety far more visible than their audience did. You feel your heart; they see a person talking."),
  ],
- "related": ["networking-with-social-anxiety", "what-to-say-instead-of-what-do-you-do"],
+ "related": ["networking-with-social-anxiety", "what-to-say-instead-of-what-do-you-do", "how-to-introduce-two-people", "what-to-say-when-your-mind-goes-blank"],
 },
 {
  "slug": "networking-with-social-anxiety",
@@ -108,7 +108,7 @@ PAGES = [
    ("Should I go if I'm dreading it?", "Set a small, specific goal — one conversation — and let yourself leave after it. Most of the dread is about the imagined whole evening, not the part you actually have to do."),
    ("What if I freeze mid-conversation?", "Silence is far shorter than it feels. Ask a question you prepared, or say \"sorry, I lost my thread\" — which is a completely normal thing that people say to each other."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "networking-for-introverts"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "networking-for-introverts", "your-first-networking-event", "what-to-do-if-you-panic-at-an-event"],
 },
 {
  "slug": "what-to-say-instead-of-what-do-you-do",
@@ -139,7 +139,7 @@ PAGES = [
    ("Isn't \"what do you do\" fine in a professional setting?", "It is fine, it is just low-yield. You can ask it and immediately follow with \"and what part of that do you actually like?\" — the follow-up is where the conversation starts."),
    ("What if I don't have an impressive answer?", "Nobody is grading you. \"I'm figuring out my next thing\" is a completely normal sentence and often a more interesting conversation than a job title."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "how-to-follow-up-after-a-networking-event"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "how-to-follow-up-after-a-networking-event", "how-to-introduce-two-people", "how-to-join-a-group-already-talking"],
 },
 {
  "slug": "how-to-follow-up-after-a-networking-event",
@@ -222,7 +222,7 @@ PAGES = [
    ("How many people should I talk to?", "Two or three real conversations is a good night. Counting introductions is the wrong metric."),
    ("What if I need to leave early?", "Then leave. \"I'm heading off — it was good to meet you\" needs no justification."),
  ],
- "related": ["networking-with-social-anxiety", "what-to-say-when-you-dont-know-anyone"],
+ "related": ["networking-with-social-anxiety", "what-to-say-when-you-dont-know-anyone", "how-to-network-at-a-conference", "how-many-people-should-i-talk-to"],
 },
 ]
 
@@ -303,7 +303,7 @@ PAGES += [
    ("What if I talk too much?", "Ask a question roughly every third thing you say. It is a mechanical rule rather than a personality change, which is why it works when you are not monitoring yourself."),
    ("Does medication timing matter?", "That is a question for whoever prescribes it, not for us. What we can say is that people who plan the evening around their own predictable crash report an easier night than people who plan around the event's schedule."),
  ],
- "related": ["neurodivergent-networking", "when-you-forget-someones-name", "how-to-follow-up-after-a-networking-event"],
+ "related": ["neurodivergent-networking", "when-you-forget-someones-name", "how-to-follow-up-after-a-networking-event", "autistic-networking-events"],
 },
 {
  "slug": "networking-with-dyslexia",
@@ -337,7 +337,7 @@ PAGES += [
    ("What about spelling someone's name in the follow-up?", "Copy it from their LinkedIn or their card rather than from memory. Getting a name wrong in writing is the one error worth a few seconds of checking."),
    ("Are printed notes in my pocket a bad idea?", "No, but they are hard to use in a room. A phone screen you can enlarge, and that can read a line back to you, is usually easier than paper you have to find good light for."),
  ],
- "related": ["neurodivergent-networking", "how-to-follow-up-after-a-networking-event", "what-to-say-when-you-dont-know-anyone"],
+ "related": ["neurodivergent-networking", "how-to-follow-up-after-a-networking-event", "what-to-say-when-you-dont-know-anyone", "rejection-sensitivity-after-networking"],
 },
 {
  "slug": "job-search-networking",
@@ -374,7 +374,7 @@ PAGES += [
    ("How many people should I reach out to?", "Few, well. Five specific messages to people whose work you can actually reference beat fifty generic ones, and the fifty will damage how you feel about doing it at all."),
    ("What if they do not reply?", "Most will not, and it is almost never about you. One follow-up after ten days, then leave it."),
  ],
- "related": ["career-fair-what-to-say", "how-to-follow-up-after-a-networking-event", "networking-with-social-anxiety"],
+ "related": ["career-fair-what-to-say", "how-to-follow-up-after-a-networking-event", "networking-with-social-anxiety", "networking-as-a-student"],
 },
 {
  "slug": "career-fair-what-to-say",
@@ -409,7 +409,7 @@ PAGES += [
    ("Do I have to wear a suit?", "Match the industry, and when in doubt go one step smarter than you think. Nobody has ever been marked down for it, and it is one fewer thing to think about on the day."),
    ("Is it worth going if I am not graduating yet?", "Yes, and it is easier. \"I'm a year out, I'm trying to work out what to aim at\" takes all the pressure off and recruiters are noticeably more relaxed about it."),
  ],
- "related": ["job-search-networking", "networking-with-social-anxiety", "how-to-follow-up-after-a-networking-event"],
+ "related": ["job-search-networking", "networking-with-social-anxiety", "how-to-follow-up-after-a-networking-event", "career-fair-with-social-anxiety", "networking-for-a-career-change"],
 },
 {
  "slug": "social-anxiety-after-a-networking-event",
@@ -445,7 +445,7 @@ PAGES += [
    ("Does avoiding the next event help?", "It ends the replay quickly and makes the next invitation harder. That trade is the thing to be aware of when you decline."),
    ("Is it the same as overthinking in general?", "It is more specific: it is tied to a social event, it starts after it, and it focuses on how you came across. The name for it in the research is post-event processing, from Clark and Wells' 1995 cognitive model of social phobia."),
  ],
- "related": ["networking-with-social-anxiety", "neurodivergent-networking", "how-to-follow-up-after-a-networking-event"],
+ "related": ["networking-with-social-anxiety", "neurodivergent-networking", "how-to-follow-up-after-a-networking-event", "what-to-bring-to-a-networking-event"],
 },
 {
  "slug": "follow-up-email-after-a-networking-event",
@@ -484,7 +484,7 @@ PAGES += [
    ("Email or LinkedIn?", "Whichever one they actually gave you. If you have both, email — a LinkedIn request sits unread for weeks far more often."),
    ("Do I follow up on the follow-up?", "Once, after about ten days, and then stop. Two unanswered messages is information, not an invitation to send a third."),
  ],
- "related": ["how-to-follow-up-after-a-networking-event", "job-search-networking", "networking-with-dyslexia"],
+ "related": ["how-to-follow-up-after-a-networking-event", "job-search-networking", "networking-with-dyslexia", "follow-up-email-subject-lines", "what-to-say-in-a-coffee-chat"],
 },
 {
  "slug": "how-to-end-a-conversation-politely",
@@ -521,7 +521,7 @@ PAGES += [
    ("Is it rude to leave a group?", "Less than leaving a pair. A group closes the gap behind you without anyone noticing, which is also why groups are easier to join."),
    ("How long should a conversation last?", "There is no correct length. Ten minutes is a good conversation and ninety seconds is a perfectly normal one."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "networking-for-introverts", "what-to-say-instead-of-what-do-you-do"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "networking-for-introverts", "what-to-say-instead-of-what-do-you-do", "common-networking-mistakes"],
 },
 ]
 
@@ -560,7 +560,7 @@ PAGES += [
    ("What if I want to cancel?", "Decide to go and to leave at your planned time. Going for forty minutes is a completely different commitment from going for the night, and it is the version that is hard to talk yourself out of."),
    ("Is arriving late better?", "Usually worse. A full room means joining conversations already underway, which is the harder skill. Early is quieter and people are more open."),
  ],
- "related": ["networking-with-social-anxiety", "how-to-go-to-a-networking-event-alone", "how-to-leave-a-networking-event-early"],
+ "related": ["networking-with-social-anxiety", "how-to-go-to-a-networking-event-alone", "how-to-leave-a-networking-event-early", "what-to-bring-to-a-networking-event"],
 },
 {
  "slug": "how-to-leave-a-networking-event-early",
@@ -592,7 +592,7 @@ PAGES += [
    ("Is it rude to leave before the talks?", "Check the running order when you arrive. If the content is the reason you came, stay for it; if the room is the reason, the talks are the natural moment to go."),
    ("How early is too early?", "If you have had one real conversation, you have got something out of it. Twenty minutes and nobody spoken to is worth pushing through — that is usually the doorway, not the event."),
  ],
- "related": ["networking-with-social-anxiety", "how-to-end-a-conversation-politely", "the-hour-before-a-networking-event"],
+ "related": ["networking-with-social-anxiety", "how-to-end-a-conversation-politely", "the-hour-before-a-networking-event", "what-to-do-if-you-panic-at-an-event"],
 },
 {
  "slug": "how-to-go-to-a-networking-event-alone",
@@ -626,7 +626,7 @@ PAGES += [
    ("Is it obvious I don't know anyone?", "No. Everyone is watching their own situation. The people you assume all know each other usually met an hour ago."),
    ("What if nobody talks to me?", "Then you approach, which is the plan anyway. Waiting to be approached is the one strategy that reliably produces an evening of not talking."),
  ],
- "related": ["networking-with-social-anxiety", "what-to-say-when-you-dont-know-anyone", "the-hour-before-a-networking-event"],
+ "related": ["networking-with-social-anxiety", "what-to-say-when-you-dont-know-anyone", "the-hour-before-a-networking-event", "your-first-networking-event"],
 },
 {
  "slug": "what-to-do-if-you-panic-at-an-event",
@@ -694,7 +694,7 @@ PAGES += [
    ("What about people who say it's all about who you know?", "They are mostly right and it does not mean what they imply. Knowing people happens through repeated small contact, not through one night in a hotel function room."),
    ("Why does Haveo exist then?", "Because sometimes you have to go, and the preparation is the part that makes it survivable. It is a tool for the events you have decided to attend, not an argument that you should attend more of them."),
  ],
- "related": ["networking-with-social-anxiety", "job-search-networking", "networking-for-introverts"],
+ "related": ["networking-with-social-anxiety", "job-search-networking", "networking-for-introverts", "your-first-networking-event"],
 },
 ]
 
@@ -733,7 +733,7 @@ PAGES += [
    ("What if they stop talking when I arrive?", "They are making room, not shutting you out. Say who you are, or ask them to carry on — both restart it immediately."),
    ("Is a group better than one person?", "One person is easier to start with and a group is easier to stay in. Early in a night, go for the person on their own."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "how-to-end-a-conversation-politely", "how-to-go-to-a-networking-event-alone"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "how-to-end-a-conversation-politely", "how-to-go-to-a-networking-event-alone", "what-to-say-when-your-mind-goes-blank"],
 },
 {
  "slug": "what-to-say-when-your-mind-goes-blank",
@@ -765,7 +765,7 @@ PAGES += [
    ("Should I apologize?", "Once, in half a sentence. A long apology makes a two-second pause into the subject of the conversation."),
    ("Is it worse if I am not a native English speaker?", "Searching for a word is a different problem from losing the thread, and the same sentence covers both. \"Sorry, I have lost the word\" is completely ordinary and people are glad to help."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "networking-with-adhd", "small-talk-questions-that-arent-boring"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "networking-with-adhd", "small-talk-questions-that-arent-boring", "how-to-introduce-yourself-at-a-networking-event"],
 },
 {
  "slug": "when-you-forget-someones-name",
@@ -797,7 +797,7 @@ PAGES += [
    ("Are badges not enough?", "Only if you can read one at conversational distance, which many people cannot. Asking is faster than staring."),
    ("What if they forget mine?", "Say it again unprompted. \"Sam, by the way\" mid-conversation is a kindness and it lets them off entirely."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "networking-with-adhd", "how-to-remember-who-you-met"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "networking-with-adhd", "how-to-remember-who-you-met", "how-to-introduce-yourself-at-a-networking-event"],
 },
 {
  "slug": "how-to-introduce-yourself-at-a-networking-event",
@@ -833,7 +833,7 @@ PAGES += [
    ("Do I need a different one for each event?", "The last part changes with the room; the first two do not. That is why keeping them separate is worth doing."),
    ("What if my work is hard to explain?", "Say what it is for rather than what it is. \"I make sure the payment doesn't break\" beats any accurate description of the systems."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "what-to-say-instead-of-what-do-you-do", "job-search-networking"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "what-to-say-instead-of-what-do-you-do", "job-search-networking", "common-networking-mistakes"],
 },
 {
  "slug": "small-talk-questions-that-arent-boring",
@@ -874,7 +874,7 @@ PAGES += [
    ("What if they give a one-word answer?", "Take it at face value and follow up once. If the second one is also short, they may not want to talk — move on, it is not a verdict on you."),
    ("Is it strange to ask who else I should talk to?", "It is one of the best questions in the room. People like being the person who made an introduction, and you often get walked over to someone."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "what-to-say-instead-of-what-do-you-do", "what-to-say-when-your-mind-goes-blank"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "what-to-say-instead-of-what-do-you-do", "what-to-say-when-your-mind-goes-blank", "how-to-join-a-group-already-talking"],
 },
 {
  "slug": "how-to-introduce-two-people",
@@ -906,7 +906,7 @@ PAGES += [
    ("What if I get the hook wrong?", "They will correct it and that is a conversation too. A slightly wrong hook still works better than none."),
    ("Should I introduce people if I barely know them?", "Yes. \"You two should talk — you are both doing X\" is enough, and neither expects you to be an authority on them."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "how-to-end-a-conversation-politely", "how-to-join-a-group-already-talking"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "how-to-end-a-conversation-politely", "how-to-join-a-group-already-talking", "common-networking-mistakes"],
 },
 ]
 
@@ -942,7 +942,7 @@ PAGES += [
    ("What if they do not accept?", "Plenty of people check LinkedIn twice a year. It is not a signal, and it is not worth a second attempt."),
    ("Should I follow rather than connect?", "If they have a large following and post a lot, following is lower friction and you can still message later. For someone you actually met, connect."),
  ],
- "related": ["how-to-follow-up-after-a-networking-event", "follow-up-email-after-a-networking-event", "linkedin-networking-message-examples"],
+ "related": ["how-to-follow-up-after-a-networking-event", "follow-up-email-after-a-networking-event", "linkedin-networking-message-examples", "what-to-do-with-the-business-cards"],
 },
 {
  "slug": "follow-up-email-subject-lines",
@@ -980,7 +980,7 @@ PAGES += [
    ("Does 'quick' help?", "Mildly, and only if the email really is quick. Promising short and then sending six paragraphs is worse than not promising."),
    ("What about replying to an existing thread?", "Always better if one exists. A reply carries the whole context and skips the recognition problem entirely."),
  ],
- "related": ["follow-up-email-after-a-networking-event", "how-to-follow-up-after-a-networking-event", "following-up-late"],
+ "related": ["follow-up-email-after-a-networking-event", "how-to-follow-up-after-a-networking-event", "following-up-late", "what-to-do-with-the-business-cards", "what-to-say-in-a-coffee-chat"],
 },
 {
  "slug": "what-to-do-with-the-business-cards",
@@ -1015,7 +1015,7 @@ PAGES += [
    ("Should I throw the cards away?", "Once the detail and the address are somewhere you will look, yes. A drawer of cards is a pile of decisions you keep not making."),
    ("What if I did not get a card?", "Look them up that night while you still remember the name and the company. Searching two days later almost never works."),
  ],
- "related": ["how-to-follow-up-after-a-networking-event", "how-to-remember-who-you-met", "networking-with-dyslexia"],
+ "related": ["how-to-follow-up-after-a-networking-event", "how-to-remember-who-you-met", "networking-with-dyslexia", "following-up-late"],
 },
 {
  "slug": "following-up-late",
@@ -1047,7 +1047,7 @@ PAGES += [
    ("Should I pretend it has not been that long?", "No. They can see the date of the event and the gap is obvious. Naming it takes it off the table."),
    ("What if I promised to send something and never did?", "Send it now with one line: \"far later than I said — here it is.\" People remember the thing arriving much more than when it was due."),
  ],
- "related": ["how-to-follow-up-after-a-networking-event", "follow-up-email-after-a-networking-event", "how-to-remember-who-you-met"],
+ "related": ["how-to-follow-up-after-a-networking-event", "follow-up-email-after-a-networking-event", "how-to-remember-who-you-met", "follow-up-email-subject-lines", "linkedin-message-after-meeting-someone"],
 },
 {
  "slug": "how-to-remember-who-you-met",
@@ -1081,7 +1081,7 @@ PAGES += [
    ("What about memory tricks with names?", "Repeating the name aloud once, in the conversation, genuinely helps. The visual association tricks take more attention than a room like this leaves you."),
    ("How many people should I expect to remember?", "Without notes, two or three. With notes, all of them. That gap is the entire argument."),
  ],
- "related": ["how-to-follow-up-after-a-networking-event", "when-you-forget-someones-name", "networking-with-adhd"],
+ "related": ["how-to-follow-up-after-a-networking-event", "when-you-forget-someones-name", "networking-with-adhd", "follow-up-email-subject-lines"],
 },
 {
  "slug": "what-to-say-in-a-coffee-chat",
@@ -1116,7 +1116,7 @@ PAGES += [
    ("Video or in person?", "Whatever is easier for them — say so explicitly when you ask. Making it easy is most of why people say yes."),
    ("What if I run out of questions?", "Ask who else they would talk to in your position. It is the most useful question in the conversation and it is a natural ending."),
  ],
- "related": ["job-search-networking", "informational-interview-questions", "how-to-follow-up-after-a-networking-event"],
+ "related": ["job-search-networking", "informational-interview-questions", "how-to-follow-up-after-a-networking-event", "following-up-late"],
 },
 ]
 
@@ -1157,7 +1157,7 @@ PAGES += [
    ("What if I talk too long about one thing?", "Ask a question roughly every third turn. It is mechanical rather than a personality change, which is exactly why it works under pressure."),
    ("Are these events even worth it for me?", "Sometimes not, and that is a legitimate answer. One prepared conversation with a specific person is usually higher value than any mixer."),
  ],
- "related": ["neurodivergent-networking", "sensory-overload-at-events", "masking-at-work-events"],
+ "related": ["neurodivergent-networking", "sensory-overload-at-events", "masking-at-work-events", "rejection-sensitivity-after-networking"],
 },
 {
  "slug": "sensory-overload-at-events",
@@ -1231,7 +1231,7 @@ PAGES += [
    ("Is it dishonest?", "No. Everyone adjusts how they present at a work event. The difference is how much it costs you, not whether you are doing something other people are not."),
    ("Why am I exhausted when it went well?", "Because going well is the expensive version. A conversation that flowed usually means more monitoring, not less."),
  ],
- "related": ["neurodivergent-networking", "networking-when-youre-already-drained", "rejection-sensitivity-after-networking"],
+ "related": ["neurodivergent-networking", "networking-when-youre-already-drained", "rejection-sensitivity-after-networking", "autistic-networking-events"],
 },
 {
  "slug": "rejection-sensitivity-after-networking",
@@ -1297,7 +1297,7 @@ PAGES += [
    ("Is it bad to stay with one person all night?", "Only if you both wanted to move and neither did. If it is a genuinely good conversation, that is the outcome you came for."),
    ("How do I know if it counted?", "You can name one specific thing they told you. If you cannot, it was an introduction."),
  ],
- "related": ["networking-for-introverts", "how-to-end-a-conversation-politely", "how-to-leave-a-networking-event-early"],
+ "related": ["networking-for-introverts", "how-to-end-a-conversation-politely", "how-to-leave-a-networking-event-early", "how-to-network-at-a-conference"],
 },
 {
  "slug": "networking-when-youre-already-drained",
@@ -1331,7 +1331,7 @@ PAGES += [
    ("What if I always feel like this before?", "Dread before and fine during is extremely common, and it is different from arriving genuinely empty. The forty-minute version is a good test of which one it is."),
    ("Does coffee help?", "It reliably makes the physical symptoms of anxiety louder. If you are going in nervous rather than tired, it usually makes the first hour harder."),
  ],
- "related": ["networking-for-introverts", "masking-at-work-events", "how-to-leave-a-networking-event-early"],
+ "related": ["networking-for-introverts", "masking-at-work-events", "how-to-leave-a-networking-event-early", "conferences-for-introverts"],
 },
 {
  "slug": "conferences-for-introverts",
@@ -1366,7 +1366,7 @@ PAGES += [
    ("What if my employer sent me?", "Nobody is counting sessions. Come back with two useful contacts and a clear summary and you have done more than most attendees."),
    ("Is it worth staying in the venue hotel?", "Usually yes — being able to go upstairs for twenty minutes is worth more than the cheaper room twenty minutes away."),
  ],
- "related": ["networking-for-introverts", "networking-when-youre-already-drained", "sensory-overload-at-events"],
+ "related": ["networking-for-introverts", "networking-when-youre-already-drained", "sensory-overload-at-events", "how-to-network-at-a-conference", "online-networking-for-introverts"],
 },
 {
  "slug": "online-networking-for-introverts",
@@ -1402,7 +1402,7 @@ PAGES += [
    ("How often do I need to post?", "Consistently beats often. Once a fortnight for a year does more than daily for a month."),
    ("Is video required?", "No. Written work is read by more people than it is watched by in most professional fields, and it is searchable afterwards."),
  ],
- "related": ["networking-for-introverts", "linkedin-networking-message-examples", "do-i-actually-have-to-network"],
+ "related": ["networking-for-introverts", "linkedin-networking-message-examples", "do-i-actually-have-to-network", "conferences-for-introverts"],
 },
 ]
 
@@ -1441,7 +1441,7 @@ PAGES += [
    ("Is it worth going at all if I apply online anyway?", "The name is what you get. An application that says \"I spoke to Priya at the fair\" is read differently from one that does not."),
    ("Can I go with a friend?", "Walk in together and split up at the door. Doing the tables as a pair halves how much anyone talks to either of you."),
  ],
- "related": ["career-fair-what-to-say", "job-search-networking", "networking-with-social-anxiety"],
+ "related": ["career-fair-what-to-say", "job-search-networking", "networking-with-social-anxiety", "networking-as-a-student", "how-to-network-on-linkedin"],
 },
 {
  "slug": "informational-interview-questions",
@@ -1486,7 +1486,7 @@ PAGES += [
    ("Should I send them in advance?", "Only if they ask. Sending a list makes it feel like an interview of them, which changes how candidly people answer."),
    ("Is it okay to take notes?", "Yes, and say so — \"do you mind if I write some of this down?\" People are more forthcoming when they can see it is being taken seriously."),
  ],
- "related": ["job-search-networking", "what-to-say-in-a-coffee-chat", "how-to-ask-for-a-referral"],
+ "related": ["job-search-networking", "what-to-say-in-a-coffee-chat", "how-to-ask-for-a-referral", "career-fair-with-social-anxiety", "networking-after-a-layoff"],
 },
 {
  "slug": "linkedin-networking-message-examples",
@@ -1523,7 +1523,7 @@ PAGES += [
    ("What reply rate should I expect?", "Low, and it is not about you. Five thoughtful messages beat fifty generic ones, and the fifty will make you hate doing it."),
    ("Should I follow up?", "Once, after about ten days, shorter than the first. Then stop."),
  ],
- "related": ["job-search-networking", "linkedin-message-after-meeting-someone", "online-networking-for-introverts"],
+ "related": ["job-search-networking", "linkedin-message-after-meeting-someone", "online-networking-for-introverts", "networking-as-a-student"],
 },
 {
  "slug": "networking-as-a-student",
@@ -1558,7 +1558,7 @@ PAGES += [
    ("What if I have no experience to talk about?", "Talk about what you are curious about instead. \"I am trying to work out whether X or Y\" is a better conversation than a thin resume."),
    ("Do professors count?", "Very much. They have decades of former students in industry and they are rarely asked. Ask who they would put you in touch with."),
  ],
- "related": ["job-search-networking", "career-fair-what-to-say", "informational-interview-questions"],
+ "related": ["job-search-networking", "career-fair-what-to-say", "informational-interview-questions", "networking-for-a-career-change"],
 },
 {
  "slug": "networking-after-a-layoff",
@@ -1594,7 +1594,7 @@ PAGES += [
    ("How long should I wait before telling people?", "Days, not weeks. The market moves and the awkwardness does not decrease with time — it increases, because then you also have to explain the gap in contact."),
    ("What if I was let go rather than laid off?", "\"It was not the right fit and we parted ways\" is a normal sentence that closes the subject. Do not volunteer more; almost nobody asks a second question."),
  ],
- "related": ["job-search-networking", "how-to-ask-for-a-referral", "how-to-introduce-yourself-at-a-networking-event"],
+ "related": ["job-search-networking", "how-to-ask-for-a-referral", "how-to-introduce-yourself-at-a-networking-event", "networking-for-a-career-change"],
 },
 {
  "slug": "how-to-ask-for-a-referral",
@@ -1649,7 +1649,7 @@ PAGES += [
    ("Should I ask before or after I apply?", "Before, if you can. A referral that arrives after you applied can be harder for the recruiter to connect to your application, so ask first and apply once they confirm."),
    ("What if they say no?", "Thank them and move on without asking why. A no protects a relationship that a pressured yes would damage."),
  ],
- "related": ["job-search-networking", "how-to-follow-up-after-a-networking-event", "networking-after-a-layoff", "informational-interview-questions"],
+ "related": ["job-search-networking", "how-to-follow-up-after-a-networking-event", "networking-after-a-layoff", "informational-interview-questions", "how-to-network-on-linkedin"],
 },
 {
  "slug": "networking-for-a-career-change",
@@ -1684,7 +1684,7 @@ PAGES += [
    ("How do I explain the change?", "One sentence, forward-looking. \"I want to work on X and this is the closest I can get\" needs no defense and invites no follow-up."),
    ("Is it worth going to events in the new field if I know nobody?", "Yes, and being new is a usable position: \"I am moving into this and trying to work out who does what\" is a legitimate reason to talk to anyone in the room."),
  ],
- "related": ["job-search-networking", "informational-interview-questions", "do-i-actually-have-to-network"],
+ "related": ["job-search-networking", "informational-interview-questions", "do-i-actually-have-to-network", "how-to-network-on-linkedin"],
 },
 {
  "slug": "what-to-bring-to-a-networking-event",
@@ -1717,7 +1717,7 @@ PAGES += [
    ("Should I bring a notebook?", "Only if you will actually use it. A phone is faster, quieter and does not require a surface."),
    ("What should I wear?", "Match the industry and go one step smarter if unsure. It is the least interesting decision of the evening and worth settling the night before."),
  ],
- "related": ["the-hour-before-a-networking-event", "how-to-remember-who-you-met", "what-to-do-with-the-business-cards"],
+ "related": ["the-hour-before-a-networking-event", "how-to-remember-who-you-met", "what-to-do-with-the-business-cards", "do-i-actually-have-to-network"],
 },
 {
  "slug": "how-to-network-at-a-conference",
@@ -1750,7 +1750,7 @@ PAGES += [
    ("What if I do not know anyone at all?", "Arrive early on day one. The first morning is the only time nobody has formed groups yet, and it is much easier than day two."),
    ("Is the evening event worth it?", "One of them. They are largely interchangeable and going to all of them is how the last day disappears."),
  ],
- "related": ["conferences-for-introverts", "networking-for-introverts", "how-to-remember-who-you-met"],
+ "related": ["conferences-for-introverts", "networking-for-introverts", "how-to-remember-who-you-met", "how-many-people-should-i-talk-to"],
 },
 ]
 
@@ -1789,7 +1789,7 @@ PAGES += [
    ("How often?", "Consistently rather than often. A few comments a week for a year beats a burst of daily activity for a month."),
    ("Is a premium account worth it?", "For most people no. The free account does everything described here."),
  ],
- "related": ["linkedin-networking-message-examples", "online-networking-for-introverts", "job-search-networking"],
+ "related": ["linkedin-networking-message-examples", "online-networking-for-introverts", "job-search-networking", "career-fair-with-social-anxiety", "networking-after-a-layoff"],
 },
 {
  "slug": "your-first-networking-event",
@@ -1865,7 +1865,7 @@ PAGES += [
    ("What about drinking?", "One is fine if you normally drink. The problem with more is the follow-up note you never take and the conversations you cannot reconstruct."),
    ("Is it bad to leave a conversation?", "No — it is the expected behavior at an event, and doing it cleanly is a kindness. Being unable to leave one is what actually ruins evenings."),
  ],
- "related": ["what-to-say-when-you-dont-know-anyone", "how-to-follow-up-after-a-networking-event", "how-many-people-should-i-talk-to"],
+ "related": ["what-to-say-when-you-dont-know-anyone", "how-to-follow-up-after-a-networking-event", "how-many-people-should-i-talk-to", "how-to-introduce-two-people", "small-talk-questions-that-arent-boring"],
 },
 ]
 
@@ -1908,7 +1908,7 @@ PAGES += [
    ("Do productivity apps help?", "The ones that reduce a decision help. The ones that add a system to maintain become another thing to abandon in three weeks, which is its own small cost."),
    ("Is it worse in an open-plan office?", "Usually, and that is worth naming as an environment problem rather than a personal failing. Noise-filtering earplugs and a booked room for anything that needs thinking are the two cheapest fixes."),
  ],
- "related": ["adhd-job-interview", "adhd-in-meetings", "networking-with-adhd"],
+ "related": ["adhd-job-interview", "adhd-in-meetings", "networking-with-adhd", "adhd-and-email-at-work"],
 },
 {
  "slug": "adhd-job-interview",
@@ -1944,7 +1944,7 @@ PAGES += [
    ("What if I interrupt the interviewer?", "Say \"sorry, go on\" and let them finish. It reads as enthusiasm far more often than rudeness, and the recovery is what people remember."),
    ("Are panel interviews worse?", "Usually, because there is more to track. Ask who is who at the start and write the names down — that removes one whole thing you would otherwise be holding."),
  ],
- "related": ["adhd-at-work", "asking-for-interview-adjustments", "what-to-say-about-your-weakness"],
+ "related": ["adhd-at-work", "asking-for-interview-adjustments", "what-to-say-about-your-weakness", "adhd-remote-work"],
 },
 {
  "slug": "adhd-in-meetings",
@@ -1979,7 +1979,7 @@ PAGES += [
    ("What about video meetings?", "Harder, because there is less to do with your body and more to watch. Notes help more, not less, and turning off self-view removes one thing you are monitoring."),
    ("I zone out and miss my turn.", "Ask to go first when there is a round. It costs nothing and removes twenty minutes of waiting for your name."),
  ],
- "related": ["adhd-at-work", "speaking-up-in-meetings", "adhd-note-taking"],
+ "related": ["adhd-at-work", "speaking-up-in-meetings", "adhd-note-taking", "adhd-and-email-at-work"],
 },
 {
  "slug": "adhd-remote-work",
@@ -2123,7 +2123,7 @@ PAGES += [
    ("What about inbox zero?", "It is a system to maintain, so treat it as optional. The two rules above deliver most of the benefit and survive a bad week."),
    ("I have hundreds of unread.", "Archive everything older than a month. If it mattered, it will come back. Starting from zero is worth more than the few things you lose."),
  ],
- "related": ["adhd-at-work", "writing-emails-with-dyslexia", "adhd-note-taking"],
+ "related": ["adhd-at-work", "writing-emails-with-dyslexia", "adhd-note-taking", "adhd-time-blindness-at-work"],
 },
 {
  "slug": "telling-your-employer-you-have-adhd",
@@ -2193,7 +2193,7 @@ PAGES += [
    ("Should I go to HR or my manager?", "Most people start with the manager if the relationship is good, because it stays practical. HR makes it a process, which is what you want only if you need it on record."),
    ("What if I have not been performing well?", "Bring the request and the fix together. Asking for what would help, with a plan, is a much stronger position than waiting to be managed."),
  ],
- "related": ["adhd-at-work", "telling-your-employer-you-have-adhd", "asking-for-accommodations-at-work"],
+ "related": ["adhd-at-work", "telling-your-employer-you-have-adhd", "asking-for-accommodations-at-work", "adhd-time-blindness-at-work"],
 },
 ]
 
@@ -2231,7 +2231,7 @@ PAGES += [
    ("Does it get easier in a job you have done for years?", "Usually yes, because the vocabulary becomes familiar and you know what is coming. A new role resets that, and it is worth expecting rather than being surprised by."),
    ("Is AI writing help cheating?", "No more than a spellchecker. The judgement about what to say is still yours, and that is the part the job is paying for."),
  ],
- "related": ["dyslexia-email-signature", "reading-out-loud-at-work", "networking-with-dyslexia"],
+ "related": ["dyslexia-email-signature", "reading-out-loud-at-work", "networking-with-dyslexia", "dyslexia-and-note-taking"],
 },
 {
  "slug": "dyslexia-email-signature",
@@ -2269,7 +2269,7 @@ PAGES += [
    ("Should the company add it as standard?", "Some do, as an option in the signature template. That normalizes it far better than an individual adding it alone."),
    ("What about LinkedIn or a resume?", "Different decision — those are read by people deciding about you rather than corresponding with you. Most people who use the email line do not put it on a resume."),
  ],
- "related": ["dyslexia-at-work", "writing-emails-with-dyslexia", "telling-your-employer-you-have-dyslexia"],
+ "related": ["dyslexia-at-work", "writing-emails-with-dyslexia", "telling-your-employer-you-have-dyslexia", "reading-out-loud-at-work"],
 },
 {
  "slug": "reading-out-loud-at-work",
@@ -2305,7 +2305,7 @@ PAGES += [
    ("What if I stumble halfway through?", "Stop, say \"let me start that line again\", and carry on. Everyone stumbles reading aloud and the recovery is what is remembered."),
    ("Does text-to-speech help?", "For your own preparation, a lot — hearing it once makes reading it aloud much easier. It does not help in the moment."),
  ],
- "related": ["dyslexia-at-work", "presenting-at-work", "dyslexia-in-a-job-interview"],
+ "related": ["dyslexia-at-work", "presenting-at-work", "dyslexia-in-a-job-interview", "dyslexia-accommodations-at-work"],
 },
 {
  "slug": "writing-emails-with-dyslexia",
@@ -2374,7 +2374,7 @@ PAGES += [
    ("Do AI meeting notes solve it?", "Largely, and they create a transcript nobody reads. Still write the four things."),
    ("What about handwriting for memory?", "It does help recall. If your handwriting is hard to reread, the trade is rarely worth it."),
  ],
- "related": ["dyslexia-at-work", "adhd-note-taking", "how-to-remember-who-you-met"],
+ "related": ["dyslexia-at-work", "adhd-note-taking", "how-to-remember-who-you-met", "dyslexia-email-signature"],
 },
 {
  "slug": "dyslexia-in-a-job-interview",
@@ -2409,7 +2409,7 @@ PAGES += [
    ("What about online tests with a timer?", "That is exactly the case to ask about, and untimed or extended versions usually exist. Ask before you start it, not after."),
    ("Should it be on my resume?", "Most people do not put it there. A resume is for deciding whether to meet you; the adjustment conversation belongs later."),
  ],
- "related": ["dyslexia-at-work", "adhd-job-interview", "asking-for-interview-adjustments"],
+ "related": ["dyslexia-at-work", "adhd-job-interview", "asking-for-interview-adjustments", "writing-emails-with-dyslexia"],
 },
 {
  "slug": "telling-your-employer-you-have-dyslexia",
@@ -2478,7 +2478,7 @@ PAGES += [
    ("Is software expensive?", "Text-to-speech and dictation are built into every major operating system and cost nothing. Start there before asking for a budget."),
    ("What if my manager does not understand dyslexia?", "Do not explain dyslexia. Explain the specific thing you want and what it produces — that conversation does not require them to understand anything."),
  ],
- "related": ["dyslexia-at-work", "telling-your-employer-you-have-dyslexia", "adhd-accommodations-at-work"],
+ "related": ["dyslexia-at-work", "telling-your-employer-you-have-dyslexia", "adhd-accommodations-at-work", "dyslexia-and-note-taking"],
 },
 ]
 
@@ -2516,7 +2516,7 @@ PAGES += [
    ("Should I tell my manager?", "You can ask for what helps without naming anything — an agenda in advance, a heads-up before being asked to speak. Start there."),
    ("Does it get better with exposure?", "The specific situations do, with repetition. The general feeling is less responsive, which is why preparing each one beats waiting to feel differently."),
  ],
- "related": ["speaking-up-in-meetings", "first-day-at-a-new-job", "networking-with-social-anxiety"],
+ "related": ["speaking-up-in-meetings", "first-day-at-a-new-job", "networking-with-social-anxiety", "imposter-syndrome-at-work"],
 },
 {
  "slug": "speaking-up-in-meetings",
@@ -2551,7 +2551,7 @@ PAGES += [
    ("Are video meetings harder?", "Usually — the turn-taking cues are gone. Use the chat as a legitimate way to contribute, and say your name before speaking."),
    ("What if my idea is wrong?", "Most contributions in most meetings are partly wrong and it is not remembered. Being consistently silent is remembered."),
  ],
- "related": ["social-anxiety-at-work", "adhd-in-meetings", "video-call-anxiety"],
+ "related": ["social-anxiety-at-work", "adhd-in-meetings", "video-call-anxiety", "presenting-at-work"],
 },
 {
  "slug": "work-parties-and-socials",
@@ -2586,7 +2586,7 @@ PAGES += [
    ("What if I have nothing to say to my colleagues?", "Ask about the thing they are working on, or the commute, or the weekend. Work socials run on ordinary small talk, not on wit."),
    ("Is it career-limiting to skip them?", "Skipping some, no. Skipping all of them tends to show up as being seen as distant, which is a slower cost but a real one."),
  ],
- "related": ["social-anxiety-at-work", "the-office-christmas-party", "team-lunches-and-work-food"],
+ "related": ["social-anxiety-at-work", "the-office-christmas-party", "team-lunches-and-work-food", "performance-review-anxiety"],
 },
 {
  "slug": "the-office-christmas-party",
@@ -2620,7 +2620,7 @@ PAGES += [
    ("What if there are games or dancing?", "You can decline both without explanation and nobody follows up. Standing near it is enough to have participated."),
    ("Secret Santa?", "Do it — it is low effort and opting out is more conspicuous than joining in."),
  ],
- "related": ["work-parties-and-socials", "social-anxiety-at-work", "social-anxiety-after-a-networking-event"],
+ "related": ["work-parties-and-socials", "social-anxiety-at-work", "social-anxiety-after-a-networking-event", "video-call-anxiety"],
 },
 {
  "slug": "first-day-at-a-new-job",
@@ -2655,7 +2655,7 @@ PAGES += [
    ("What if I forget everyone's name?", "You will. Asking again in week one is completely expected and nobody counts it."),
    ("Should I stay late to look keen?", "No. Leaving at a normal time on day one sets the pattern you actually want, and nobody is noting your hours yet."),
  ],
- "related": ["social-anxiety-at-work", "when-you-forget-someones-name", "office-small-talk"],
+ "related": ["social-anxiety-at-work", "when-you-forget-someones-name", "office-small-talk", "the-office-christmas-party", "team-lunches-and-work-food"],
 },
 {
  "slug": "video-call-anxiety",
@@ -2689,7 +2689,7 @@ PAGES += [
    ("Why am I more tired than after in-person meetings?", "More faces at close range, a mirror, and missing cues you are working to replace. It is a real effect and it is not a lack of stamina."),
    ("Should I look at the camera or the person?", "The camera reads as eye contact and the screen is where the information is. Most people switch and nobody notices either way."),
  ],
- "related": ["social-anxiety-at-work", "speaking-up-in-meetings", "video-interview-anxiety"],
+ "related": ["social-anxiety-at-work", "speaking-up-in-meetings", "video-interview-anxiety", "work-parties-and-socials"],
 },
 ]
 
@@ -2727,7 +2727,7 @@ PAGES += [
    ("Should I bring notes?", "Yes, and visibly. It reads as preparation, and it means you do not lose your points when the conversation turns."),
    ("What if I have no idea what they think of me?", "That is a question to ask now rather than in the review. \"Is there anything you would want me doing differently?\" a month before removes most surprises."),
  ],
- "related": ["social-anxiety-at-work", "one-on-ones-with-your-manager", "imposter-syndrome-at-work"],
+ "related": ["social-anxiety-at-work", "one-on-ones-with-your-manager", "imposter-syndrome-at-work", "presenting-at-work"],
 },
 {
  "slug": "one-on-ones-with-your-manager",
@@ -2762,7 +2762,7 @@ PAGES += [
    ("Should I raise problems or look competent?", "Raise them. Unsurfaced problems become surprises, and a surprise is the thing managers genuinely mind."),
    ("Can I ask for feedback directly?", "Yes, specifically: \"is there anything you would want me doing differently?\" General requests get general answers."),
  ],
- "related": ["social-anxiety-at-work", "performance-review-anxiety", "speaking-up-in-meetings"],
+ "related": ["social-anxiety-at-work", "performance-review-anxiety", "speaking-up-in-meetings", "imposter-syndrome-at-work"],
 },
 {
  "slug": "team-lunches-and-work-food",
@@ -2795,7 +2795,7 @@ PAGES += [
    ("What if I have dietary restrictions?", "Tell whoever books it, in advance and by message. It removes an on-the-spot conversation you would otherwise have in front of everyone."),
    ("What do people even talk about?", "Weekends, the commute, television, and the work everyone is already doing. It is genuinely ordinary."),
  ],
- "related": ["social-anxiety-at-work", "office-small-talk", "work-parties-and-socials"],
+ "related": ["social-anxiety-at-work", "office-small-talk", "work-parties-and-socials", "first-day-at-a-new-job"],
 },
 {
  "slug": "going-back-to-the-office",
@@ -2828,7 +2828,7 @@ PAGES += [
    ("Can I ask to stay remote?", "You can ask, with a reason tied to output. Whether it is granted depends on the employer, and asking does not cost you anything."),
    ("How long does the adjustment take?", "People commonly describe a few weeks. If it is still getting worse after a couple of months, that is worth taking seriously rather than pushing through."),
  ],
- "related": ["social-anxiety-at-work", "adhd-remote-work", "sensory-issues-in-an-office"],
+ "related": ["social-anxiety-at-work", "adhd-remote-work", "sensory-issues-in-an-office", "the-office-christmas-party"],
 },
 {
  "slug": "imposter-syndrome-at-work",
@@ -2862,7 +2862,7 @@ PAGES += [
    ("Should I tell my manager?", "You can ask for concrete feedback without framing it this way. \"What would you want me doing differently?\" gets you the evidence without the conversation."),
    ("Is it ever accurate?", "Occasionally you are genuinely new and under-skilled — and that is a learning plan, not a character verdict. The test is whether you can name the specific gap."),
  ],
- "related": ["social-anxiety-at-work", "performance-review-anxiety", "first-day-at-a-new-job"],
+ "related": ["social-anxiety-at-work", "performance-review-anxiety", "first-day-at-a-new-job", "one-on-ones-with-your-manager", "going-back-to-the-office"],
 },
 {
  "slug": "presenting-at-work",
@@ -2897,7 +2897,7 @@ PAGES += [
    ("Should I stand or sit?", "Standing tends to make your voice carry and your breathing steadier. If the room is small and everyone is sitting, sit."),
    ("Is it worth practicing in front of someone?", "One friendly colleague once is worth several solo run-throughs, mainly because it surfaces which part is unclear."),
  ],
- "related": ["social-anxiety-at-work", "reading-out-loud-at-work", "speaking-up-in-meetings"],
+ "related": ["social-anxiety-at-work", "reading-out-loud-at-work", "speaking-up-in-meetings", "one-on-ones-with-your-manager"],
 },
 ]
 
@@ -2935,7 +2935,7 @@ PAGES += [
    ("Is remote work better?", "Often, for the sensory and interruption part. It removes the incidental contact too, which some people miss — worth deciding deliberately rather than by default."),
    ("What if I am doing the work well and still struggling?", "That is the common pattern rather than a contradiction. It is usually the environment, and the environment is the thing with levers on it."),
  ],
- "related": ["asking-for-accommodations-at-work", "sensory-issues-in-an-office", "autistic-networking-events"],
+ "related": ["asking-for-accommodations-at-work", "sensory-issues-in-an-office", "autistic-networking-events", "autistic-burnout-after-work-events"],
 },
 {
  "slug": "autistic-burnout-after-work-events",
@@ -2969,7 +2969,7 @@ PAGES += [
    ("Should I skip work events entirely?", "Skipping all of them has its own cost over time. Fewer events, deliberately chosen, with recovery planned, is the trade most people land on."),
    ("Can I tell my employer this is why?", "You can ask for a later start after an evening event without explaining anything. That gets you most of the benefit with none of the disclosure."),
  ],
- "related": ["autistic-at-work", "sensory-issues-in-an-office", "masking-at-work-events"],
+ "related": ["autistic-at-work", "sensory-issues-in-an-office", "masking-at-work-events", "telling-your-employer-you-are-autistic"],
 },
 {
  "slug": "asking-for-accommodations-at-work",
@@ -3004,7 +3004,7 @@ PAGES += [
    ("Manager or HR?", "Manager first if the relationship is decent, because it stays practical. HR makes it a process, which you want only when you need it on record."),
    ("What if I have asked before and nothing happened?", "Put it in writing this time, with one specific thing and a date. Verbal requests are the ones that evaporate."),
  ],
- "related": ["autistic-at-work", "adhd-accommodations-at-work", "dyslexia-accommodations-at-work"],
+ "related": ["autistic-at-work", "adhd-accommodations-at-work", "dyslexia-accommodations-at-work", "autistic-burnout-after-work-events", "telling-your-employer-you-are-autistic"],
 },
 {
  "slug": "sensory-issues-in-an-office",
@@ -3038,7 +3038,7 @@ PAGES += [
    ("What about hot-desking?", "Ask whether you can book the same desk regularly. Many systems allow it and few people realize."),
    ("Is it reasonable to ask to work from home for focused work?", "Very common now, and easiest to get agreed for specific tasks rather than as a general pattern."),
  ],
- "related": ["autistic-at-work", "going-back-to-the-office", "sensory-overload-at-events"],
+ "related": ["autistic-at-work", "going-back-to-the-office", "sensory-overload-at-events", "telling-your-employer-you-are-autistic"],
 },
 {
  "slug": "office-small-talk",
@@ -3072,7 +3072,7 @@ PAGES += [
    ("Do I have to remember what they told me?", "It helps a lot and it is exactly what a note is for. One line about a colleague is not strange to keep."),
    ("Is it okay to be bad at it?", "Almost everyone is. Being consistently pleasant and brief is read as perfectly normal — it is silence that gets interpreted."),
  ],
- "related": ["autistic-at-work", "team-lunches-and-work-food", "small-talk-questions-that-arent-boring"],
+ "related": ["autistic-at-work", "team-lunches-and-work-food", "small-talk-questions-that-arent-boring", "autistic-burnout-after-work-events"],
 },
 {
  "slug": "telling-your-employer-you-are-autistic",
@@ -3107,7 +3107,7 @@ PAGES += [
    ("Do I have to tell them?", "In most places no. The specifics depend on your country — check a local source rather than this page."),
    ("What if I am self-identified rather than diagnosed?", "For working preferences it makes no difference. For formal adjustments it may — that varies by country and employer."),
  ],
- "related": ["autistic-at-work", "asking-for-accommodations-at-work", "telling-your-employer-you-have-adhd"],
+ "related": ["autistic-at-work", "asking-for-accommodations-at-work", "telling-your-employer-you-have-adhd", "office-small-talk"],
 },
 {
  "slug": "job-interviews",
@@ -3141,7 +3141,7 @@ PAGES += [
    ("What if I go blank completely?", "Say so: \"I have gone blank — can I come back to that?\" Interviewers almost always say yes and it is remembered far less than you would think."),
    ("How much research is enough?", "What they do, one recent thing they did, and one genuine question. More than that rarely shows up in the conversation."),
  ],
- "related": ["adhd-job-interview", "social-anxiety-in-interviews", "dyslexia-in-a-job-interview"],
+ "related": ["adhd-job-interview", "social-anxiety-in-interviews", "dyslexia-in-a-job-interview", "what-to-say-about-your-weakness"],
 },
 {
  "slug": "social-anxiety-in-interviews",
@@ -3177,7 +3177,7 @@ PAGES += [
    ("Are panel interviews worse?", "For most people yes. Ask who will be there beforehand and write the names down as you arrive."),
    ("What about the small talk walking to the room?", "Prepare one line about the building, the journey or the weather. It is thirty seconds and it is the part nobody rehearses."),
  ],
- "related": ["job-interviews", "video-interview-anxiety", "the-day-before-an-interview"],
+ "related": ["job-interviews", "video-interview-anxiety", "the-day-before-an-interview", "interview-questions-you-can-prepare"],
 },
 {
  "slug": "video-interview-anxiety",
@@ -3211,7 +3211,7 @@ PAGES += [
    ("What if the connection drops?", "Rejoin and carry on. It happens constantly and no interviewer holds it against a candidate."),
    ("Is it harder than in person?", "Different. The cues are worse and the logistics are easier, and you can have notes in view, which in a room you cannot."),
  ],
- "related": ["job-interviews", "video-call-anxiety", "social-anxiety-in-interviews"],
+ "related": ["job-interviews", "video-call-anxiety", "social-anxiety-in-interviews", "the-day-before-an-interview"],
 },
 {
  "slug": "what-to-say-about-your-weakness",
@@ -3284,7 +3284,7 @@ PAGES += [
    ("Does it make me look like hard work?", "Asking for one thing clearly and early reads as prepared. It is a list of six, sent the night before, that creates an impression."),
    ("Can I ask after I have already been booked in?", "Yes, at any point. Sooner is easier for them and therefore easier for you."),
  ],
- "related": ["job-interviews", "dyslexia-in-a-job-interview", "adhd-job-interview"],
+ "related": ["job-interviews", "dyslexia-in-a-job-interview", "adhd-job-interview", "video-interview-anxiety"],
 },
 {
  "slug": "interview-questions-you-can-prepare",
@@ -3324,7 +3324,7 @@ PAGES += [
    ("Should I write answers out in full?", "Write them, then reduce to bullet points and say them out loud. A memorized script sounds memorized and collapses if interrupted."),
    ("How many questions should I ask?", "Two good ones. A long list rarely gets through and the time is usually shorter than expected."),
  ],
- "related": ["job-interviews", "what-to-say-about-your-weakness", "the-day-before-an-interview"],
+ "related": ["job-interviews", "what-to-say-about-your-weakness", "the-day-before-an-interview", "asking-for-interview-adjustments"],
 },
 {
  "slug": "the-day-before-an-interview",

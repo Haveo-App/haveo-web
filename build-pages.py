@@ -98,9 +98,18 @@ FIRST_PUBLISHED = "2026-09-15"   # the day the site's guides went live
 
 def _fingerprint(page):
     """Everything a reader would see. Ordering-independent, so a reshuffle of
-    content.py does not read as a rewrite."""
+    content.py does not read as a rewrite.
+
+    `related` is excluded on purpose. Adding a page to a sibling's Related
+    guides changes that sibling's footer, not its answer, and a reader who came
+    back for the text would find nothing new. Including it meant one internal
+    linking pass bumped dateModified on 81 of 92 pages in a single commit —
+    which is a false freshness claim to Google, and would have fired IndexNow
+    for 81 pages that did not change. Link the pages freely; the date still
+    means the day the words changed."""
+    body = {k: v for k, v in page.items() if k != "related"}
     return hashlib.sha256(
-        json.dumps(page, sort_keys=True, ensure_ascii=False, default=str)
+        json.dumps(body, sort_keys=True, ensure_ascii=False, default=str)
         .encode("utf-8")).hexdigest()[:16]
 
 try:
