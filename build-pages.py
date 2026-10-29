@@ -376,7 +376,7 @@ def render(p):
 
     <div class="appbox">
       <p><strong>Rehearse it before you walk in.</strong></p>
-      <p>Haveo builds your intro, lets you practice out loud with an AI coach, and keeps your notes one tap away in the room. Free on iPhone and iPad.</p>
+      <p>Haveo builds your intro, lets you practice out loud with an AI coach, and keeps your notes one tap away in the room. Free on iPhone and iPad with iOS 15.1 or later. No account required.</p>
       <a class="btn btn-appstore" href="{app_href}" target="_blank" rel="noopener">{APPLE_SVG}Download Haveo — free</a>
     </div>
 
