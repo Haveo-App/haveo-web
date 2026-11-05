@@ -132,6 +132,26 @@ def main():
         return 1
 
     fails = []
+    # The home title is the search-result promise for the product's own name.
+    # It drifted into audience-only wording several times, leaving the title
+    # unable to say what Haveo is, where it runs, or what it helps with. Keep
+    # the stable, source-backed facts in the raw HTML: Haveo is an iPhone app
+    # for networking event prep. If the platform or product changes, update
+    # this assertion deliberately alongside the public copy.
+    try:
+        home = open("index.html", encoding="utf-8").read()
+    except FileNotFoundError:
+        print("page-check: missing home index.html", file=sys.stderr)
+        return 1
+    title_match = re.search(r"<title>(.*?)</title>", home, re.S | re.I)
+    home_title = html.unescape(title_match.group(1)).strip() if title_match else ""
+    required_home_title_terms = ("haveo", "iphone", "networking", "event prep")
+    missing_home_title_terms = [term for term in required_home_title_terms
+                                if term not in home_title.lower()]
+    if missing_home_title_terms:
+        fails.append(("index.html", "home title missing product fact",
+                      ", ".join(missing_home_title_terms)))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
