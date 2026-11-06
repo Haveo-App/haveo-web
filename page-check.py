@@ -152,6 +152,15 @@ def main():
         fails.append(("index.html", "home title missing product fact",
                       ", ".join(missing_home_title_terms)))
 
+    desc_match = re.search(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
+    home_desc = html.unescape(desc_match.group(1)).strip() if desc_match else ""
+    required_home_desc_terms = ("haveo", "networking", "cheat sheet", "92", "ios")
+    missing_home_desc_terms = [term for term in required_home_desc_terms
+                               if term not in home_desc.lower()]
+    if missing_home_desc_terms:
+        fails.append(("index.html", "home meta description missing product fact",
+                      ", ".join(missing_home_desc_terms)))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
@@ -296,8 +305,9 @@ def main():
     # --- search-result truncation ------------------------------------------
     # Google cuts titles around 65 characters and meta descriptions around 165.
     # A truncated title loses the words at the end, which are usually the
-    # specific ones the page is meant to rank for.
-    for f in files:
+    # specific ones the page is meant to rank for. Include index.html so the
+    # brand homepage title and description are strictly guarded against truncation.
+    for f in files + (["index.html"] if _os.path.exists("index.html") else []):
         t = open(f, encoding="utf-8").read()
         m = re.search(r"<title>(.*?)</title>", t, re.S)
         if m and len(m.group(1).strip()) > 65:
