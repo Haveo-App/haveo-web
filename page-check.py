@@ -161,6 +161,38 @@ def main():
         fails.append(("index.html", "home meta description missing product fact",
                       ", ".join(missing_home_desc_terms)))
 
+    og_title_m = re.search(r'<meta\s+property=["\']og:title["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
+    og_title = html.unescape(og_title_m.group(1)).strip() if og_title_m else ""
+    missing_og_title_terms = [term for term in required_home_title_terms
+                              if term not in og_title.lower()]
+    if missing_og_title_terms:
+        fails.append(("index.html", "home og:title missing product fact",
+                      ", ".join(missing_og_title_terms)))
+
+    og_desc_m = re.search(r'<meta\s+property=["\']og:description["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
+    og_desc = html.unescape(og_desc_m.group(1)).strip() if og_desc_m else ""
+    missing_og_desc_terms = [term for term in required_home_desc_terms
+                             if term not in og_desc.lower()]
+    if missing_og_desc_terms:
+        fails.append(("index.html", "home og:description missing product fact",
+                      ", ".join(missing_og_desc_terms)))
+
+    tw_title_m = re.search(r'<meta\s+name=["\']twitter:title["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
+    tw_title = html.unescape(tw_title_m.group(1)).strip() if tw_title_m else ""
+    missing_tw_title_terms = [term for term in required_home_title_terms
+                              if term not in tw_title.lower()]
+    if missing_tw_title_terms:
+        fails.append(("index.html", "home twitter:title missing product fact",
+                      ", ".join(missing_tw_title_terms)))
+
+    tw_desc_m = re.search(r'<meta\s+name=["\']twitter:description["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
+    tw_desc = html.unescape(tw_desc_m.group(1)).strip() if tw_desc_m else ""
+    missing_tw_desc_terms = [term for term in required_home_desc_terms
+                             if term not in tw_desc.lower()]
+    if missing_tw_desc_terms:
+        fails.append(("index.html", "home twitter:description missing product fact",
+                      ", ".join(missing_tw_desc_terms)))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
