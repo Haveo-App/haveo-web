@@ -201,6 +201,14 @@ def main():
         fails.append(("index.html", "home WebSite structured data description missing product fact",
                       ", ".join(missing_ws_desc_terms)))
 
+    app_desc_m = re.search(r'"@type":\s*"MobileApplication",.*?"description":\s*"(.*?)"', home, re.S)
+    app_desc = html.unescape(app_desc_m.group(1)).strip() if app_desc_m else ""
+    missing_app_desc_terms = [term for term in required_home_desc_terms
+                              if term not in app_desc.lower()]
+    if missing_app_desc_terms:
+        fails.append(("index.html", "home MobileApplication structured data description missing product fact",
+                      ", ".join(missing_app_desc_terms)))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
