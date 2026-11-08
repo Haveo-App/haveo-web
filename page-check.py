@@ -193,6 +193,14 @@ def main():
         fails.append(("index.html", "home twitter:description missing product fact",
                       ", ".join(missing_tw_desc_terms)))
 
+    ws_desc_m = re.search(r'"@type":\s*"WebSite",.*?"description":\s*"(.*?)"', home, re.S)
+    ws_desc = html.unescape(ws_desc_m.group(1)).strip() if ws_desc_m else ""
+    missing_ws_desc_terms = [term for term in required_home_desc_terms
+                             if term not in ws_desc.lower()]
+    if missing_ws_desc_terms:
+        fails.append(("index.html", "home WebSite structured data description missing product fact",
+                      ", ".join(missing_ws_desc_terms)))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
