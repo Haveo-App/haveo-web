@@ -209,6 +209,27 @@ def main():
         fails.append(("index.html", "home MobileApplication structured data description missing product fact",
                       ", ".join(missing_app_desc_terms)))
 
+    # Verify that homepage FAQPage structured data stays synchronized with the visible FAQ.
+    faq_ld_m = re.search(r'"@type":\s*"FAQPage",\s*"mainEntity":\s*(\[.*?\])\s*\}', home, re.S)
+    if not faq_ld_m:
+        fails.append(("index.html", "home FAQPage structured data missing or malformed", ""))
+    else:
+        try:
+            faq_entities = json.loads(faq_ld_m.group(1))
+            faq_ld_questions = [q.get("name", "").strip() for q in faq_entities if isinstance(q, dict)]
+        except json.JSONDecodeError as exc:
+            fails.append(("index.html", "home FAQPage JSON-LD invalid", str(exc)))
+            faq_ld_questions = []
+
+        visible_faq_questions = [q.strip() for q in re.findall(r"<summary>(.*?)</summary>", home)]
+        if not visible_faq_questions:
+            fails.append(("index.html", "home visible FAQ summaries missing", ""))
+        else:
+            missing_in_ld = [q for q in visible_faq_questions if q not in faq_ld_questions]
+            if missing_in_ld:
+                fails.append(("index.html", "home FAQPage schema missing visible questions",
+                              ", ".join(missing_in_ld)))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
