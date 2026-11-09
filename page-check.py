@@ -209,6 +209,14 @@ def main():
         fails.append(("index.html", "home MobileApplication structured data description missing product fact",
                       ", ".join(missing_app_desc_terms)))
 
+    org_desc_m = re.search(r'"@type":\s*"Organization",.*?"description":\s*"(.*?)"', home, re.S)
+    org_desc = html.unescape(org_desc_m.group(1)).strip() if org_desc_m else ""
+    missing_org_desc_terms = [term for term in required_home_desc_terms
+                              if term not in org_desc.lower()]
+    if missing_org_desc_terms:
+        fails.append(("index.html", "home Organization structured data description missing product fact",
+                      ", ".join(missing_org_desc_terms)))
+
     # Verify that homepage FAQPage structured data stays synchronized with the visible FAQ.
     faq_ld_m = re.search(r'"@type":\s*"FAQPage",\s*"mainEntity":\s*(\[.*?\])\s*\}', home, re.S)
     if not faq_ld_m:
