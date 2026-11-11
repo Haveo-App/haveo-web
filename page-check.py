@@ -251,6 +251,11 @@ def main():
                 fails.append(("index.html", "home FAQPage schema missing visible questions",
                               ", ".join(missing_in_ld)))
 
+    # Verify that homepage has apple-itunes-app meta tag for iOS Smart App Banner to convert mobile branded searchers.
+    itunes_m = re.search(r'<meta\s+name=["\']apple-itunes-app["\']\s+content=["\']app-id=6774740212["\']\s*/?>', home)
+    if not itunes_m:
+        fails.append(("index.html", "home missing apple-itunes-app meta tag for iOS App Banner", "expected app-id=6774740212"))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
