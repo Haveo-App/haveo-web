@@ -217,6 +217,19 @@ def main():
         fails.append(("index.html", "home Organization structured data description missing product fact",
                       ", ".join(missing_org_desc_terms)))
 
+    # Verify that homepage WebSite structured data includes SiteNavigationElement hasPart items matching visible guide hubs.
+    ws_haspart_m = re.search(r'"@type":\s*"WebSite",.*?"hasPart":\s*(\[.*?\])\s*,\s*"publisher"', home, re.S)
+    if not ws_haspart_m:
+        fails.append(("index.html", "home WebSite structured data missing hasPart SiteNavigationElement links", ""))
+    else:
+        try:
+            ws_parts = json.loads(ws_haspart_m.group(1))
+            nav_urls = [p.get("url", "").strip() for p in ws_parts if isinstance(p, dict) and p.get("@type") == "SiteNavigationElement"]
+            if len(nav_urls) < 11:
+                fails.append(("index.html", "home WebSite hasPart missing navigation elements", f"expected at least 11, found {len(nav_urls)}"))
+        except json.JSONDecodeError as exc:
+            fails.append(("index.html", "home WebSite hasPart JSON-LD invalid", str(exc)))
+
     # Verify that homepage FAQPage structured data stays synchronized with the visible FAQ.
     faq_ld_m = re.search(r'"@type":\s*"FAQPage",\s*"mainEntity":\s*(\[.*?\])\s*\}', home, re.S)
     if not faq_ld_m:
