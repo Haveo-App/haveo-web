@@ -145,12 +145,19 @@ def main():
         return 1
     title_match = re.search(r"<title>(.*?)</title>", home, re.S | re.I)
     home_title = html.unescape(title_match.group(1)).strip() if title_match else ""
-    required_home_title_terms = ("haveo", "iphone", "networking", "event prep")
+    # Keep the search-result title, social titles and image alt text as one
+    # product-name-aligned promise. Checking separate words let them drift apart
+    # while still passing, which weakens a branded-result CTR improvement.
+    expected_home_title = "Haveo: Networking Event Prep & Small Talk App for iPhone"
+    required_home_title_terms = ("haveo", "iphone", "networking", "event prep", "small talk")
     missing_home_title_terms = [term for term in required_home_title_terms
                                 if term not in home_title.lower()]
     if missing_home_title_terms:
         fails.append(("index.html", "home title missing product fact",
                       ", ".join(missing_home_title_terms)))
+    elif home_title != expected_home_title:
+        fails.append(("index.html", "home title differs from canonical product promise",
+                      home_title))
 
     desc_match = re.search(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
     home_desc = html.unescape(desc_match.group(1)).strip() if desc_match else ""
@@ -168,6 +175,15 @@ def main():
     if missing_og_title_terms:
         fails.append(("index.html", "home og:title missing product fact",
                       ", ".join(missing_og_title_terms)))
+    elif og_title != expected_home_title:
+        fails.append(("index.html", "home og:title differs from canonical product promise",
+                      og_title))
+
+    og_image_alt_m = re.search(r'<meta\s+property=["\']og:image:alt["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
+    og_image_alt = html.unescape(og_image_alt_m.group(1)).strip() if og_image_alt_m else ""
+    if og_image_alt != expected_home_title:
+        fails.append(("index.html", "home og:image:alt differs from canonical product promise",
+                      og_image_alt or "missing"))
 
     og_desc_m = re.search(r'<meta\s+property=["\']og:description["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
     og_desc = html.unescape(og_desc_m.group(1)).strip() if og_desc_m else ""
@@ -184,6 +200,9 @@ def main():
     if missing_tw_title_terms:
         fails.append(("index.html", "home twitter:title missing product fact",
                       ", ".join(missing_tw_title_terms)))
+    elif tw_title != expected_home_title:
+        fails.append(("index.html", "home twitter:title differs from canonical product promise",
+                      tw_title))
 
     tw_desc_m = re.search(r'<meta\s+name=["\']twitter:description["\']\s+content=["\'](.*?)["\']', home, re.S | re.I)
     tw_desc = html.unescape(tw_desc_m.group(1)).strip() if tw_desc_m else ""
