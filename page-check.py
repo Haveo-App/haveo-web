@@ -256,6 +256,20 @@ def main():
     if not itunes_m:
         fails.append(("index.html", "home missing apple-itunes-app meta tag for iOS App Banner", "expected app-id=6774740212"))
 
+    # Metadata-only CTR edits kept recurring while the first rendered screen
+    # still made a visitor infer the product identity. Keep the same grounded
+    # facts in the initial header: this is Haveo, it is a free iPhone app, and
+    # it prepares someone for a networking event. This is deliberately scoped
+    # to visible body copy, not JSON-LD or <head> metadata.
+    header_m = re.search(r"<header\b[^>]*>(.*?)</header>", home, re.S | re.I)
+    hero_text = html.unescape(re.sub(r"<[^>]+>", " ", header_m.group(1))) if header_m else ""
+    required_hero_terms = ("haveo", "free iphone app", "networking event")
+    missing_hero_terms = [term for term in required_hero_terms
+                          if term not in hero_text.lower()]
+    if missing_hero_terms:
+        fails.append(("index.html", "first screen missing grounded product identity",
+                      ", ".join(missing_hero_terms)))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
