@@ -236,7 +236,7 @@ def main():
         fails.append(("index.html", "home Organization structured data description missing product fact",
                       ", ".join(missing_org_desc_terms)))
 
-    # Verify that homepage WebSite structured data includes SiteNavigationElement hasPart items matching visible guide hubs.
+    # Verify that homepage WebSite structured data includes SiteNavigationElement hasPart items matching visible guide hubs with rich descriptions.
     ws_haspart_m = re.search(r'"@type":\s*"WebSite",.*?"hasPart":\s*(\[.*?\])\s*,\s*"publisher"', home, re.S)
     if not ws_haspart_m:
         fails.append(("index.html", "home WebSite structured data missing hasPart SiteNavigationElement links", ""))
@@ -246,6 +246,15 @@ def main():
             nav_urls = [p.get("url", "").strip() for p in ws_parts if isinstance(p, dict) and p.get("@type") == "SiteNavigationElement"]
             if len(nav_urls) < 11:
                 fails.append(("index.html", "home WebSite hasPart missing navigation elements", f"expected at least 11, found {len(nav_urls)}"))
+            # Require descriptions on SiteNavigationElement items to support enhanced SERP rich sitelinks
+            elements_without_desc = [
+                p.get("name", "unnamed")
+                for p in ws_parts
+                if isinstance(p, dict) and p.get("@type") == "SiteNavigationElement" and not p.get("description", "").strip()
+            ]
+            if elements_without_desc:
+                fails.append(("index.html", "home WebSite hasPart SiteNavigationElement missing description",
+                              ", ".join(elements_without_desc)))
         except json.JSONDecodeError as exc:
             fails.append(("index.html", "home WebSite hasPart JSON-LD invalid", str(exc)))
 
