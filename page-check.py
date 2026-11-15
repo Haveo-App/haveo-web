@@ -258,6 +258,17 @@ def main():
         except json.JSONDecodeError as exc:
             fails.append(("index.html", "home WebSite hasPart JSON-LD invalid", str(exc)))
 
+    # Verify that the visible guide links on the homepage are wrapped in a semantic <nav> landmark
+    # with an explicit accessible label, providing both search engine crawlers and screen readers
+    # with clear structural hierarchy for sitelink generation.
+    nav_m = re.search(r'''<nav\b[^>]*aria-label=["']Networking guides["'][^>]*>(.*?)</nav>''', home, re.S | re.I)
+    if not nav_m:
+        fails.append(("index.html", "home missing semantic <nav aria-label='Networking guides'> element", ""))
+    else:
+        nav_anchors = re.findall(r'''<a\s+href=["'](/.*?/)["']''', nav_m.group(1))
+        if len(nav_anchors) < 11:
+            fails.append(("index.html", "home navigation landmark missing hub links", f"expected at least 11, found {len(nav_anchors)}"))
+
     # Verify that homepage FAQPage structured data stays synchronized with the visible FAQ.
     faq_ld_m = re.search(r'"@type":\s*"FAQPage",\s*"mainEntity":\s*(\[.*?\])\s*\}', home, re.S)
     if not faq_ld_m:
