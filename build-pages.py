@@ -483,11 +483,12 @@ social anxiety disorder or any other condition.
 # Each hub carries its own children, so nothing is more than two clicks away.
 HUBS = [q for q in PAGES if not q.get("hub")]
 home_links = (
-    '      <p style="margin-top:28px; font-weight:600;">Networking guides:<br />'
+    '      <nav class="site-guides" aria-label="Networking guides">\n'
+    + '        <p style="margin-top:28px; font-weight:600;">Networking guides:<br />'
     + ' &nbsp;·&nbsp; '.join(
         f'<a href="/{p["slug"]}/">{strip_tags(p["h1"])}</a>'
         for p in HUBS)
-    + '</p>\n')
+    + '</p>\n      </nav>\n')
 _idx_path = os.path.join(ROOT, "index.html")
 _idx = open(_idx_path, encoding="utf-8").read()
 _m = re.search(r"(<!-- guides:start.*?-->\n)(.*?)(\s*<!-- guides:end -->)", _idx, re.S)
