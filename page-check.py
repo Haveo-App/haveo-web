@@ -255,6 +255,15 @@ def main():
             if elements_without_desc:
                 fails.append(("index.html", "home WebSite hasPart SiteNavigationElement missing description",
                               ", ".join(elements_without_desc)))
+            # Require explicit 1-based sequential position on SiteNavigationElement items for deterministic SERP sitelink ordering
+            positions = [
+                p.get("position")
+                for p in ws_parts
+                if isinstance(p, dict) and p.get("@type") == "SiteNavigationElement"
+            ]
+            if positions != list(range(1, len(positions) + 1)):
+                fails.append(("index.html", "home WebSite hasPart SiteNavigationElement missing or non-sequential position",
+                              f"expected 1..{len(positions)}, found {positions}"))
         except json.JSONDecodeError as exc:
             fails.append(("index.html", "home WebSite hasPart JSON-LD invalid", str(exc)))
 
