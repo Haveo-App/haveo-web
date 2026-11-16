@@ -80,6 +80,14 @@
       "url": "https://haveo.app/",
       "name": "Haveo",
       "description": "Haveo prepares you for networking events: build your intro, practice out loud, and keep a Cheat Sheet in your pocket. Explore 92 practical guides. Free on iOS.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://haveo.app/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
       "hasPart": [
         {
           "@type": "SiteNavigationElement",

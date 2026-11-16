@@ -267,6 +267,32 @@ def main():
         except json.JSONDecodeError as exc:
             fails.append(("index.html", "home WebSite hasPart JSON-LD invalid", str(exc)))
 
+    # Verify that homepage WebSite structured data includes potentialAction SearchAction for SERP sitelinks searchbox
+    try:
+        graph_m = re.search(r'"@graph":\s*(\[.*?\])\s*\}\s*</script>', home, re.S)
+        if graph_m:
+            graph_data = json.loads(graph_m.group(1))
+            ws_entities = [x for x in graph_data if isinstance(x, dict) and x.get("@type") == "WebSite"]
+            if not ws_entities:
+                fails.append(("index.html", "home WebSite structured data missing from @graph", ""))
+            else:
+                ws_entity = ws_entities[0]
+                pa = ws_entity.get("potentialAction")
+                if not isinstance(pa, dict) or pa.get("@type") != "SearchAction":
+                    fails.append(("index.html", "home WebSite structured data missing potentialAction SearchAction", ""))
+                else:
+                    target = pa.get("target")
+                    if not isinstance(target, dict) or target.get("@type") != "EntryPoint":
+                        fails.append(("index.html", "home WebSite SearchAction target missing EntryPoint", ""))
+                    elif "{search_term_string}" not in target.get("urlTemplate", ""):
+                        fails.append(("index.html", "home WebSite SearchAction target urlTemplate missing search_term_string", ""))
+                    if "required name=search_term_string" not in pa.get("query-input", ""):
+                        fails.append(("index.html", "home WebSite SearchAction missing query-input requirement", ""))
+        else:
+            fails.append(("index.html", "home JSON-LD @graph missing or malformed", ""))
+    except Exception as exc:
+        fails.append(("index.html", "home JSON-LD parsing failed during SearchAction check", str(exc)))
+
     # Verify that the visible guide links on the homepage are wrapped in a semantic <nav> landmark
     # with an explicit accessible label, providing both search engine crawlers and screen readers
     # with clear structural hierarchy for sitelink generation.
