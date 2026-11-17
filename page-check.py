@@ -293,6 +293,29 @@ def main():
     except Exception as exc:
         fails.append(("index.html", "home JSON-LD parsing failed during SearchAction check", str(exc)))
 
+    # Verify that homepage MobileApplication structured data includes screenshot assets for SERP rich media
+    try:
+        graph_m = re.search(r'"@graph":\s*(\[.*?\])\s*\}\s*</script>', home, re.S)
+        if graph_m:
+            graph_data = json.loads(graph_m.group(1))
+            app_entities = [x for x in graph_data if isinstance(x, dict) and x.get("@type") == "MobileApplication"]
+            if not app_entities:
+                fails.append(("index.html", "home MobileApplication structured data missing from @graph", ""))
+            else:
+                app_entity = app_entities[0]
+                screenshots = app_entity.get("screenshot")
+                if not isinstance(screenshots, list) or len(screenshots) < 2:
+                    fails.append(("index.html", "home MobileApplication structured data missing screenshot list",
+                                  f"expected list of at least 2 screenshots, found {screenshots}"))
+                else:
+                    for shot in screenshots:
+                        if not shot.startswith("https://haveo.app/illustrations/"):
+                            fails.append(("index.html", "home MobileApplication screenshot URL malformed", shot))
+        else:
+            fails.append(("index.html", "home JSON-LD @graph missing or malformed", ""))
+    except Exception as exc:
+        fails.append(("index.html", "home JSON-LD parsing failed during MobileApplication screenshot check", str(exc)))
+
     # Verify that the visible guide links on the homepage are wrapped in a semantic <nav> landmark
     # with an explicit accessible label, providing both search engine crawlers and screen readers
     # with clear structural hierarchy for sitelink generation.
