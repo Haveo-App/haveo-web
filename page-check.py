@@ -316,6 +316,17 @@ def main():
     except Exception as exc:
         fails.append(("index.html", "home JSON-LD parsing failed during MobileApplication screenshot check", str(exc)))
 
+    # Verify that homepage specifies robots directives with max-image-preview:large to qualify for full-width rich visual SERP snippets
+    robots_m = re.search(r'<meta\s+name=["\']robots["\']\s+content=["\'](.*?)["\']\s*/?>', home, re.I)
+    if not robots_m:
+        fails.append(("index.html", "home missing robots meta tag with max-image-preview:large", ""))
+    else:
+        robots_content = robots_m.group(1).lower()
+        if "max-image-preview:large" not in robots_content:
+            fails.append(("index.html", "home robots meta missing max-image-preview:large", robots_content))
+        if "max-snippet:-1" not in robots_content:
+            fails.append(("index.html", "home robots meta missing max-snippet:-1", robots_content))
+
     # Verify that the visible guide links on the homepage are wrapped in a semantic <nav> landmark
     # with an explicit accessible label, providing both search engine crawlers and screen readers
     # with clear structural hierarchy for sitelink generation.
