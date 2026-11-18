@@ -311,6 +311,19 @@ def main():
                     for shot in screenshots:
                         if not shot.startswith("https://haveo.app/illustrations/"):
                             fails.append(("index.html", "home MobileApplication screenshot URL malformed", shot))
+
+                # Verify operatingSystem, applicationCategory, and offers for rich app snippet display in SERPs
+                op_sys = app_entity.get("operatingSystem", "")
+                if "iOS" not in op_sys or "15.1" not in op_sys:
+                    fails.append(("index.html", "home MobileApplication missing operatingSystem specification", op_sys))
+
+                app_cat = app_entity.get("applicationCategory", "")
+                if not app_cat:
+                    fails.append(("index.html", "home MobileApplication missing applicationCategory", ""))
+
+                offers = app_entity.get("offers")
+                if not isinstance(offers, dict) or offers.get("@type") != "Offer" or str(offers.get("price")) != "0" or offers.get("priceCurrency") != "USD":
+                    fails.append(("index.html", "home MobileApplication offers missing valid free offer specification", str(offers)))
         else:
             fails.append(("index.html", "home JSON-LD @graph missing or malformed", ""))
     except Exception as exc:
