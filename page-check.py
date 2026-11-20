@@ -236,6 +236,31 @@ def main():
         fails.append(("index.html", "home Organization structured data description missing product fact",
                       ", ".join(missing_org_desc_terms)))
 
+    # Verify Organization contactPoint structured data for local/GBP customer support and trust signals
+    try:
+        graph_m = re.search(r'"@graph":\s*(\[.*?\])\s*\}\s*</script>', home, re.S)
+        if graph_m:
+            graph_data = json.loads(graph_m.group(1))
+            org_entities = [x for x in graph_data if isinstance(x, dict) and x.get("@type") == "Organization"]
+            if not org_entities:
+                fails.append(("index.html", "home Organization structured data missing from @graph", ""))
+            else:
+                org_entity = org_entities[0]
+                cp = org_entity.get("contactPoint")
+                if not isinstance(cp, dict) or cp.get("@type") != "ContactPoint":
+                    fails.append(("index.html", "home Organization structured data missing contactPoint ContactPoint", ""))
+                else:
+                    if cp.get("email") != "hello@haveo.app":
+                        fails.append(("index.html", "home Organization contactPoint missing or invalid email", str(cp.get("email"))))
+                    if not cp.get("url", "").startswith("https://gloriaaecu-rgb.github.io/haveo-privacy/support"):
+                        fails.append(("index.html", "home Organization contactPoint missing support URL", str(cp.get("url"))))
+                    if not cp.get("availableLanguage"):
+                        fails.append(("index.html", "home Organization contactPoint missing availableLanguage", ""))
+        else:
+            fails.append(("index.html", "home JSON-LD @graph missing or malformed", ""))
+    except Exception as exc:
+        fails.append(("index.html", "home JSON-LD parsing failed during Organization contactPoint check", str(exc)))
+
     # Verify that homepage WebSite structured data includes SiteNavigationElement hasPart items matching visible guide hubs with rich descriptions.
     ws_haspart_m = re.search(r'"@type":\s*"WebSite",.*?"hasPart":\s*(\[.*?\])\s*,\s*"publisher"', home, re.S)
     if not ws_haspart_m:
