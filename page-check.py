@@ -384,9 +384,9 @@ def main():
         try:
             faq_entities = json.loads(faq_ld_m.group(1))
             faq_ld_questions = [q.get("name", "").strip() for q in faq_entities if isinstance(q, dict)]
-            if len(faq_ld_questions) < 8:
+            if len(faq_ld_questions) < 9:
                 fails.append(("index.html", "home FAQPage mainEntity questions below expected count",
-                              f"expected at least 8 questions, found {len(faq_ld_questions)}"))
+                              f"expected at least 9 questions, found {len(faq_ld_questions)}"))
             for q_ent in faq_entities:
                 if not isinstance(q_ent, dict):
                     continue
@@ -397,6 +397,8 @@ def main():
                     fails.append(("index.html", "home FAQPage acceptedAnswer missing @type Answer", str(q_ent.get("name"))))
                 elif not ans.get("text", "").strip():
                     fails.append(("index.html", "home FAQPage acceptedAnswer text empty", str(q_ent.get("name"))))
+            if "How do I get customer support or share feedback?" not in faq_ld_questions:
+                fails.append(("index.html", "home FAQPage missing customer support question", ""))
         except json.JSONDecodeError as exc:
             fails.append(("index.html", "home FAQPage JSON-LD invalid", str(exc)))
             faq_ld_questions = []
