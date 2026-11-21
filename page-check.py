@@ -256,6 +256,12 @@ def main():
                         fails.append(("index.html", "home Organization contactPoint missing support URL", str(cp.get("url"))))
                     if not cp.get("availableLanguage"):
                         fails.append(("index.html", "home Organization contactPoint missing availableLanguage", ""))
+                # Verify knowsAbout expertise topics on Organization entity for entity trust and local/GBP SERP disambiguation
+                knows_about = org_entity.get("knowsAbout")
+                if not isinstance(knows_about, list) or len(knows_about) < 3:
+                    fails.append(("index.html", "home Organization missing knowsAbout expertise topics list", str(knows_about)))
+                elif not all(isinstance(topic, str) and topic.strip() for topic in knows_about):
+                    fails.append(("index.html", "home Organization knowsAbout contains invalid topic", str(knows_about)))
         else:
             fails.append(("index.html", "home JSON-LD @graph missing or malformed", ""))
     except Exception as exc:
