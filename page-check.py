@@ -256,6 +256,13 @@ def main():
                         fails.append(("index.html", "home Organization contactPoint missing support URL", str(cp.get("url"))))
                     if not cp.get("availableLanguage"):
                         fails.append(("index.html", "home Organization contactPoint missing availableLanguage", ""))
+                # Verify knowsAbout and areaServed for rich Knowledge Graph / GBP entity resolution
+                knows_about = org_entity.get("knowsAbout")
+                if not isinstance(knows_about, list) or len(knows_about) < 3:
+                    fails.append(("index.html", "home Organization missing knowsAbout expertise topics list", str(knows_about)))
+                area_served = org_entity.get("areaServed")
+                if not area_served or area_served != "US":
+                    fails.append(("index.html", "home Organization missing or invalid areaServed", str(area_served)))
         else:
             fails.append(("index.html", "home JSON-LD @graph missing or malformed", ""))
     except Exception as exc:
