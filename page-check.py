@@ -348,6 +348,14 @@ def main():
                 if "iOS" not in op_sys or "15.1" not in op_sys:
                     fails.append(("index.html", "home MobileApplication missing operatingSystem specification", op_sys))
 
+                app_ver = app_entity.get("softwareVersion", "")
+                if not app_ver or not re.match(r"^\d+\.\d+(\.\d+)?$", app_ver):
+                    fails.append(("index.html", "home MobileApplication missing valid softwareVersion", str(app_ver)))
+
+                app_features = app_entity.get("featureList")
+                if not isinstance(app_features, list) or len(app_features) < 4:
+                    fails.append(("index.html", "home MobileApplication missing featureList items", str(app_features)))
+
                 app_cat = app_entity.get("applicationCategory", "")
                 if not app_cat:
                     fails.append(("index.html", "home MobileApplication missing applicationCategory", ""))
