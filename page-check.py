@@ -352,6 +352,10 @@ def main():
                 if not app_ver or not re.match(r"^\d+\.\d+(\.\d+)?$", app_ver):
                     fails.append(("index.html", "home MobileApplication missing valid softwareVersion", str(app_ver)))
 
+                app_size = app_entity.get("fileSize", "")
+                if not app_size or not str(app_size).isdigit() or int(app_size) <= 0:
+                    fails.append(("index.html", "home MobileApplication missing valid fileSize in bytes", str(app_size)))
+
                 app_features = app_entity.get("featureList")
                 if not isinstance(app_features, list) or len(app_features) < 4:
                     fails.append(("index.html", "home MobileApplication missing featureList items", str(app_features)))
