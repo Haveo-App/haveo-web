@@ -356,6 +356,12 @@ def main():
                 if not app_size or not str(app_size).isdigit() or int(app_size) <= 0:
                     fails.append(("index.html", "home MobileApplication missing valid fileSize in bytes", str(app_size)))
 
+                agg_rating = app_entity.get("aggregateRating")
+                if not isinstance(agg_rating, dict) or agg_rating.get("@type") != "AggregateRating":
+                    fails.append(("index.html", "home MobileApplication missing aggregateRating specification", str(agg_rating)))
+                elif not agg_rating.get("ratingValue") or not agg_rating.get("reviewCount"):
+                    fails.append(("index.html", "home MobileApplication aggregateRating missing ratingValue or reviewCount", str(agg_rating)))
+
                 app_features = app_entity.get("featureList")
                 if not isinstance(app_features, list) or len(app_features) < 4:
                     fails.append(("index.html", "home MobileApplication missing featureList items", str(app_features)))
