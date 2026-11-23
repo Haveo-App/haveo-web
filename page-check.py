@@ -352,6 +352,10 @@ def main():
                 if not app_ver or not re.match(r"^\d+\.\d+(\.\d+)?$", app_ver):
                     fails.append(("index.html", "home MobileApplication missing valid softwareVersion", str(app_ver)))
 
+                app_date_mod = app_entity.get("dateModified", "")
+                if not app_date_mod or not re.match(r"^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})?)?$", app_date_mod):
+                    fails.append(("index.html", "home MobileApplication missing valid ISO dateModified", str(app_date_mod)))
+
                 app_size = app_entity.get("fileSize", "")
                 if not app_size or not str(app_size).isdigit() or int(app_size) <= 0:
                     fails.append(("index.html", "home MobileApplication missing valid fileSize in bytes", str(app_size)))
