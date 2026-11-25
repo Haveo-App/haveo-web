@@ -256,6 +256,13 @@ def main():
                         fails.append(("index.html", "home Organization contactPoint missing support URL", str(cp.get("url"))))
                     if not cp.get("availableLanguage"):
                         fails.append(("index.html", "home Organization contactPoint missing availableLanguage", ""))
+                    if cp.get("contactOption") != "HearingImpairedSupported":
+                        fails.append(("index.html", "home Organization contactPoint missing or invalid contactOption HearingImpairedSupported", str(cp.get("contactOption"))))
+                    ha = cp.get("hoursAvailable")
+                    if not isinstance(ha, dict) or ha.get("@type") != "OpeningHoursSpecification":
+                        fails.append(("index.html", "home Organization contactPoint missing hoursAvailable OpeningHoursSpecification", str(ha)))
+                    elif ha.get("opens") != "00:00" or ha.get("closes") != "23:59":
+                        fails.append(("index.html", "home Organization contactPoint hoursAvailable missing 24/7 opens/closes bounds", str(ha)))
                 # Verify knowsAbout expertise topics on Organization entity for entity trust and local/GBP SERP disambiguation
                 knows_about = org_entity.get("knowsAbout")
                 if not isinstance(knows_about, list) or len(knows_about) < 3:
