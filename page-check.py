@@ -256,6 +256,8 @@ def main():
                         fails.append(("index.html", "home Organization contactPoint missing support URL", str(cp.get("url"))))
                     if not cp.get("availableLanguage"):
                         fails.append(("index.html", "home Organization contactPoint missing availableLanguage", ""))
+                    if not cp.get("areaServed"):
+                        fails.append(("index.html", "home Organization contactPoint missing areaServed", ""))
                 # Verify knowsAbout expertise topics on Organization entity for entity trust and local/GBP SERP disambiguation
                 knows_about = org_entity.get("knowsAbout")
                 if not isinstance(knows_about, list) or len(knows_about) < 3:
