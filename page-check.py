@@ -275,6 +275,9 @@ def main():
                     fails.append(("index.html", "home Person missing or invalid founder name", str(founder_entity.get("name"))))
                 if founder_entity.get("jobTitle") != "Founder":
                     fails.append(("index.html", "home Person missing or invalid jobTitle", str(founder_entity.get("jobTitle"))))
+                works_for = founder_entity.get("worksFor")
+                if not isinstance(works_for, dict) or works_for.get("@id") != "https://haveo.app/#org":
+                    fails.append(("index.html", "home Person missing or invalid worksFor Organization reference", str(works_for)))
                 if not founder_entity.get("sameAs"):
                     fails.append(("index.html", "home Person missing sameAs profiles", str(founder_entity.get("sameAs"))))
         else:
