@@ -264,6 +264,19 @@ def main():
                     fails.append(("index.html", "home Organization missing knowsAbout expertise topics list", str(knows_about)))
                 elif not all(isinstance(topic, str) and topic.strip() for topic in knows_about):
                     fails.append(("index.html", "home Organization knowsAbout contains invalid topic", str(knows_about)))
+
+            # Verify Person founder structured data for entity authority and local/brand knowledge graph trust
+            person_entities = [x for x in graph_data if isinstance(x, dict) and x.get("@type") == "Person"]
+            if not person_entities:
+                fails.append(("index.html", "home Person structured data missing from @graph", ""))
+            else:
+                founder_entity = person_entities[0]
+                if founder_entity.get("name") != "Gloria E. Aguilar":
+                    fails.append(("index.html", "home Person missing or invalid founder name", str(founder_entity.get("name"))))
+                if founder_entity.get("jobTitle") != "Founder":
+                    fails.append(("index.html", "home Person missing or invalid jobTitle", str(founder_entity.get("jobTitle"))))
+                if not founder_entity.get("sameAs"):
+                    fails.append(("index.html", "home Person missing sameAs profiles", str(founder_entity.get("sameAs"))))
         else:
             fails.append(("index.html", "home JSON-LD @graph missing or malformed", ""))
     except Exception as exc:
