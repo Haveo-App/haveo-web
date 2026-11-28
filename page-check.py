@@ -143,6 +143,33 @@ def main():
     except FileNotFoundError:
         print("page-check: missing home index.html", file=sys.stderr)
         return 1
+
+    # The homepage branded-result opportunity is only useful if the person can
+    # understand the product before being asked to leave the site. It once had
+    # an unexplained App Store button before the H1 and a second install button
+    # after it, splitting attribution between two hero tokens. Keep one explicit
+    # install choice after the offer; secondary exploration stays a plain link.
+    header_m = re.search(r"<header\b[^>]*>(.*?)</header>", home, re.S | re.I)
+    header = header_m.group(1) if header_m else ""
+    hero_store_links = re.findall(
+        r'<a\b[^>]*href=["\'][^"\']*apps\.apple\.com[^"\']*["\'][^>]*>(.*?)</a>',
+        header, re.S | re.I)
+    if not header_m:
+        fails.append(("index.html", "homepage hero missing", ""))
+    elif len(hero_store_links) != 1:
+        fails.append(("index.html", "homepage hero must contain one App Store choice",
+                      str(len(hero_store_links))))
+    else:
+        hero_text = re.sub(r"<[^>]+>", " ", hero_store_links[0])
+        hero_text = " ".join(html.unescape(hero_text).split())
+        if hero_text != "Download Haveo free on the App Store":
+            fails.append(("index.html", "homepage install choice is not explicit", hero_text))
+        if "ct=site-hero&amp;mt=8" not in header:
+            fails.append(("index.html", "homepage install choice missing site-hero attribution", ""))
+        if header.find("<h1") > header.find("apps.apple.com"):
+            fails.append(("index.html", "homepage App Store choice appears before product promise", ""))
+    if "site-hero-local" in home:
+        fails.append(("index.html", "retired duplicate hero attribution remains", "site-hero-local"))
     title_match = re.search(r"<title>(.*?)</title>", home, re.S | re.I)
     home_title = html.unescape(title_match.group(1)).strip() if title_match else ""
     # Keep the search-result title, social titles and image alt text as one
