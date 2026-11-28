@@ -401,6 +401,11 @@
     .btn-ghost { background:#fff; color:var(--ink); border:1.5px solid #E7DECb; }
     .btn-ghost:hover { background:#FBF7EF; transform:translateY(-2px); }
     .cta-note { font-size:13.5px; color:var(--muted); font-weight:600; }
+    /* One explicit installation choice, after the product promise. The quieter
+       links are for people who are not ready to install, not competing CTAs. */
+    .cta-decision { max-width:470px; color:var(--ink); font-size:15px; font-weight:700; line-height:1.45; }
+    .cta-secondary { color:var(--muted); font-size:14px; font-weight:700; }
+    .cta-secondary a { color:var(--blue); text-decoration-thickness:1px; text-underline-offset:3px; }
 
     /* ---------- sections ---------- */
     section { padding:52px 0; position:relative; }
@@ -512,6 +517,21 @@
       .cta-row { flex-direction:row !important; }
       .hero-char { width:150px; height:150px; }
     }
+    /* A short mobile browser has about 600px of useful height. Keep the
+       product statement and its one action together there without moving the
+       action ahead of the explanation or hiding the character entirely. */
+    @media (max-width:679px) and (max-height:680px) {
+      header { padding-top:20px; padding-bottom:22px; }
+      .logo { margin-bottom:12px; }
+      .hero-char { width:72px; height:72px; margin-bottom:2px; }
+      h1 { margin-bottom:10px; }
+      .sub { margin-bottom:14px; }
+      .cta-wrap { gap:9px; }
+      .soon-pill { padding:7px 13px; }
+      .cta-decision { font-size:14px; }
+      .btn { padding:12px 20px; }
+      .cta-note, .cta-secondary { font-size:12.5px; }
+    }
     @media (prefers-reduced-motion:reduce) {
       .f1,.f2,.f3,.card:hover .art { animation:none !important; }
       .reveal { opacity:1; transform:none; transition:none; }
@@ -538,7 +558,6 @@
     <div class="wrap">
       <div class="logo"><span class="dot">H</span> Haveo</div>
       <p class="hero-product">Haveo is a free iPhone app</p>
-      <a class="btn btn-primary" href="https://apps.apple.com/app/haveo/id6774740212?pt=128642904&amp;ct=site-hero-local&amp;mt=8" target="_blank" rel="noopener" style="margin-bottom: 24px;">Get started free</a>
 
       <div class="hero-char f1"><img src="illustrations/ai-assistant.svg" alt="Haveo, the yellow character who coaches you" /></div>
 
@@ -551,17 +570,15 @@
 
       <div class="cta-wrap">
         <span class="soon-pill"><span class="live-dot"></span> Now on the App Store — free</span>
+        <p class="cta-decision">Start with the event you have coming up. Haveo helps you prepare the words before you walk in.</p>
         <div class="cta-row" style="display:flex; flex-direction:column; gap:12px;">
           <a class="btn btn-appstore" href="https://apps.apple.com/app/haveo/id6774740212?pt=128642904&amp;ct=site-hero&amp;mt=8" target="_blank" rel="noopener">
             <svg viewBox="0 0 384 512" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            Download on the App Store
+            Download Haveo free on the App Store
           </a>
-          <a class="btn btn-tiktok" href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">
-            Follow @haveoapp
-          </a>
-          <a class="btn btn-ghost" href="#feedback">Share your honest feedback</a>
         </div>
         <p class="cta-note">Free on iPhone and iPad with iOS 15.1 or later. No account, no ads, and nothing that follows you into other apps.</p>
+        <p class="cta-secondary"><a href="https://www.tiktok.com/@haveoapp" target="_blank" rel="noopener">See what’s coming next</a> <span aria-hidden="true">·</span> <a href="#feedback">Share feedback</a></p>
       </div>
     </div>
   </header>
