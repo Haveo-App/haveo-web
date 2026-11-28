@@ -477,6 +477,29 @@ def main():
         fails.append(("index.html", "first screen missing grounded product identity",
                       ", ".join(missing_hero_terms)))
 
+    # A branded searcher who lands on the homepage should have one immediately
+    # available, accessible handoff to the App Store. This link is also the
+    # conversion boundary: the Apple campaign token attributes installs without
+    # adding visitor-level tracking. Keep the rendered label, the accessible
+    # promise and the exact attribution token together so a future copy-only
+    # edit cannot quietly sever measurement or make the destination ambiguous.
+    hero_download_links = re.findall(r"<a\b[^>]*>.*?</a>", home, re.S | re.I)
+    expected_hero_href = (
+        "https://apps.apple.com/app/haveo/id6774740212?pt=128642904"
+        "&amp;ct=site-hero-local&amp;mt=8"
+    )
+    expected_hero_label = "Download Haveo free on the App Store — opens the App Store"
+    hero_download_ok = any(
+        'data-conversion="app-store-download"' in link
+        and expected_hero_href in link
+        and f'aria-label="{expected_hero_label}"' in link
+        and re.search(r">\s*Get started free\s*</a>", link, re.S | re.I)
+        for link in hero_download_links
+    )
+    if not hero_download_ok:
+        fails.append(("index.html", "hero App Store conversion handoff missing or malformed",
+                      "expected accessible site-hero-local App Store link with campaign attribution"))
+
     # Positive control. If the searches below come back clean because the text
     # never loaded, this is the line that says so. A clean result is only
     # evidence if the check could have come back dirty.
